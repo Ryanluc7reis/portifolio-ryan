@@ -7,8 +7,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   body {
-  font-family : 'Roboto',sans-serif;
-}
+    font-family : 'Roboto',sans-serif;
+  }  
 `
 function App({ Component, pageProps }) {
   return (

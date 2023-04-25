@@ -2,15 +2,14 @@ import styled from 'styled-components'
 
 const StyledContainer = styled.div`
   display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 200px;
+  margin-left: 70px;
 `
 const StyledChildren = styled.div`
-  max-width: 700px;
+  width: 100%;
+  display: flex;
 `
 
-function Container({ children }) {
+function ContainerDois({ children }) {
   return (
     <StyledContainer>
       <StyledChildren>{children}</StyledChildren>
@@ -18,4 +17,4 @@ function Container({ children }) {
   )
 }
 
-export default Container
+export default ContainerDois
