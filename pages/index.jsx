@@ -2,18 +2,23 @@ import styled from 'styled-components'
 
 import H3 from '../src/components/typography/H3'
 import H4 from '../src/components/typography/H4'
+import H5 from '../src/components/typography/H5'
+import Title from '../src/components/layout/Title'
+import Button from '../src/components/inputs/Button'
+
 import ContainerUm from '../src/components/layout/ContainerUm'
 import ContainerDois from '../src/components/layout/ContainerDois'
 import ContainerSkils from '../src/components/layout/ContainerSkils'
 import ContainerSobremim from '../src/components/layout/ContainerSobremim'
-import Button from '../src/components/inputs/Button'
+import ContainerProjects from '../src/components/layout/ContainerProjects'
+
 import Contacts from '../src/components/layout/Contacts'
+import ProjectsCards from '../src/components/inputs/ProjectsCards'
 
 import WhatzImage from '../src/components/contacts-image/whtaz'
 import GitImage from '../src/components/contacts-image/git'
 import EmailImage from '../src/components/contacts-image/email'
 import LinkeImage from '../src/components/contacts-image/linkedin'
-import Link from 'next/link'
 
 const StyledFlex = styled.div`
   display: flex;
@@ -26,9 +31,9 @@ const StyledImage = styled.div`
   height: 100vh;
 `
 const handleClick = () => {
-  return <Link href="/google.com">i</Link>
+  return <div>i</div>
 }
-function HomePage({ image, imageDois }) {
+function HomePage({ image, imageDois, imageTres }) {
   return (
     <>
       <>
@@ -64,12 +69,36 @@ function HomePage({ image, imageDois }) {
           </ContainerDois>
         </StyledImage>
       </>
+      <>
+        <StyledImage image={imageTres}>
+          <Title>PROJETOS</Title>
+          <ContainerProjects>
+            <ProjectsCards>
+              <H4>Social Dev</H4>
+              <H5>
+                Foi construída uma rede social usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e
+                styled components.
+              </H5>
+              <Button>Visitar projeto</Button>
+            </ProjectsCards>
+            <ProjectsCards>
+              <H4>Jogo da velha</H4>
+              <H5>
+                Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
+                de estados dentro do ReactJS.
+              </H5>
+              <Button>Visitar projeito</Button>
+            </ProjectsCards>
+          </ContainerProjects>
+        </StyledImage>
+      </>
     </>
   )
 }
 HomePage.defaultProps = {
   image: '/aa416637aae576fc9f1dde64c8b17816.jpg',
-  imageDois: '/original-4ab4debcd15404252b095da71afc6b65.jpg'
+  imageDois: '/original-4ab4debcd15404252b095da71afc6b65.jpg',
+  imageTres: '/telapreta-background.jpg'
 }
 
 export default HomePage
