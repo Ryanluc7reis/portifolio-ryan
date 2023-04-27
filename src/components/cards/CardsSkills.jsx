@@ -2,17 +2,19 @@ import styled from 'styled-components'
 
 const StyledContainer = styled.div`
   display: flex;
+  margin-top: 10px;
 `
 const StyledChildren = styled.div`
-  max-width: 300px;
-  max-height: 200px;
-  margin-top: 20px;
-  margin-left: 100px;
+  width: 90px;
+  height: 40px;
+  background-color: ${(props) => props.theme.grey};
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
-function ContainerSkils({ children }) {
+function CardsSkills({ children }) {
   return (
     <StyledContainer>
       <StyledChildren>{children}</StyledChildren>
@@ -20,4 +22,4 @@ function ContainerSkils({ children }) {
   )
 }
 
-export default ContainerSkils
+export default CardsSkills

@@ -16,8 +16,9 @@ const StyledButton = styled.button`
     background-color: ${(props) => props.theme.blue};
   }
 `
-const Button = ({ ...props }) => {
-  return <StyledButton {...props} />
+
+function Button({ children, ...props }) {
+  return <StyledButton {...props}>{children}</StyledButton>
 }
 
 export default Button

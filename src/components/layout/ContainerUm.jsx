@@ -4,18 +4,22 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 130px;
 `
 
 const StyledChildren = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
 `
 
-function ContainerUm({ children }) {
+function ContainerUm({ children, ...props }) {
   return (
     <StyledContainer>
-      <StyledChildren>{children}</StyledChildren>
+      <StyledChildren {...props}>{children}</StyledChildren>
     </StyledContainer>
   )
 }

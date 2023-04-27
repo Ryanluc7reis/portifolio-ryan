@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const StyledFlex = styled.div`
-  display: flex;
   margin-bottom: 15px;
   margin-top: 3px;
   margin-left: 5px;
@@ -18,10 +17,12 @@ const StyledImageContatctsW = styled.div`
   height: 35px;
   cursor: pointer;
 `
-function WhatzImage({ children, image }) {
+function WhatzImage({ children, image, ...props }) {
   return (
     <StyledFlex>
-      <StyledImageContatctsW image={image}>{children} </StyledImageContatctsW>
+      <StyledImageContatctsW image={image} {...props}>
+        {children}{' '}
+      </StyledImageContatctsW>
     </StyledFlex>
   )
 }

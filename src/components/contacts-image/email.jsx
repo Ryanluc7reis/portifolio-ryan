@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const StyledFlex = styled.div`
-  display: flex;
   margin-bottom: 15px;
   margin-left: 5px;
   :hover {
