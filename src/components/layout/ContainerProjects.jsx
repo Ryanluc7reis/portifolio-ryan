@@ -7,10 +7,10 @@ const StyledChildren = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 60px;
-  margin-top: 100px;
+  margin-top: 95px;
+  margin-right: 50px;
 `
 
 function ContainerProjects({ children }) {

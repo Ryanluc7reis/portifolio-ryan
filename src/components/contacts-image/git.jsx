@@ -1,20 +1,29 @@
 import styled from 'styled-components'
 
 const StyledFlex = styled.div`
-  margin-bottom: 15px;
-  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49px;
+  height: 48px;
 
   :hover {
+    border-radius: 7px;
     transition: 0.6s;
-    background-color: ${(props) => props.theme.grey};
+    background-color: ${(props) => props.theme.background};
   }
 `
 const StyledImageContatctsG = styled.div`
   background-image: url('${(props) => props.image}');
   background-size: cover;
-  width: 40px;
-  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 36px;
+  padding: 13px;
   cursor: pointer;
+  margin-bottom: 13px;
 `
 function GitImage({ children, image }) {
   return (
@@ -24,6 +33,6 @@ function GitImage({ children, image }) {
   )
 }
 GitImage.defaultProps = {
-  image: '/gitimagee.jpg'
+  image: '/gitnovo3.jpg'
 }
 export default GitImage

@@ -2,10 +2,10 @@ import { forwardRef } from 'react'
 import styled from 'styled-components'
 
 const StyledTitle = styled.h1`
-  font-size: 35px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
-  color: blue;
+  color: ${(props) => props.theme.title};
 `
 const StyledChildren = styled.div`
   margin-top: 70px;

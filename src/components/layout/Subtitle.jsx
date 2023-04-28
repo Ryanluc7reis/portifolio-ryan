@@ -7,7 +7,7 @@ const StyledSubtitle = styled.text`
 `
 const StyledChildren = styled.text`
   max-width: 600px;
-  color: #f3f3f3;
+  color: #363636;
 `
 function Subtitle({ children, ...props }) {
   return (

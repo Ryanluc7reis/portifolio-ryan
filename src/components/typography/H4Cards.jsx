@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-const H4 = styled.h4`
+const H4Cards = styled.h4`
   font-size: 20px;
   font-weight: 500;
   max-width: 600px;
-  color: ${(props) => props.theme.subtitle};
+  color: ${(props) => props.theme.H4Cards};
 `
-export default H4
+export default H4Cards

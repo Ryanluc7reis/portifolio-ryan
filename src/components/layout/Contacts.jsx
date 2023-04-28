@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 
 const StyledFlex = styled.div`
+  margin-bottom: 15px;
   display: flex;
-  margin-top: 82px;
+  margin-top: 80px;
   margin-left: 200px;
 `
 const StyledContacts = styled.div`
   width: 100%;
-  height: 60px;
+  max-height: 70px;
   border-radius: 0;
   display: flex;
-  flex-direction: center;
-  justify-content: flex-start;
   gap: 50px;
 `
 

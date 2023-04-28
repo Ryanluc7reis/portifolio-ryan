@@ -3,15 +3,17 @@ import { useRef } from 'react'
 
 import H3 from '../src/components/typography/H3'
 import H4 from '../src/components/typography/H4'
+import H4Cards from '../src/components/typography/H4Cards'
 import H5 from '../src/components/typography/H5'
 import Title from '../src/components/layout/Title'
 import Subtitle from '../src/components/layout/Subtitle'
 import Button from '../src/components/inputs/Button'
 
+import ConatainerOptions from '../src/components/layout/ConatainerOptions'
 import ContainerUm from '../src/components/layout/ContainerUm'
 import ContainerDois from '../src/components/layout/ContainerDois'
 import ContainerSkils from '../src/components/layout/ContainerSkils'
-import ContainerSobremim from '../src/components/layout/ContainerSobremim'
+import ContainerDoisTitle from '../src/components/layout/ContainerDoisTitle'
 import ContainerProjects from '../src/components/layout/ContainerProjects'
 
 import Contacts from '../src/components/layout/Contacts'
@@ -33,37 +35,90 @@ const StyledImage = styled.div`
   width: 100%;
   height: 100vh;
 `
+const StyledImageAvatar = styled.div`
+  background-image: url('${(props) => props.image}');
+  background-size: cover;
+  width: 40px;
+  height: 35px;
+  padding: 5px;
+  margin-right: 4px;
+`
+const StyledImageClimaDev = styled.div`
+  background-image: url('${(props) => props.image}');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 36px;
+  border-radius: 8px;
+`
+
 const StyledContacts = styled.p`
   font-size: 15px;
   display: flex;
   justify-content: flex-start;
   text-align: center;
-  color: white;
+  color: #fafafa;
 `
 const StyledTitleContacts = styled.p`
   font-size: 20px;
   display: flex;
   justify-content: center;
   text-align: center;
-  color: white;
-  margin-top: 90px;
+  color: #fafafa;
+  margin-top: 50px;
 `
-const StyledHabilidades = styled.p`
-  font-weight: bold;
-  font-size: 55px;
-  margin-top: 25px;
-  margin-left: 100px;
-  color: ${(props) => props.theme.white};
+const StyledNameOptions = styled.p`
+  font-size: 22px;
   display: flex;
-  justify-content: end;
-  text-align: end;
+  align-items: center;
+  color: #f3f3f3;
+  border-radius: 15px;
+  background-color: #535353;
+  cursor: pointer;
+  :hover {
+    transition: 0.3s;
+    background-color: ${(props) => props.theme.brown};
+  }
+`
+// background-color: #be0b0b;
+const StyledOptions = styled.p`
+  font-size: 21px;
+  display: flex;
+  cursor: pointer;
+  color: #797777;
+
+  :hover {
+    border-radius: 15px;
+    transition: 0.3s;
+    color: ${(props) => props.theme.brown};
+  }
 `
 
-function HomePage({ image, imageDois, imageTres }) {
+const StyledSobremim = styled.p`
+  font-size: 20px;
+  max-width: 715px;
+  margin-left: 25px;
+  display: flex;
+  color: ${(props) => props.theme.H4};
+`
+
+function HomePage({
+  image,
+  imageDois,
+  imageTres,
+  imageAvatar,
+  imageClimaDev,
+  imageSocialDev,
+  imageJogoDaV
+}) {
   const projetosRef = useRef(null)
 
   const handleButtonFocus = () => {
-    projetosRef.current
     console.log('retornou aqui')
   }
 
@@ -89,6 +144,15 @@ function HomePage({ image, imageDois, imageTres }) {
       <>
         <StyledFlex>
           <StyledImage image={image}>
+            <ConatainerOptions>
+              <StyledNameOptions>
+                <StyledImageAvatar image={imageAvatar} />
+                Ryan Lucas
+              </StyledNameOptions>
+              <StyledOptions onClick={handleButtonFocus}>Sobre mim</StyledOptions>
+              <StyledOptions>Habilidades</StyledOptions>
+              <StyledOptions>Projetos</StyledOptions>
+            </ConatainerOptions>
             <ContainerUm>
               <H3>Olá, Eu sou o Ryan Lucas</H3>
               <H4>E eu sou um desenvolvedor de software fullstack focado em contruir Websites!</H4>
@@ -97,7 +161,7 @@ function HomePage({ image, imageDois, imageTres }) {
             </ContainerUm>
             <Contacts>
               <StyledContacts>
-                Currículo: <Link href="">Meu curriculo123</Link>
+                Meu Currículo:<Link href="">Meu curriculo123</Link>
               </StyledContacts>
               <StyledContacts>E-mail: ryandev18@outlook.com</StyledContacts>
               <WhatzImage onClick={handleClickWpp} />
@@ -110,21 +174,35 @@ function HomePage({ image, imageDois, imageTres }) {
       <>
         <StyledImage image={imageDois}>
           <ContainerDois>
-            <ContainerSobremim>
+            <ContainerDoisTitle>
               <H3>Sobre mim</H3>
-              <H4>
-                No ano de 2021 começei a me interessar com programação,e desde então venho estudando
-                nfdksdkjfnjsdnfjsdnfj lalaalalalaffdfsdfsdfsd{' '}
-              </H4>
-            </ContainerSobremim>
+              <H3>Habilidades</H3>
+            </ContainerDoisTitle>
+
             <ContainerSkils>
-              <StyledHabilidades>Habilidades</StyledHabilidades>
+              <StyledSobremim>
+                E eu sou um desenvolvedor de software fullstack focado em contruir
+                Websites!fhedjkadksdklasdkljasdjajsdklasjdklasjdaskld
+              </StyledSobremim>
               <CardsSkills>HTML</CardsSkills>
-              <CardsSkills>ReactJs</CardsSkills>
+              <CardsSkills>CSS</CardsSkills>
               <CardsSkills>NextJs</CardsSkills>
+              <CardsSkills>ReactJs</CardsSkills>
+              <CardsSkills>JavaScript</CardsSkills>
+            </ContainerSkils>
+            <ContainerSkils>
               <CardsSkills>NodeJs</CardsSkills>
-              <CardsSkills>JavaScipt</CardsSkills>
-              <CardsSkills>JavaScipt</CardsSkills>
+              <CardsSkills>MongoBD</CardsSkills>
+              <CardsSkills>Mongoose</CardsSkills>
+              <CardsSkills>Axios</CardsSkills>
+              <CardsSkills>Router</CardsSkills>
+            </ContainerSkils>
+            <ContainerSkils>
+              <CardsSkills>ExpressJs</CardsSkills>
+              <CardsSkills>Styled Components</CardsSkills>
+              <CardsSkills>SASS</CardsSkills>
+              <CardsSkills>ESlint</CardsSkills>
+              <CardsSkills>Prettier</CardsSkills>
             </ContainerSkils>
           </ContainerDois>
         </StyledImage>
@@ -135,28 +213,34 @@ function HomePage({ image, imageDois, imageTres }) {
           <Subtitle>Aqui está alguns de meus projetos pessoais!</Subtitle>
           <ContainerProjects>
             <ProjectsCards>
-              <H4>Social Dev</H4>
-              <H5>
-                Foi construída uma rede social usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e
-                styled components.
-              </H5>
-              <Button onClick={handleClickProjetosUm}> Visitar projeito </Button>
+              <StyledImageClimaDev image={imageSocialDev}>
+                <H4Cards>Social Dev</H4Cards>
+                <H5>
+                  Foi construída uma rede social com intuito de amigos conversarem entre si por meio
+                  de posts usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e styled components.
+                </H5>
+                <Button onClick={handleClickProjetosUm}> Visitar projeito </Button>
+              </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>
-              <H4>Jogo da velha</H4>
-              <H5>
-                Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
-                de estados dentro do ReactJS.
-              </H5>
-              <Button onClick={handleClickProjetosDois}>Visitar projeito</Button>
+              <StyledImageClimaDev image={imageJogoDaV}>
+                <H4Cards>Jogo da velha</H4Cards>
+                <H5>
+                  Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
+                  de estados dentro do ReactJs.
+                </H5>
+                <Button onClick={handleClickProjetosDois}>Visitar projeito</Button>
+              </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>
-              <H4>Clima dev</H4>
-              <H5>
-                Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
-                de estados dentro do ReactJS.
-              </H5>
-              <Button onClick={handleClickProjetosDois}>Visitar projeito</Button>
+              <StyledImageClimaDev image={imageClimaDev}>
+                <H4Cards>Clima dev</H4Cards>
+                <H5>
+                  Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
+                  de estados dentro do ReactJS.
+                </H5>
+                <Button onClick={handleClickProjetosDois}>Visitar projeito</Button>
+              </StyledImageClimaDev>
             </ProjectsCards>
           </ContainerProjects>
         </StyledImage>
@@ -165,9 +249,13 @@ function HomePage({ image, imageDois, imageTres }) {
   )
 }
 HomePage.defaultProps = {
-  image: '/telapreta-background.jpg',
-  imageDois: '/original-4ab4debcd15404252b095da71afc6b65.jpg',
-  imageTres: '/telapreta-background.jpg'
+  image: '/fundo1.jpg',
+  imageDois: '/fundo2.jpg',
+  imageTres: '/fundo3.jpg',
+  imageAvatar: '/avatar3.jpg',
+  imageClimaDev: '/cliimadevimage.jpg',
+  imageSocialDev: '/redesocial.jpg',
+  imageJogoDaV: '/jogodavelha1.jpg'
 }
 
 export default HomePage

@@ -2,21 +2,19 @@ import styled from 'styled-components'
 
 const StyledContainer = styled.div`
   display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 59px;
 `
 
 const StyledChildren = styled.div`
   width: 100%;
-  height: 100%;
+  height: 78px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  justify-content: space-around;
+  background-color: white;
+  gap: 10px;
 `
 
-function ContainerUm({ children, ...props }) {
+function ConatainerOptions({ children, ...props }) {
   return (
     <StyledContainer>
       <StyledChildren {...props}>{children}</StyledChildren>
@@ -24,4 +22,4 @@ function ContainerUm({ children, ...props }) {
   )
 }
 
-export default ContainerUm
+export default ConatainerOptions

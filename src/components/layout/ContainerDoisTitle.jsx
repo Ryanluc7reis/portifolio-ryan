@@ -5,11 +5,13 @@ const StyledContainer = styled.div`
 `
 const StyledChildren = styled.div`
   width: 100%;
-  max-width: 600px;
   margin-top: 50px;
+  margin-right: 120px;
+  display: flex;
+  justify-content: space-around;
 `
 
-function ContainerSobremim({ children }) {
+function ContainerDoisTitle({ children }) {
   return (
     <StyledContainer>
       <StyledChildren>{children}</StyledChildren>
@@ -17,4 +19,4 @@ function ContainerSobremim({ children }) {
   )
 }
 
-export default ContainerSobremim
+export default ContainerDoisTitle

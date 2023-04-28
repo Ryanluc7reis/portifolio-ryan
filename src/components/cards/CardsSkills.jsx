@@ -5,8 +5,8 @@ const StyledContainer = styled.div`
   margin-top: 10px;
 `
 const StyledChildren = styled.div`
-  width: 90px;
-  height: 40px;
+  width: 100px;
+  height: 45px;
   background-color: ${(props) => props.theme.grey};
   border-radius: 10px;
   display: flex;

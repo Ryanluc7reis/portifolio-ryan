@@ -6,23 +6,18 @@ const StyledContainer = styled.div`
 const StyledChildren = styled.div`
   max-width: 300px;
   height: 320px;
-  background-color: ${(props) => props.theme.grey};
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: column;
   flex-direction: column;
-  flex-wrap: nowrap;
-  line-height: 40px;
   padding: 20px;
 `
 
-function ProjectsCards({ children }) {
+function ProjectsCards({ children, ...props }) {
   return (
     <StyledContainer>
-      <StyledChildren>{children}</StyledChildren>
+      <StyledChildren {...props}>{children}</StyledChildren>
     </StyledContainer>
   )
 }
-
 export default ProjectsCards

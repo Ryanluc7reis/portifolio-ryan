@@ -4,12 +4,13 @@ const StyledContainer = styled.div`
   display: flex;
 `
 const StyledChildren = styled.div`
-  max-width: 300px;
-  max-height: 200px;
+  width: 100%;
+  height: 100%;
   margin-top: 20px;
-  margin-left: 100px;
+  margin-right: 50px;
   display: flex;
-  flex-direction: column;
+  justify-content: end;
+  gap: 20px;
 `
 
 function ContainerSkils({ children }) {
