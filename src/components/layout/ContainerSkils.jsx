@@ -4,13 +4,16 @@ const StyledContainer = styled.div`
   display: flex;
 `
 const StyledChildren = styled.div`
-  width: 100%;
-  height: 100%;
+  font-size: 20px;
   margin-top: 20px;
   margin-right: 50px;
   display: flex;
-  justify-content: end;
   gap: 20px;
+
+  @media (max-width: 615px) {
+    display: flex;
+    max-width: 150px;
+  }
 `
 
 function ContainerSkils({ children }) {

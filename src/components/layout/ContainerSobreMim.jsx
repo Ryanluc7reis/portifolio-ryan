@@ -4,14 +4,14 @@ const StyledContainer = styled.div`
   display: flex;
 `
 const StyledChildren = styled.div`
-  width: 100%;
+  max-width: 650px;
+  height: 100%;
   margin-top: 50px;
-  margin-right: 120px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 `
 
-function ContainerDoisTitle({ children }) {
+function ContainerSobreMim({ children }) {
   return (
     <StyledContainer>
       <StyledChildren>{children}</StyledChildren>
@@ -19,4 +19,4 @@ function ContainerDoisTitle({ children }) {
   )
 }
 
-export default ContainerDoisTitle
+export default ContainerSobreMim

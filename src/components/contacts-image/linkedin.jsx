@@ -6,24 +6,13 @@ const StyledFlex = styled.div`
   justify-content: center;
   width: 46px;
   height: 48px;
-
-  :hover {
-    border-radius: 7px;
-    transition: 0.6s;
-    background-color: ${(props) => props.theme.background};
-  }
 `
 const StyledImageContatctsL = styled.div`
   background-image: url('${(props) => props.image}');
   background-size: cover;
-  width: 38px;
-  height: 36px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  margin-bottom: 13px;
 `
 function LinkeImage({ children, image }) {
   return (
@@ -33,6 +22,6 @@ function LinkeImage({ children, image }) {
   )
 }
 LinkeImage.defaultProps = {
-  image: '/Linkedin2.jpg'
+  image: '/linkedin-logo-24.png'
 }
 export default LinkeImage

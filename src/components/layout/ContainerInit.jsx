@@ -6,16 +6,10 @@ const StyledContainer = styled.div`
 
 const StyledChildren = styled.div`
   width: 100%;
-  height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: white;
-  gap: 10px;
-  position: fixed;
+  height: 100%;
 `
 
-function ConatainerOptions({ children, ...props }) {
+function ContainerInit({ children, ...props }) {
   return (
     <StyledContainer>
       <StyledChildren {...props}>{children}</StyledChildren>
@@ -23,4 +17,4 @@ function ConatainerOptions({ children, ...props }) {
   )
 }
 
-export default ConatainerOptions
+export default ContainerInit

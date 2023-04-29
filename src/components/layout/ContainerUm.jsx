@@ -4,7 +4,7 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 59px;
+  margin-top: 120px;
 `
 
 const StyledChildren = styled.div`

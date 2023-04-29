@@ -5,25 +5,15 @@ const StyledFlex = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 48px;
-
-  :hover {
-    border-radius: 7px;
-    transition: 0.6s;
-    background-color: ${(props) => props.theme.background};
-  }
+  width: 40px;
+  height: 40px;
 `
 const StyledImageContatctsW = styled.div`
   background-image: url('${(props) => props.image}');
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  margin-bottom: 13px;
 `
 function WhatzImage({ children, image, ...props }) {
   return (

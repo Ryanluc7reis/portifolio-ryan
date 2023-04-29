@@ -11,6 +11,13 @@ const StyledChildren = styled.div`
   align-items: center;
   margin-top: 95px;
   margin-right: 50px;
+  @media (max-width: 915px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 30px;
+  }
 `
 
 function ContainerProjects({ children }) {
