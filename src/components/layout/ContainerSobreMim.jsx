@@ -6,8 +6,8 @@ const StyledContainer = styled.div`
 const StyledChildren = styled.div`
   max-width: 650px;
   height: 100%;
-  margin-top: 50px;
   display: flex;
+  margin-top: 50px;
   justify-content: center;
 `
 

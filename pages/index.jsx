@@ -18,6 +18,8 @@ import ContainerSkils from '../src/components/layout/ContainerSkils'
 import ContainerSobreMim from '../src/components/layout/ContainerSobreMim'
 import ContainerHabilidades from '../src/components/layout/ContainerHabilidades'
 import ContainerProjects from '../src/components/layout/ContainerProjects'
+import NavOptions from '../src/components/navigations/NavOptions'
+import ContNavOptions from '../src/components/layout/ContNavOptions'
 
 import Contacts from '../src/components/layout/Contacts'
 import ProjectsCards from '../src/components/cards/ProjectsCards'
@@ -34,6 +36,10 @@ const StyledImage = styled.div`
   background-size: cover;
   width: 100%;
   height: 100vh;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 const StyledImageDois = styled.div`
   background: url('${(props) => props.image}');
@@ -41,6 +47,10 @@ const StyledImageDois = styled.div`
   background-size: cover;
   width: 100%;
   height: 100vh;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 const StyledImageTres = styled.div`
   background: url('${(props) => props.image}');
@@ -48,6 +58,10 @@ const StyledImageTres = styled.div`
   background-size: cover;
   width: 100%;
   height: 100vh;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100vh;
+  }
 `
 const StyledImageAvatar = styled.div`
   background-image: url('${(props) => props.image}');
@@ -60,14 +74,14 @@ const StyledImageAvatar = styled.div`
 const StyledImageClimaDev = styled.div`
   background-image: url('${(props) => props.image}');
   background-size: cover;
-  width: 200px;
+  width: 60%;
   height: 200px;
   padding: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 36px;
+  line-height: 38px;
   border-radius: 8px;
 `
 
@@ -95,6 +109,7 @@ const ContainerImage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
   }
 `
 const StyledContactsimage = styled.div`
@@ -112,44 +127,37 @@ const StyledContactsimage = styled.div`
     background-color: #b1b1b1;
   }
 `
-const StyledNav = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 34px;
 
-  @media (max-width: 540px) {
-    display: none;
-    width: 40px;
-    height: 40px;
-  }
-`
 const StyledNameOptions = styled.div`
   font-size: 25px;
   font-weight: 600;
   text-decoration: none;
   display: flex;
   align-items: center;
+  margin-right: 200px;
   color: #393838;
   border-radius: 15px;
   cursor: pointer;
 `
 // background-color: #be0b0b;
-const StyledOptions = styled.div`
-  font-size: 21px;
-  display: flex;
-  cursor: pointer;
-  color: #797777;
-
-  :hover {
-    border-radius: 15px;
-    transition: 0.3s;
-    color: ${(props) => props.theme.brown};
-  }
-`
 
 const StyledSobremim = styled.div`
   font-size: 20px;
+  max-width: 650px;
+  font-weight: 500;
+  gap: 10px;
+  color: ${(props) => props.theme.H4};
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-break: 100px;
+    margin-top: 10px;
+  }
+`
+const StyledSobremimP = styled.p`
+  font-size: 20px;
+  font-weight: 500;
   max-width: 650px;
   color: ${(props) => props.theme.H4};
   @media (max-width: 900px) {
@@ -160,13 +168,11 @@ const StyledSobremim = styled.div`
     margin-top: 10px;
   }
 `
+
 const StyledContainerTitle = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  @media (max-width: 900px) {
-    padding-top: 245px;
-  }
 `
 
 const StyledSkils = styled.div`
@@ -219,11 +225,8 @@ function HomePage({
                 <StyledImageAvatar image={imageAvatar} />
                 Ryan.
               </StyledNameOptions>
-              <StyledNav>
-                <StyledOptions onClick={handleButtonFocus}>Sobre mim</StyledOptions>
-                <StyledOptions>Habilidades</StyledOptions>
-                <StyledOptions>Projetos</StyledOptions>
-              </StyledNav>
+              <NavOptions />
+              <ContNavOptions />
             </ConatainerOptions>
             <ContainerContacts>
               <ContainerUm>
@@ -262,8 +265,18 @@ function HomePage({
               <StyledSkils>
                 Sobre mim
                 <StyledSobremim>
-                  E eu sou um desenvolvedor de software fullstack focado em contruir Websites! dito
-                  a gente esta focado em trbaalahr mais vezes
+                  Olá,sou o Ryan.Sou um desenvolvedor fullstack que sempre presa muito pela
+                  qualidade e a eficacia de um website.Há 10 meses começei meus estudos na area de
+                  desenvolvimento de software e me apaixonei por tal ,sigo até hoje os estudos para
+                  continuar aperfeiçuando minhas habilidades e um dia me tornar um sênior.
+                  <StyledSobremimP>
+                    No 2 mês de estudo iniciei um curso ,e nele participei de vários projetos junto
+                    com colegas do curso para conseguir experiência e melhorar de fato minhas
+                    habilidades,e com isso passei a desenvolver projetos sozinhos ,cujo você
+                    encontrará 3 deles logo abaixo.E não vejo a hora de ingressar nesse mundo o
+                    quanto antes e iniciar minha longa carreira profissional na programação! Caso
+                    tenha gostado do que viu nao deixe de <Link href="#">Contatar-me</Link>.
+                  </StyledSobremimP>
                 </StyledSobremim>
               </StyledSkils>
             </ContainerSobreMim>

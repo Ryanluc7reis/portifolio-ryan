@@ -8,7 +8,7 @@ const StyledButton = styled.button`
   color: ${(props) => props.theme.black};
   font-size: 16px;
   margin-top: 40px;
-  background-color: #686767;
+  background-color: #a3a2a2;
 
   cursor: pointer;
 

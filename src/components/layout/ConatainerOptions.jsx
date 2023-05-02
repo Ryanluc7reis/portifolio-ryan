@@ -11,7 +11,6 @@ const StyledChildren = styled.div`
   align-items: center;
   justify-content: space-around;
   background-color: white;
-  gap: 10px;
   position: fixed;
 `
 
