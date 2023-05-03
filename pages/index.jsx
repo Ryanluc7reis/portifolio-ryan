@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { useRef } from 'react'
+import { Link } from 'react-scroll'
+import { useEffect } from 'react'
 
 import H3 from '../src/components/typography/H3'
 import H4 from '../src/components/typography/H4'
@@ -28,7 +29,6 @@ import CardsSkills from '../src/components/cards/CardsSkills'
 import WhatzImage from '../src/components/contacts-image/whtaz'
 import GitImage from '../src/components/contacts-image/git'
 import LinkeImage from '../src/components/contacts-image/linkedin'
-import Link from 'next/link'
 
 const StyledImage = styled.div`
   background: url('${(props) => props.image}');
@@ -191,39 +191,51 @@ function HomePage({
   imageSocialDev,
   imageJogoDaV
 }) {
-  const projetosRef = useRef(null)
-
-  const handleButtonFocus = () => {
-    console.log('retornou aqui')
-  }
-
-  const handleClickWpp = () => {
-    window.location.replace(
+  useEffect(() => {
+    const url1 = 'https://www.linkedin.com/in/ryan-lucas-9387b1244/'
+    const link = document.querySelector('#link')
+    function openInNewTab1() {
+      const win = window.open(url1, '_blank')
+      win.focus()
+    }
+    link.addEventListener('click', () => {
+      openInNewTab1(url1)
+    })
+  }, [])
+  useEffect(() => {
+    const url = 'https://github.com/Ryanluc7reis'
+    const git = document.querySelector('#git')
+    function openInNewTab() {
+      const win = window.open(url, '_blank')
+      win.focus()
+    }
+    git.addEventListener('click', () => {
+      openInNewTab(url)
+    })
+  }, [])
+  useEffect(() => {
+    const url2 =
       'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!'
-    )
-  }
-
-  const handleClickLinke = () => {
-    window.location.replace('https://www.linkedin.com/in/ryan-lucas-9387b1244/')
-  }
-  const handleClickGit = (url) => {
-    window.open(url, '_blank', 'noreferrer')
-  }
-  const handleClickProjetosUm = () => {
-    window.location.replace('https://social-dev-wine.vercel.app/login')
-  }
-  const handleClickProjetosDois = () => {
-    window.location.replace('https://social-dev-wine.vercel.app/login')
-  }
+    const wpp = document.querySelector('#wpp')
+    function openInNewTab2() {
+      const win = window.open(url2, '_blank')
+      win.focus()
+    }
+    wpp.addEventListener('click', () => {
+      openInNewTab2(url2)
+    })
+  }, [])
   return (
     <>
       <>
-        <ContainerInit>
+        <ContainerInit id="hero">
           <StyledImage image={image}>
             <ConatainerOptions>
               <StyledNameOptions>
                 <StyledImageAvatar image={imageAvatar} />
-                Ryan.
+                <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+                  Ryan.
+                </Link>
               </StyledNameOptions>
               <NavOptions />
               <ContNavOptions />
@@ -234,7 +246,17 @@ function HomePage({
                 <H4>
                   E eu sou um desenvolvedor de software fullstack focado em contruir Websites!
                 </H4>
-                <Button onClick={handleButtonFocus}>PROJETOS</Button>
+                <Button>
+                  <Link
+                    to="StyledContainerTitle"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                  >
+                    PROJETOS
+                  </Link>
+                </Button>
               </ContainerUm>
               <StyledTitleContacts>Contate-me por :</StyledTitleContacts>
               <Contacts>
@@ -244,13 +266,13 @@ function HomePage({
                 </StyledContacts>
                 <ContainerImage>
                   <StyledContactsimage>
-                    <WhatzImage onClick={handleClickWpp} />
+                    <WhatzImage id="wpp" />
                   </StyledContactsimage>
                   <StyledContactsimage>
-                    <GitImage onCLick={() => handleClickGit('https://github.com/Ryanluc7reis')} />
+                    <GitImage id="git" />
                   </StyledContactsimage>
                   <StyledContactsimage>
-                    <LinkeImage onCLick={handleClickLinke} />
+                    <LinkeImage id="link" />
                   </StyledContactsimage>
                 </ContainerImage>
               </Contacts>
@@ -262,7 +284,7 @@ function HomePage({
         <StyledImageDois image={imageDois}>
           <ContainerDois>
             <ContainerSobreMim>
-              <StyledSkils>
+              <StyledSkils id="ContainerDois">
                 Sobre mim
                 <StyledSobremim>
                   Olá,sou o Ryan.Sou um desenvolvedor fullstack que sempre presa muito pela
@@ -316,9 +338,10 @@ function HomePage({
       <>
         <StyledImageTres image={imageTres}>
           <StyledContainerTitle>
-            <Title ref={projetosRef}>PROJETOS</Title>
+            <Title id="StyledContainerTitle">PROJETOS</Title>
             <Subtitle>Aqui está alguns de meus projetos pessoais!</Subtitle>
           </StyledContainerTitle>
+
           <ContainerProjects>
             <ProjectsCards>
               <StyledImageClimaDev image={imageSocialDev}>
@@ -327,7 +350,7 @@ function HomePage({
                   Foi construída uma rede social com intuito de amigos conversarem entre si por meio
                   de posts usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e styled components.
                 </H5>
-                <Button onClick={handleClickProjetosUm}> Visitar projeito </Button>
+                <Button> Visitar projeito </Button>
               </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>
@@ -337,7 +360,7 @@ function HomePage({
                   Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
                   de estados dentro do ReactJs.
                 </H5>
-                <Button onClick={handleClickProjetosDois}>Visitar projeito</Button>
+                <Button>Visitar projeito</Button>
               </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>
@@ -347,7 +370,7 @@ function HomePage({
                   Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
                   de estados dentro do ReactJS.
                 </H5>
-                <Button onClick={handleClickProjetosDois}>Visitar projeito</Button>
+                <Button>Visitar projeito</Button>
               </StyledImageClimaDev>
             </ProjectsCards>
           </ContainerProjects>
@@ -362,7 +385,7 @@ HomePage.defaultProps = {
   imageTres: '/fundo3.jpg',
   imageAvatar: '/avatar3.jpg',
   imageClimaDev: '/cliimadevimage.jpg',
-  imageSocialDev: '/redesocial.jpg',
+  imageSocialDev: '/redes-sociais1.jpg',
   imageJogoDaV: '/jogodavelha1.jpg'
 }
 

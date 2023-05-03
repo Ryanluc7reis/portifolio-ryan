@@ -15,6 +15,7 @@ const StyledImageContatctsW = styled.div`
   height: 32px;
   cursor: pointer;
 `
+
 function WhatzImage({ children, image, ...props }) {
   return (
     <StyledFlex>

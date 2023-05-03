@@ -14,6 +14,7 @@ const StyledImageContatctsL = styled.div`
   height: 32px;
   cursor: pointer;
 `
+
 function LinkeImage({ children, image }) {
   return (
     <StyledFlex>

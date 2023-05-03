@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 const StyledFlex = styled.div`
   display: flex;
@@ -26,15 +27,32 @@ const StyledChildren = styled.div`
   gap: 30px;
   font-weight: 1000;
 `
+
 function ContNavOptions({ children, ...props }) {
   return (
     <StyledFlex>
       <StyledChildren {...props}>
         {children}
-        <StyledOptions>Início</StyledOptions>
-        <StyledOptions>Sobre mim </StyledOptions>
-        <StyledOptions>Habilidades</StyledOptions>
-        <StyledOptions>Projetos</StyledOptions>
+        <StyledOptions>
+          <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+            Início
+          </Link>
+        </StyledOptions>
+        <StyledOptions>
+          <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
+            Sobre mim
+          </Link>
+        </StyledOptions>
+        <StyledOptions>
+          <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
+            Habilidades
+          </Link>
+        </StyledOptions>
+        <StyledOptions>
+          <Link to="StyledContainerTitle" spy={true} smooth={true} offset={-100} duration={500}>
+            Projetos
+          </Link>
+        </StyledOptions>
       </StyledChildren>
     </StyledFlex>
   )

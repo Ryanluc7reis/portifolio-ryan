@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 const ContainerDots = styled.div`
   height: max-content;
@@ -14,7 +15,7 @@ const Dots = styled.img`
 const StyledMenu = styled.div`
   position: relative;
   width: 130px;
-  height: 150px;
+  height: 210px;
   box-shadow: 6px 5px 15px 5px rgba(0, 0, 0, 0.15);
   background-color: ${(props) => props.theme.white};
   display: ${(props) => (props.show ? 'block' : 'none')};
@@ -67,9 +68,26 @@ const NavOptions = () => {
           <Dots src="/Hamburger_icon.svg.png" height="45px" onClick={() => setShow(!show)} />
         </ContainerDots>
         <StyledMenu show={show} ref={menuRef} onBlur={() => setShow(false)}>
-          <StyledOption>Sobre mim</StyledOption>
-          <StyledOption>Habilidades</StyledOption>
-          <StyledOption>Projetos</StyledOption>
+          <StyledOption>
+            <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+              Início
+            </Link>
+          </StyledOption>
+          <StyledOption>
+            <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
+              Sobre mim
+            </Link>
+          </StyledOption>
+          <StyledOption>
+            <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
+              Habilidades
+            </Link>
+          </StyledOption>
+          <StyledOption>
+            <Link to="StyledContainerTitle" spy={true} smooth={true} offset={-100} duration={500}>
+              Projetos
+            </Link>
+          </StyledOption>
         </StyledMenu>
       </StyledContainerMenu>
     </>

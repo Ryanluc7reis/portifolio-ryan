@@ -14,10 +14,13 @@ const StyledImageContatctsG = styled.div`
   height: 36px;
   cursor: pointer;
 `
-function GitImage({ children, image }) {
+
+function GitImage({ children, image, ...props }) {
   return (
     <StyledFlex>
-      <StyledImageContatctsG image={image}>{children} </StyledImageContatctsG>
+      <StyledImageContatctsG {...props} image={image}>
+        {children}{' '}
+      </StyledImageContatctsG>
     </StyledFlex>
   )
 }
