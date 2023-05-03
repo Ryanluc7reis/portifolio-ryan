@@ -12,6 +12,7 @@ const StyledImageContatctsG = styled.div`
   background-size: cover;
   width: 38px;
   height: 36px;
+  padding: 7px;
   cursor: pointer;
 `
 
@@ -25,6 +26,6 @@ function GitImage({ children, image, ...props }) {
   )
 }
 GitImage.defaultProps = {
-  image: '/github-logo-24.png'
+  image: '/newgit4.png'
 }
 export default GitImage

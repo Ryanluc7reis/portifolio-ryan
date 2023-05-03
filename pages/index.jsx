@@ -144,8 +144,8 @@ const StyledNameOptions = styled.div`
 const StyledSobremim = styled.div`
   font-size: 20px;
   max-width: 650px;
+  height: 400px;
   font-weight: 500;
-  gap: 10px;
   color: ${(props) => props.theme.H4};
   @media (max-width: 900px) {
     display: flex;
@@ -181,6 +181,12 @@ const StyledSkils = styled.div`
   margin-bottom: 20px;
   color: ${(props) => props.theme.title};
 `
+const StyledContateme = styled.u`
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #b83535;
+`
 
 function HomePage({
   image,
@@ -198,9 +204,11 @@ function HomePage({
       const win = window.open(url1, '_blank')
       win.focus()
     }
-    link.addEventListener('click', () => {
-      openInNewTab1(url1)
-    })
+    if (addEventListener === true) {
+      link.addEventListener('click', () => {
+        openInNewTab1(url1)
+      })
+    }
   }, [])
   useEffect(() => {
     const url = 'https://github.com/Ryanluc7reis'
@@ -223,6 +231,28 @@ function HomePage({
     }
     wpp.addEventListener('click', () => {
       openInNewTab2(url2)
+    })
+  }, [])
+  useEffect(() => {
+    const url3 = 'https://react-jogo-da-velha-orpin.vercel.app/'
+    const jdv = document.querySelector('#jdv')
+    function openInNewTab2() {
+      const win = window.open(url3, '_blank')
+      win.focus()
+    }
+    jdv.addEventListener('click', () => {
+      openInNewTab2(url3)
+    })
+  }, [])
+  useEffect(() => {
+    const url4 = 'https://social-dev-wine.vercel.app/login'
+    const scd = document.querySelector('#scd')
+    function openInNewTab2() {
+      const win = window.open(url4, '_blank')
+      win.focus()
+    }
+    scd.addEventListener('click', () => {
+      openInNewTab2(url4)
     })
   }, [])
   return (
@@ -258,7 +288,7 @@ function HomePage({
                   </Link>
                 </Button>
               </ContainerUm>
-              <StyledTitleContacts>Contate-me por :</StyledTitleContacts>
+              <StyledTitleContacts id="StyledTitleContacts">Contate-me por :</StyledTitleContacts>
               <Contacts>
                 <StyledContacts>
                   Meu currículo:<Link href="">Meu curriculo123</Link>
@@ -287,7 +317,7 @@ function HomePage({
               <StyledSkils id="ContainerDois">
                 Sobre mim
                 <StyledSobremim>
-                  Olá,sou o Ryan.Sou um desenvolvedor fullstack que sempre presa muito pela
+                  Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa muito pela
                   qualidade e a eficacia de um website.Há 10 meses começei meus estudos na area de
                   desenvolvimento de software e me apaixonei por tal ,sigo até hoje os estudos para
                   continuar aperfeiçuando minhas habilidades e um dia me tornar um sênior.
@@ -296,8 +326,19 @@ function HomePage({
                     com colegas do curso para conseguir experiência e melhorar de fato minhas
                     habilidades,e com isso passei a desenvolver projetos sozinhos ,cujo você
                     encontrará 3 deles logo abaixo.E não vejo a hora de ingressar nesse mundo o
-                    quanto antes e iniciar minha longa carreira profissional na programação! Caso
-                    tenha gostado do que viu nao deixe de <Link href="#">Contatar-me</Link>.
+                    quanto antes e iniciar minha carreira profissional na programação! Caso tenha
+                    gostado do que viu não deixe de{' '}
+                    <StyledContateme>
+                      <Link
+                        to="StyledTitleContacts"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                      >
+                        Contatar-me.
+                      </Link>
+                    </StyledContateme>
                   </StyledSobremimP>
                 </StyledSobremim>
               </StyledSkils>
@@ -350,7 +391,7 @@ function HomePage({
                   Foi construída uma rede social com intuito de amigos conversarem entre si por meio
                   de posts usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e styled components.
                 </H5>
-                <Button> Visitar projeito </Button>
+                <Button id="scd"> Visitar projeto </Button>
               </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>
@@ -360,7 +401,7 @@ function HomePage({
                   Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
                   de estados dentro do ReactJs.
                 </H5>
-                <Button>Visitar projeito</Button>
+                <Button id="jdv">Visitar projeto</Button>
               </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>
@@ -370,7 +411,7 @@ function HomePage({
                   Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
                   de estados dentro do ReactJS.
                 </H5>
-                <Button>Visitar projeito</Button>
+                <Button>Visitar projeto</Button>
               </StyledImageClimaDev>
             </ProjectsCards>
           </ContainerProjects>

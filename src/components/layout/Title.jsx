@@ -7,7 +7,7 @@ const StyledTitle = styled.h1`
   color: ${(props) => props.theme.title};
 `
 const StyledChildren = styled.div`
-  margin-top: 70px;
+  margin-top: 75px;
 `
 
 const Title = ({ children, ref, ...props }) => {
