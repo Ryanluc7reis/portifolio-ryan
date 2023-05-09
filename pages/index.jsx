@@ -20,6 +20,7 @@ import ContainerHabilidades from '../src/components/layout/ContainerHabilidades'
 import ContainerProjects from '../src/components/layout/ContainerProjects'
 import NavOptions from '../src/components/navigations/NavOptions'
 import ContNavOptions from '../src/components/layout/ContNavOptions'
+import Sinalizador from '../src/components/layout/Sinalizador'
 
 import Contacts from '../src/components/layout/Contacts'
 import ProjectsCards from '../src/components/cards/ProjectsCards'
@@ -86,10 +87,8 @@ const StyledImageClimaDev = styled.div`
 
 const StyledContacts = styled.div`
   font-size: 15px;
-  display: flex;
-  gap: 15px;
-  text-align: center;
-  color: #fafafa;
+  color: white;
+  cursor: pointer;
 `
 const StyledTitleContacts = styled.div`
   font-size: 20px;
@@ -151,7 +150,7 @@ const StyledSobremim = styled.div`
     justify-content: center;
     flex-direction: column;
     line-break: 100px;
-    margin-top: 10px;
+    padding-top: 50px;
   }
 `
 
@@ -163,9 +162,13 @@ const StyledContainerTitle = styled.div`
 
 const StyledSkils = styled.div`
   font-weight: bold;
-  font-size: 55px;
+  font-size: 40px;
   margin-bottom: 20px;
   color: ${(props) => props.theme.title};
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 const StyledContateme = styled.u`
   font-size: 20px;
@@ -204,6 +207,12 @@ function HomePage({
   const handleSdv = () => {
     window.open(' https://social-dev-wine.vercel.app/login', '_blank')
   }
+  const handleCurriculo = () => {
+    window.open(
+      'https://docs.google.com/document/d/1abZSxG8AOakHAh2P3fdWj8ka8IQEuurqCN_3zoM02iA/edit',
+      '_blank'
+    )
+  }
 
   return (
     <>
@@ -240,10 +249,10 @@ function HomePage({
               </ContainerUm>
               <StyledTitleContacts id="StyledTitleContacts">Contate-me por :</StyledTitleContacts>
               <Contacts>
-                <StyledContacts>
-                  Meu currículo:<Link href="">Meu curriculo123</Link>
-                  E-mail: ryandev18@outlook.com
+                <StyledContacts onClick={handleCurriculo}>
+                  Meu curriculo:<u>currículo</u>
                 </StyledContacts>
+                E-mail: ryandev18@outlook.com
                 <ContainerImage>
                   <StyledContactsimage>
                     <WhatzImage onClick={handleWpp} />
@@ -262,10 +271,16 @@ function HomePage({
       </>
       <>
         <StyledImageDois image={imageDois}>
+          <Title id="ContainerDois">Sobre mim</Title>
+          <Sinalizador />
+          <Subtitle>
+            Aqui você encontrará mais informações sobre mim, minhas habilidades atuais
+            principalmente em termos de programação e tecnologia!
+          </Subtitle>
           <ContainerDois>
             <ContainerSobreMim>
-              <StyledSkils id="ContainerDois">
-                Sobre mim
+              <StyledSkils>
+                Me conheça!
                 <StyledSobremim>
                   Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa muito pela
                   qualidade e a eficacia de um website.Há 10 meses começei meus estudos na area de
@@ -330,9 +345,9 @@ function HomePage({
         <StyledImageTres image={imageTres}>
           <StyledContainerTitle>
             <Title id="StyledContainerTitle">PROJETOS</Title>
+            <Sinalizador />
             <Subtitle>Aqui está alguns de meus projetos pessoais!</Subtitle>
           </StyledContainerTitle>
-
           <ContainerProjects>
             <ProjectsCards>
               <StyledImageClimaDev image={imageSocialDev}>

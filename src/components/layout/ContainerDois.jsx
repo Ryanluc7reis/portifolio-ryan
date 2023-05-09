@@ -9,12 +9,9 @@ const StyledChildren = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: start;
-  gap: 25px;
   @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding-top: 100px;
   }
 `
 

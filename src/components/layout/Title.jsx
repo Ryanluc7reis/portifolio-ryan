@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 const StyledTitle = styled.h1`
-  font-size: 40px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   color: ${(props) => props.theme.title};
 `
 const StyledChildren = styled.div`
-  margin-top: 75px;
+  margin-top: 30px;
 `
 
 const Title = ({ children, ref, ...props }) => {

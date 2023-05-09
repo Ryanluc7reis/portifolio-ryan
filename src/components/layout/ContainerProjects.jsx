@@ -9,7 +9,7 @@ const StyledChildren = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 95px;
+  margin-top: 70px;
   margin-right: 50px;
   @media (max-width: 915px) {
     display: flex;

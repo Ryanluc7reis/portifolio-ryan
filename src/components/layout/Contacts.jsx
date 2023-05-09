@@ -4,12 +4,14 @@ const StyledFlex = styled.div`
   margin-bottom: 15px;
   display: flex;
   margin-top: 80px;
+  color: white;
 `
 const StyledContacts = styled.div`
   width: 100%;
   max-height: 70px;
   border-radius: 0;
   display: flex;
+  text-align: center;
   justify-content: center;
   gap: 50px;
   @media (max-width: 700px) {

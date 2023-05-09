@@ -6,8 +6,9 @@ const StyledSubtitle = styled.text`
   justify-content: center;
 `
 const StyledChildren = styled.text`
-  max-width: 600px;
+  max-width: 700px;
   color: #363636;
+  text-align: center;
   @media (max-width: 700px) {
     display: flex;
     justify-content: center;
