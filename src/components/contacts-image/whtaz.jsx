@@ -16,12 +16,10 @@ const StyledImageContatctsW = styled.div`
   cursor: pointer;
 `
 
-function WhatzImage({ children, image, ...props }) {
+function WhatzImage({ image, ...props }) {
   return (
     <StyledFlex>
-      <StyledImageContatctsW image={image} {...props}>
-        {children}{' '}
-      </StyledImageContatctsW>
+      <StyledImageContatctsW image={image} {...props} />
     </StyledFlex>
   )
 }

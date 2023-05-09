@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
-import { useEffect } from 'react'
 
 import H3 from '../src/components/typography/H3'
 import H4 from '../src/components/typography/H4'
@@ -155,19 +154,6 @@ const StyledSobremim = styled.div`
     margin-top: 10px;
   }
 `
-const StyledSobremimP = styled.p`
-  font-size: 20px;
-  font-weight: 500;
-  max-width: 650px;
-  color: ${(props) => props.theme.H4};
-  @media (max-width: 900px) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    line-break: 100px;
-    margin-top: 10px;
-  }
-`
 
 const StyledContainerTitle = styled.div`
   display: flex;
@@ -185,9 +171,12 @@ const StyledContateme = styled.u`
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  color: #b83535;
-`
+  color: #d85454;
 
+  :hover {
+    color: #b43535;
+  }
+`
 function HomePage({
   image,
   imageDois,
@@ -197,64 +186,25 @@ function HomePage({
   imageSocialDev,
   imageJogoDaV
 }) {
-  useEffect(() => {
-    const url1 = 'https://www.linkedin.com/in/ryan-lucas-9387b1244/'
-    const link = document.querySelector('#link')
-    function openInNewTab1() {
-      const win = window.open(url1, '_blank')
-      win.focus()
-    }
-    if (addEventListener === true) {
-      link.addEventListener('click', () => {
-        openInNewTab1(url1)
-      })
-    }
-  }, [])
-  useEffect(() => {
-    const url = 'https://github.com/Ryanluc7reis'
-    const git = document.querySelector('#git')
-    function openInNewTab() {
-      const win = window.open(url, '_blank')
-      win.focus()
-    }
-    git.addEventListener('click', () => {
-      openInNewTab(url)
-    })
-  }, [])
-  useEffect(() => {
-    const url2 =
-      'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!'
-    const wpp = document.querySelector('#wpp')
-    function openInNewTab2() {
-      const win = window.open(url2, '_blank')
-      win.focus()
-    }
-    wpp.addEventListener('click', () => {
-      openInNewTab2(url2)
-    })
-  }, [])
-  useEffect(() => {
-    const url3 = 'https://react-jogo-da-velha-orpin.vercel.app/'
-    const jdv = document.querySelector('#jdv')
-    function openInNewTab2() {
-      const win = window.open(url3, '_blank')
-      win.focus()
-    }
-    jdv.addEventListener('click', () => {
-      openInNewTab2(url3)
-    })
-  }, [])
-  useEffect(() => {
-    const url4 = 'https://social-dev-wine.vercel.app/login'
-    const scd = document.querySelector('#scd')
-    function openInNewTab2() {
-      const win = window.open(url4, '_blank')
-      win.focus()
-    }
-    scd.addEventListener('click', () => {
-      openInNewTab2(url4)
-    })
-  }, [])
+  const handleWpp = () => {
+    window.open(
+      'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!',
+      '_blank'
+    )
+  }
+  const handleGit = () => {
+    window.open('https://github.com/Ryanluc7reis', '_blank')
+  }
+  const handleLinke = () => {
+    window.open('https://www.linkedin.com/in/ryan-lucas-9387b1244/', '_blank')
+  }
+  const handleJdv = () => {
+    window.open('https://react-jogo-da-velha-orpin.vercel.app/', '_blank')
+  }
+  const handleSdv = () => {
+    window.open(' https://social-dev-wine.vercel.app/login', '_blank')
+  }
+
   return (
     <>
       <>
@@ -296,13 +246,13 @@ function HomePage({
                 </StyledContacts>
                 <ContainerImage>
                   <StyledContactsimage>
-                    <WhatzImage id="wpp" />
+                    <WhatzImage onClick={handleWpp} />
                   </StyledContactsimage>
                   <StyledContactsimage>
-                    <GitImage id="git" />
+                    <GitImage onClick={handleGit} />
                   </StyledContactsimage>
                   <StyledContactsimage>
-                    <LinkeImage id="link" />
+                    <LinkeImage onClick={handleLinke} />
                   </StyledContactsimage>
                 </ContainerImage>
               </Contacts>
@@ -321,7 +271,7 @@ function HomePage({
                   qualidade e a eficacia de um website.Há 10 meses começei meus estudos na area de
                   desenvolvimento de software e me apaixonei por tal ,sigo até hoje os estudos para
                   continuar aperfeiçuando minhas habilidades e um dia me tornar um sênior.
-                  <StyledSobremimP>
+                  <StyledSobremim>
                     No 2 mês de estudo iniciei um curso ,e nele participei de vários projetos junto
                     com colegas do curso para conseguir experiência e melhorar de fato minhas
                     habilidades,e com isso passei a desenvolver projetos sozinhos ,cujo você
@@ -339,7 +289,7 @@ function HomePage({
                         Contatar-me.
                       </Link>
                     </StyledContateme>
-                  </StyledSobremimP>
+                  </StyledSobremim>
                 </StyledSobremim>
               </StyledSkils>
             </ContainerSobreMim>
@@ -391,7 +341,10 @@ function HomePage({
                   Foi construída uma rede social com intuito de amigos conversarem entre si por meio
                   de posts usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e styled components.
                 </H5>
-                <Button id="scd"> Visitar projeto </Button>
+                <Button onClick={handleSdv} id="scd">
+                  {' '}
+                  Visitar projeto{' '}
+                </Button>
               </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>
@@ -401,7 +354,9 @@ function HomePage({
                   Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
                   de estados dentro do ReactJs.
                 </H5>
-                <Button id="jdv">Visitar projeto</Button>
+                <Button onClick={handleJdv} id="jdv">
+                  Visitar projeto
+                </Button>
               </StyledImageClimaDev>
             </ProjectsCards>
             <ProjectsCards>

@@ -15,10 +15,12 @@ const StyledImageContatctsL = styled.div`
   cursor: pointer;
 `
 
-function LinkeImage({ children, image }) {
+function LinkeImage({ children, image, ...props }) {
   return (
     <StyledFlex>
-      <StyledImageContatctsL image={image}>{children} </StyledImageContatctsL>
+      <StyledImageContatctsL {...props} image={image}>
+        {children}{' '}
+      </StyledImageContatctsL>
     </StyledFlex>
   )
 }
