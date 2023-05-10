@@ -6,7 +6,7 @@ const StyledFlex = styled.div`
   margin-top: 80px;
   color: white;
 `
-const StyledContacts = styled.div`
+const StyledContacts = styled.u`
   width: 100%;
   max-height: 70px;
   border-radius: 0;
@@ -14,10 +14,12 @@ const StyledContacts = styled.div`
   text-align: center;
   justify-content: center;
   gap: 50px;
+  color: #3e3e99;
   @media (max-width: 700px) {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 15px 0;
   }
 `
 

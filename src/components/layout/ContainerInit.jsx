@@ -7,6 +7,10 @@ const StyledContainer = styled.div`
 const StyledChildren = styled.div`
   width: 100%;
   height: 100%;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 function ContainerInit({ children, ...props }) {

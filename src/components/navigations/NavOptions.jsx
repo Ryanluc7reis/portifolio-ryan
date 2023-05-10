@@ -42,6 +42,10 @@ const StyledContainerMenu = styled.div`
   @media (max-width: 540px) {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 20px;
   }
 `
 //'onBlur' = qunado clicar em algum deck de opçoes e sair clicando fora

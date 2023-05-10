@@ -12,13 +12,13 @@ const StyledOptions = styled.div`
 
   @media (max-width: 540px) {
     display: none;
-    width: 40px;
+    width: 100%;
     height: 40px;
   }
 
   :hover {
     transition: 0.6s;
-    color: ${(props) => props.theme.brown};
+    color: ${(props) => props.theme.blackBackground};
   }
 `
 const StyledChildren = styled.div`
@@ -26,6 +26,11 @@ const StyledChildren = styled.div`
   margin-top: 10px;
   gap: 30px;
   font-weight: 1000;
+  @media (max-width: 540px) {
+    display: none;
+    width: 100%;
+    height: 40px;
+  }
 `
 
 function ContNavOptions({ children, ...props }) {

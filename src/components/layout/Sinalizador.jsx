@@ -7,7 +7,7 @@ const StyledContainer = styled.div`
   margin-top: 4px;
 `
 const StyledSinalizador = styled.div`
-  background-color: yellow;
+  background-color: ${(props) => props.theme.blackBackground};
   width: 40px;
   height: 8px;
   display: flex;

@@ -9,6 +9,7 @@ const StyledChildren = styled.text`
   max-width: 700px;
   color: #363636;
   text-align: center;
+  margin: 10px 0;
   @media (max-width: 700px) {
     display: flex;
     justify-content: center;

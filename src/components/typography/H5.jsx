@@ -5,7 +5,6 @@ const H5 = styled.h4`
   font-weight: 600;
   color: ${(props) => props.theme.title};
   text-align: center;
-  justify-content: center;
-  max-width: 300px;
+  max-width: 500px;
 `
 export default H5

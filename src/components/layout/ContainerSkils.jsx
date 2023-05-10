@@ -5,14 +5,14 @@ const StyledContainer = styled.div`
 `
 const StyledChildren = styled.div`
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 50px;
   display: flex;
   gap: 20px;
 
   @media (max-width: 615px) {
     display: flex;
-    max-width: 150px;
+    width: 100%;
   }
 `
 

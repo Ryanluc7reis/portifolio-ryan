@@ -9,6 +9,14 @@ const StyledChildren = styled.div`
   display: flex;
   margin-top: 50px;
   justify-content: center;
+  @media (max-width: 842px) {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 50px 0;
+  }
 `
 
 function ContainerSobreMim({ children }) {

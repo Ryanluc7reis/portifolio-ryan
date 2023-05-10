@@ -12,6 +12,11 @@ const StyledChildren = styled.div`
   justify-content: space-around;
   background-color: white;
   position: fixed;
+  @media (max-width: 450px) {
+    width: 100%;
+    height: 78px;
+    position: relative;
+  }
 `
 
 function ConatainerOptions({ children, ...props }) {

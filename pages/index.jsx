@@ -29,6 +29,7 @@ import CardsSkills from '../src/components/cards/CardsSkills'
 import WhatzImage from '../src/components/contacts-image/whtaz'
 import GitImage from '../src/components/contacts-image/git'
 import LinkeImage from '../src/components/contacts-image/linkedin'
+import ScrollGif from '../src/components/contacts-image/ScrollGif'
 
 const StyledImage = styled.div`
   background: url('${(props) => props.image}');
@@ -46,7 +47,7 @@ const StyledImageDois = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   @media (max-width: 600px) {
     width: 100%;
     height: 100%;
@@ -57,7 +58,7 @@ const StyledImageTres = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   @media (max-width: 600px) {
     width: 100%;
     height: 100vh;
@@ -70,11 +71,16 @@ const StyledImageAvatar = styled.div`
   height: 35px;
   padding: 5px;
   margin-right: 4px;
+  @media screen and (max-width: 500px) {
+    min-width: 50px;
+    height: 35px;
+    margin-left: 15px;
+  }
 `
 const StyledImageClimaDev = styled.div`
   background-image: url('${(props) => props.image}');
   background-size: cover;
-  width: 60%;
+  width: 65%;
   height: 200px;
   padding: 80px;
   display: flex;
@@ -86,16 +92,21 @@ const StyledImageClimaDev = styled.div`
 `
 
 const StyledContacts = styled.div`
-  font-size: 15px;
-  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  color: #3e3e99;
   cursor: pointer;
+  :hover {
+    color: ${(props) => props.theme.blackBackground};
+  }
 `
 const StyledTitleContacts = styled.div`
   font-size: 20px;
   display: flex;
+  font-weight: bold;
   justify-content: center;
   text-align: center;
-  color: #fafafa;
+  color: #363535;
   margin-top: 50px;
 `
 const ContainerImage = styled.div`
@@ -107,7 +118,7 @@ const ContainerImage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 `
 const StyledContactsimage = styled.div`
@@ -115,20 +126,21 @@ const StyledContactsimage = styled.div`
   justify-content: center;
   align-items: center;
   background: transparent;
-  border: 2px solid #3d3b3b;
+  border: 2px solid #3f3d3d;
   border-radius: 50%;
   width: 43px;
   height: 43px;
 
   :hover {
     transition: 0, 8s;
-    background-color: #b1b1b1;
+    background-color: #615f5f;
   }
 `
 
 const StyledNameOptions = styled.div`
   font-size: 25px;
   font-weight: 600;
+  min-width: 20px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -145,13 +157,7 @@ const StyledSobremim = styled.div`
   height: 400px;
   font-weight: 500;
   color: ${(props) => props.theme.H4};
-  @media (max-width: 900px) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    line-break: 100px;
-    padding-top: 50px;
-  }
+  margin-top: 20px;
 `
 
 const StyledContainerTitle = styled.div`
@@ -163,21 +169,62 @@ const StyledContainerTitle = styled.div`
 const StyledSkils = styled.div`
   font-weight: bold;
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: ${(props) => props.theme.title};
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-  }
 `
 const StyledContateme = styled.u`
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  color: #d85454;
+  color: #b5c23d;
 
   :hover {
-    color: #b43535;
+    color: #faf60c;
+  }
+`
+const StyledTitleAbout = styled.div`
+  font-weight: bold;
+  font-size: 40px;
+  width: 100%;
+  color: ${(props) => props.theme.title};
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 842px) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 80px;
+    margin-right: 70px;
+  }
+`
+const StyledContactFooter = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`
+const ButtonContato = styled.button`
+  padding: 15px 35px;
+  border-radius: 7px;
+  border: 0;
+  font-weight: 600;
+  color: ${(props) => props.theme.black};
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #a3a2a2;
+  box-shadow: 0px 4px 4px rgba(46, 46, 44, 0.25);
+
+  cursor: pointer;
+
+  :hover {
+    transition: 0.6s;
+    background-color: ${(props) => props.theme.blackBackground};
   }
 `
 function HomePage({
@@ -250,7 +297,7 @@ function HomePage({
               <StyledTitleContacts id="StyledTitleContacts">Contate-me por :</StyledTitleContacts>
               <Contacts>
                 <StyledContacts onClick={handleCurriculo}>
-                  Meu curriculo:<u>currículo</u>
+                  <u>CURRÍCULO</u>
                 </StyledContacts>
                 E-mail: ryandev18@outlook.com
                 <ContainerImage>
@@ -265,6 +312,7 @@ function HomePage({
                   </StyledContactsimage>
                 </ContainerImage>
               </Contacts>
+              <ScrollGif />
             </ContainerContacts>
           </StyledImage>
         </ContainerInit>
@@ -280,7 +328,7 @@ function HomePage({
           <ContainerDois>
             <ContainerSobreMim>
               <StyledSkils>
-                Me conheça!
+                <StyledTitleAbout>Me conheça </StyledTitleAbout>
                 <StyledSobremim>
                   Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa muito pela
                   qualidade e a eficacia de um website.Há 10 meses começei meus estudos na area de
@@ -291,8 +339,9 @@ function HomePage({
                     com colegas do curso para conseguir experiência e melhorar de fato minhas
                     habilidades,e com isso passei a desenvolver projetos sozinhos ,cujo você
                     encontrará 3 deles logo abaixo.E não vejo a hora de ingressar nesse mundo o
-                    quanto antes e iniciar minha carreira profissional na programação! Caso tenha
-                    gostado do que viu não deixe de{' '}
+                    quanto antes e iniciar minha carreira profissional na programação! Estou aberto
+                    a oportunidades de trabalho onde possa contribuir, aprender e crescer. Se você
+                    tiver uma boa oportunidade que corresponda às minhas habilidades e experiência,{' '}
                     <StyledContateme>
                       <Link
                         to="StyledTitleContacts"
@@ -310,7 +359,7 @@ function HomePage({
             </ContainerSobreMim>
             <ContainerHabilidades>
               <StyledSkils>
-                Habilidades
+                <StyledTitleAbout>Habilidades</StyledTitleAbout>
                 <ContainerSkils>
                   <CardsSkills>HTML</CardsSkills>
                   <CardsSkills>CSS</CardsSkills>
@@ -348,6 +397,7 @@ function HomePage({
             <Sinalizador />
             <Subtitle>Aqui está alguns de meus projetos pessoais!</Subtitle>
           </StyledContainerTitle>
+          <ScrollGif />
           <ContainerProjects>
             <ProjectsCards>
               <StyledImageClimaDev image={imageSocialDev}>
@@ -385,17 +435,27 @@ function HomePage({
               </StyledImageClimaDev>
             </ProjectsCards>
           </ContainerProjects>
+          <StyledContactFooter>
+            <Subtitle>
+              Caso tenha gostado do que viu , não hesite em entrar em contato comigo.
+            </Subtitle>
+            <ButtonContato>
+              <Link to="StyledTitleContacts" spy={true} smooth={true} offset={-100} duration={500}>
+                CONTATO
+              </Link>
+            </ButtonContato>
+          </StyledContactFooter>
         </StyledImageTres>
       </>
     </>
   )
 }
 HomePage.defaultProps = {
-  image: '/fundo1.jpg',
+  image: '/newnew.jpg',
   imageDois: '/fundo2.jpg',
   imageTres: '/fundo3.jpg',
   imageAvatar: '/avatar3.jpg',
-  imageClimaDev: '/cliimadevimage.jpg',
+  imageClimaDev: '/background.png',
   imageSocialDev: '/redes-sociais1.jpg',
   imageJogoDaV: '/jogodavelha1.jpg'
 }
