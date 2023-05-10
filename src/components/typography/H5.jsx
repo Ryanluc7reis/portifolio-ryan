@@ -3,8 +3,9 @@ import styled from 'styled-components'
 const H5 = styled.h4`
   font-size: 16px;
   font-weight: 600;
-  color: ${(props) => props.theme.title};
+  color: #08081f;
   text-align: center;
-  max-width: 500px;
+  align-items: center;
+  max-width: 700px;
 `
 export default H5

@@ -80,7 +80,7 @@ const StyledImageAvatar = styled.div`
 const StyledImageClimaDev = styled.div`
   background-image: url('${(props) => props.image}');
   background-size: cover;
-  width: 65%;
+  width: 70%;
   height: 200px;
   padding: 80px;
   display: flex;
@@ -176,10 +176,10 @@ const StyledContateme = styled.u`
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  color: #b5c23d;
+  color: #180d77;
 
   :hover {
-    color: #faf60c;
+    color: #5a558d;
   }
 `
 const StyledTitleAbout = styled.div`
@@ -195,7 +195,6 @@ const StyledTitleAbout = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: center;
     padding-top: 80px;
     margin-right: 70px;
   }
@@ -213,7 +212,7 @@ const ButtonContato = styled.button`
   border-radius: 7px;
   border: 0;
   font-weight: 600;
-  color: ${(props) => props.theme.black};
+  color: #04003a;
   font-size: 18px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -428,8 +427,8 @@ function HomePage({
               <StyledImageClimaDev image={imageClimaDev}>
                 <H4Cards>Clima dev</H4Cards>
                 <H5>
-                  Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
-                  de estados dentro do ReactJS.
+                  Foi construído um site que te oferece a previsao do tempo atual e nas proximas 6
+                  horas do mundo inteiro,utilizando ReactJs,Nextjs e Router.
                 </H5>
                 <Button>Visitar projeto</Button>
               </StyledImageClimaDev>

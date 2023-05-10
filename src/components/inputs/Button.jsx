@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   border-radius: 7px;
   border: 0;
   font-weight: 600;
-  color: ${(props) => props.theme.black};
+  color: #04003a;
   font-size: 18px;
   margin-top: 30px;
   background-color: #a3a2a2;

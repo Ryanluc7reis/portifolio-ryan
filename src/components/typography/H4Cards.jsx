@@ -4,6 +4,6 @@ const H4Cards = styled.h4`
   font-size: 20px;
   font-weight: 700;
   max-width: 600px;
-  color: ${(props) => props.theme.H4Cards};
+  color: #180d77;
 `
 export default H4Cards
