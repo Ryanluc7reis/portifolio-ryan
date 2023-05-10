@@ -391,6 +391,7 @@ function HomePage({
                 </ContainerSkils>
                 <ContainerSkils>
                   <CardsSkills>GitHub</CardsSkills>
+                  <CardsSkills>Responsive</CardsSkills>
                 </ContainerSkils>
               </StyledSkils>
             </ContainerHabilidades>
