@@ -322,25 +322,25 @@ function HomePage({
           <Sinalizador />
           <Subtitle>
             Aqui você encontrará mais informações sobre mim, minhas habilidades atuais
-            principalmente em termos de programação e tecnologia!
+            principalmente em termos de programação!
           </Subtitle>
           <ContainerDois>
             <ContainerSobreMim>
               <StyledSkils>
                 <StyledTitleAbout>Me conheça </StyledTitleAbout>
                 <StyledSobremim>
-                  Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa muito pela
-                  qualidade e a eficacia de um website.Há 10 meses começei meus estudos na area de
+                  Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa pela
+                  qualidade e a eficacia de um website.Há 10 meses começei meus estudos na área de
                   desenvolvimento de software e me apaixonei por tal ,sigo até hoje os estudos para
                   continuar aperfeiçuando minhas habilidades e um dia me tornar um sênior.
                   <StyledSobremim>
-                    No 2 mês de estudo iniciei um curso ,e nele participei de vários projetos junto
+                    No 2 mês de estudo iniciei um curso ,e nele participei de alguns projetos junto
                     com colegas do curso para conseguir experiência e melhorar de fato minhas
-                    habilidades,e com isso passei a desenvolver projetos sozinhos ,cujo você
-                    encontrará 3 deles logo abaixo.E não vejo a hora de ingressar nesse mundo o
-                    quanto antes e iniciar minha carreira profissional na programação! Estou aberto
-                    a oportunidades de trabalho onde possa contribuir, aprender e crescer. Se você
-                    tiver uma boa oportunidade que corresponda às minhas habilidades e experiência,{' '}
+                    habilidades,e com isso passei a desenvolver projetos ,cujo você encontrará 3
+                    deles logo abaixo.E não vejo a hora de ingressar nesse mundo o quanto antes e
+                    iniciar minha carreira profissional na programação! Estou aberto a oportunidades
+                    de trabalho onde eu possa contribuir, aprender e crescer. Se você tiver uma boa
+                    oportunidade que corresponda às minhas habilidades e experiência,{' '}
                     <StyledContateme>
                       <Link
                         to="StyledTitleContacts"
@@ -383,6 +383,10 @@ function HomePage({
                   <CardsSkills>ExpressJs</CardsSkills>
                   <CardsSkills>Styled Components</CardsSkills>
                   <CardsSkills>ReactJs</CardsSkills>
+                </ContainerSkils>
+                <ContainerSkils>
+                  <CardsSkills>JoiResolver</CardsSkills>
+                  <CardsSkills>SWR</CardsSkills>
                 </ContainerSkils>
               </StyledSkils>
             </ContainerHabilidades>
