@@ -245,7 +245,7 @@ function HomePage({
     window.open('https://github.com/Ryanluc7reis', '_blank')
   }
   const handleLinke = () => {
-    window.open('https://www.linkedin.com/in/ryan-lucas-9387b1244/', '_blank')
+    window.open('https://www.linkedin.com/in/ryanluc7reis/', '_blank')
   }
   const handleJdv = () => {
     window.open('https://react-jogo-da-velha-orpin.vercel.app/', '_blank')
