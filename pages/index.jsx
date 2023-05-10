@@ -255,7 +255,7 @@ function HomePage({
   }
   const handleCurriculo = () => {
     window.open(
-      'https://docs.google.com/document/d/1abZSxG8AOakHAh2P3fdWj8ka8IQEuurqCN_3zoM02iA/edit',
+      'https://docs.google.com/document/d/1GAqQqogr_xPIbQh4GZ_k4xjjdL8kMPr2NjEJlKXiVYU/edit#',
       '_blank'
     )
   }
