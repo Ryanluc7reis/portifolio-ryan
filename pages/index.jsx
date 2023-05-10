@@ -387,6 +387,10 @@ function HomePage({
                 <ContainerSkils>
                   <CardsSkills>JoiResolver</CardsSkills>
                   <CardsSkills>SWR</CardsSkills>
+                  <CardsSkills>Git</CardsSkills>
+                </ContainerSkils>
+                <ContainerSkils>
+                  <CardsSkills>GitHub</CardsSkills>
                 </ContainerSkils>
               </StyledSkils>
             </ContainerHabilidades>
