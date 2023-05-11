@@ -49,11 +49,6 @@ function ContNavOptions({ children, ...props }) {
           </Link>
         </StyledOptions>
         <StyledOptions>
-          <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
-            Habilidades
-          </Link>
-        </StyledOptions>
-        <StyledOptions>
           <Link to="StyledContainerTitle" spy={true} smooth={true} offset={-100} duration={500}>
             Projetos
           </Link>
