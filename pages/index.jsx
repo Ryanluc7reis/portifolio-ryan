@@ -253,6 +253,10 @@ function HomePage({
   const handleSdv = () => {
     window.open(' https://social-dev-wine.vercel.app/login', '_blank')
   }
+  const handleCdv = () => {
+    window.open('https://clima-dev-devchallenge1-nine.vercel.app/', '_blank')
+  }
+
   const handleCurriculo = () => {
     window.open(
       'https://docs.google.com/document/d/1GAqQqogr_xPIbQh4GZ_k4xjjdL8kMPr2NjEJlKXiVYU/edit#',
@@ -439,7 +443,7 @@ function HomePage({
                   Foi construído um site que te oferece a previsao do tempo atual e nas proximas 6
                   horas do mundo inteiro,utilizando ReactJs,Nextjs e Router.
                 </H5>
-                <Button>Visitar projeto</Button>
+                <Button onClick={handleCdv}>Visitar projeto</Button>
               </StyledImageClimaDev>
             </ProjectsCards>
           </ContainerProjects>
