@@ -17,7 +17,7 @@ const StyledButton = styled.button`
     transition: 0.6s;
     background-color: ${(props) => props.theme.blackBackground};
   }
-  @media (max-width: 400px) {
+  @media (max-width: 375px) {
     padding: 13px;
   }
 `

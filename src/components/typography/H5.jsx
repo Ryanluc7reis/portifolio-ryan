@@ -8,7 +8,7 @@ const H5 = styled.h4`
   align-items: center;
   height: auto;
   max-width: auto;
-  @media (max-width: 400px) {
+  @media (max-width: 375px) {
     max-height: 255px;
     width: 180px;
     text-align: center;

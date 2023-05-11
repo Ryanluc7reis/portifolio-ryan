@@ -17,6 +17,7 @@ const StyledChildren = styled.div`
     flex-direction: column;
     width: auto;
     gap: 30px;
+    margin: 50px 0;
   }
 `
 

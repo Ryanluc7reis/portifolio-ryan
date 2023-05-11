@@ -41,7 +41,7 @@ const StyledImage = styled.div`
     width: 100%;
     height: 100%;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 375px) {
     width: 110%;
     height: 100%;
   }
@@ -56,7 +56,7 @@ const StyledImageDois = styled.div`
     width: 100%;
     height: 100%;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 375px) {
     width: 110%;
     height: 100%;
   }
@@ -71,7 +71,7 @@ const StyledImageTres = styled.div`
     width: 100%;
     height: 100vh;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 375px) {
     width: 110%;
     height: 100%;
   }
@@ -87,6 +87,7 @@ const StyledImageAvatar = styled.div`
     min-width: 50px;
     height: 35px;
     margin-left: 15px;
+    align-items: center;
   }
 `
 const StyledImageClimaDev = styled.div`
@@ -101,7 +102,7 @@ const StyledImageClimaDev = styled.div`
   align-items: center;
   line-height: 38px;
   border-radius: 8px;
-  @media (max-width: 400px) {
+  @media (max-width: 370px) {
     width: 50%;
     height: 220px;
     text-align: center;
