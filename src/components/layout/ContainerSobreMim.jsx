@@ -17,6 +17,13 @@ const StyledChildren = styled.div`
     margin: 0;
     padding: 50px 0;
   }
+  @media (max-width: 400px) {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 115px;
+  }
 `
 
 function ContainerSobreMim({ children }) {

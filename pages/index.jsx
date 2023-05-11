@@ -41,6 +41,10 @@ const StyledImage = styled.div`
     width: 100%;
     height: 100%;
   }
+  @media (max-width: 400px) {
+    width: 110%;
+    height: 100%;
+  }
 `
 const StyledImageDois = styled.div`
   background: url('${(props) => props.image}');
@@ -50,6 +54,10 @@ const StyledImageDois = styled.div`
   height: 100%;
   @media (max-width: 600px) {
     width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 400px) {
+    width: 110%;
     height: 100%;
   }
 `
@@ -62,6 +70,10 @@ const StyledImageTres = styled.div`
   @media (max-width: 600px) {
     width: 100%;
     height: 100vh;
+  }
+  @media (max-width: 400px) {
+    width: 110%;
+    height: 100%;
   }
 `
 const StyledImageAvatar = styled.div`
@@ -89,6 +101,11 @@ const StyledImageClimaDev = styled.div`
   align-items: center;
   line-height: 38px;
   border-radius: 8px;
+  @media (max-width: 400px) {
+    width: 50%;
+    height: 220px;
+    text-align: center;
+  }
 `
 
 const StyledContacts = styled.div`
@@ -336,7 +353,7 @@ function HomePage({
                   Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa pela
                   qualidade e a eficacia de um website.Há 10 meses começei meus estudos na área de
                   desenvolvimento de software e me apaixonei por tal ,sigo até hoje os estudos para
-                  continuar aperfeiçuando minhas habilidades e um dia me tornar um sênior.
+                  continuar aperfeiçoando minhas habilidades e um dia me tornar um sênior.
                   <StyledSobremim>
                     No 2 mês de estudo iniciei um curso ,e nele participei de alguns projetos junto
                     com colegas do curso para conseguir experiência e melhorar de fato minhas
@@ -416,7 +433,7 @@ function HomePage({
                 <H4Cards>Social Dev</H4Cards>
                 <H5>
                   Foi construída uma rede social com intuito de amigos conversarem entre si por meio
-                  de posts usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e styled components.
+                  de posts usando ReactJs,NextJs,NodeJs,MongoDb e styled-components.
                 </H5>
                 <Button onClick={handleSdv} id="scd">
                   {' '}

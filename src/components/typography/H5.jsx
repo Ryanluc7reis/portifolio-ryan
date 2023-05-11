@@ -8,5 +8,11 @@ const H5 = styled.h4`
   align-items: center;
   height: auto;
   max-width: auto;
+  @media (max-width: 400px) {
+    max-height: 255px;
+    width: 180px;
+    text-align: center;
+    align-items: center;
+  }
 `
 export default H5

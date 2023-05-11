@@ -13,6 +13,7 @@ const StyledChildren = styled.div`
   @media (max-width: 615px) {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
   }
 `
 

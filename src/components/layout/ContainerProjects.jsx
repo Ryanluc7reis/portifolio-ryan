@@ -15,7 +15,7 @@ const StyledChildren = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 400px;
+    width: auto;
     gap: 30px;
   }
 `
