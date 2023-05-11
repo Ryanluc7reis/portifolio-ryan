@@ -41,7 +41,7 @@ const StyledImage = styled.div`
     width: 100%;
     height: 100%;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 110%;
     height: 100%;
   }
@@ -56,7 +56,7 @@ const StyledImageDois = styled.div`
     width: 100%;
     height: 100%;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 110%;
     height: 100%;
   }
@@ -71,7 +71,7 @@ const StyledImageTres = styled.div`
     width: 100%;
     height: 100vh;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 110%;
     height: 100%;
   }
