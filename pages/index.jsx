@@ -299,7 +299,7 @@ function HomePage({
             </ConatainerOptions>
             <ContainerContacts>
               <ContainerUm>
-                <H3>Olá, Eu sou o Ryan </H3>
+                <H3>Olá, eu sou o Ryan </H3>
                 <H4>
                   E eu sou um desenvolvedor de software fullstack focado em construir Websites!
                 </H4>
