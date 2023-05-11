@@ -13,7 +13,8 @@ const StyledChildren = styled.text`
   @media (max-width: 700px) {
     display: flex;
     justify-content: center;
-    margin-left: 25px;
+    margin: 25px;
+    text-align: center;
   }
 `
 function Subtitle({ children, ...props }) {
