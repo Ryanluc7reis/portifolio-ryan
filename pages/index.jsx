@@ -416,7 +416,7 @@ function HomePage({
                 <H4Cards>Social Dev</H4Cards>
                 <H5>
                   Foi construída uma rede social com intuito de amigos conversarem entre si por meio
-                  de posts usando ReactJs,NextJs,NodeJs,MongoDb,mongoose e styled components.
+                  de posts, utilizando ReactJs,NextJs,NodeJs,MongoDb,mongoose e styled components.
                 </H5>
                 <Button onClick={handleSdv} id="scd">
                   {' '}
@@ -440,8 +440,9 @@ function HomePage({
               <StyledImageClimaDev image={imageClimaDev}>
                 <H4Cards>Clima dev</H4Cards>
                 <H5>
-                  Foi construído um site que te oferece a previsao do tempo atual e nas proximas 6
-                  horas do mundo inteiro,utilizando ReactJs,Nextjs e Router.
+                  Foi construído um site que te oferece a previsão do tempo,que te mostra as
+                  previsões atuais em tempo real,e nas proximas 3 horas e 6 horas do mundo
+                  inteiro,utilizando ReactJs,Nextjs,styled-components e Router.
                 </H5>
                 <Button onClick={handleCdv}>Visitar projeto</Button>
               </StyledImageClimaDev>
