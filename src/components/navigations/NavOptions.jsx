@@ -15,7 +15,7 @@ const Dots = styled.img`
 const StyledMenu = styled.div`
   position: relative;
   width: 130px;
-  height: 210px;
+  height: 160px;
   box-shadow: 6px 5px 15px 5px rgba(0, 0, 0, 0.15);
   background-color: ${(props) => props.theme.white};
   display: ${(props) => (props.show ? 'block' : 'none')};
