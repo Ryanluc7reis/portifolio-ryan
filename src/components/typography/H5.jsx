@@ -6,6 +6,7 @@ const H5 = styled.h4`
   color: #08081f;
   text-align: center;
   align-items: center;
-  max-width: 700px;
+  height: auto;
+  max-width: auto;
 `
 export default H5
