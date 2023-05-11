@@ -259,7 +259,7 @@ function HomePage({
 
   const handleCurriculo = () => {
     window.open(
-      'https://docs.google.com/document/d/1GAqQqogr_xPIbQh4GZ_k4xjjdL8kMPr2NjEJlKXiVYU/edit#',
+      'https://docs.google.com/document/d/1GAqQqogr_xPIbQh4GZ_k4xjjdL8kMPr2NjEJlKXiVYU/edit?usp=sharing',
       '_blank'
     )
   }
