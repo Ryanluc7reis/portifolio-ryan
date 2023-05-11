@@ -441,7 +441,7 @@ function HomePage({
                 <H4Cards>Clima dev</H4Cards>
                 <H5>
                   Foi construído um site que te oferece a previsão do tempo atual e nas proximas 6
-                  horas do mundo inteiro,utilizando ReactJs,Nextjs,styled-components e Router.
+                  horas do mundo inteiro,utilizando ReactJs,styled-components e Router.
                 </H5>
                 <Button onClick={handleCdv}>Visitar projeto</Button>
               </StyledImageClimaDev>
