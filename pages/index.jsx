@@ -301,7 +301,7 @@ function HomePage({
               <ContainerUm>
                 <H3>Olá, Eu sou o Ryan </H3>
                 <H4>
-                  E eu sou um desenvolvedor de software fullstack focado em contruir Websites!
+                  E eu sou um desenvolvedor de software fullstack focado em construir Websites!
                 </H4>
                 <Button>
                   <Link
@@ -352,17 +352,17 @@ function HomePage({
                 <StyledTitleAbout>Me conheça </StyledTitleAbout>
                 <StyledSobremim>
                   Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa pela
-                  qualidade e a eficacia de um website.Há 10 meses começei meus estudos na área de
+                  qualidade e a eficácia de um website.Há 10 meses começei meus estudos na área de
                   desenvolvimento de software e me apaixonei por tal ,sigo até hoje os estudos para
                   continuar aperfeiçoando minhas habilidades e um dia me tornar um sênior.
                   <StyledSobremim>
-                    No 2 mês de estudo iniciei um curso ,e nele participei de alguns projetos junto
-                    com colegas do curso para conseguir experiência e melhorar de fato minhas
+                    No segundo mês de estudo iniciei um curso ,e nele participei de alguns projetos
+                    junto com colegas do curso para conseguir experiência e melhorar de fato minhas
                     habilidades,e com isso passei a desenvolver projetos ,cujo você encontrará 3
                     deles logo abaixo.E não vejo a hora de ingressar nesse mundo o quanto antes e
                     iniciar minha carreira profissional na programação! Estou aberto a oportunidades
                     de trabalho onde eu possa contribuir, aprender e crescer. Se você tiver uma boa
-                    oportunidade que corresponda às minhas habilidades e experiência,{' '}
+                    oportunidade que corresponda às minhas habilidades e experiência{' '}
                     <StyledContateme>
                       <Link
                         to="StyledTitleContacts"
@@ -371,7 +371,7 @@ function HomePage({
                         offset={-100}
                         duration={500}
                       >
-                        Contatar-me.
+                        Contate-me.
                       </Link>
                     </StyledContateme>
                   </StyledSobremim>
@@ -446,8 +446,8 @@ function HomePage({
               <StyledImageClimaDev image={imageJogoDaV}>
                 <H4Cards>Jogo da velha</H4Cards>
                 <H5>
-                  Foi construído um jogo da velha com placar para treinar ReactJS e fazer manipulção
-                  de estados dentro do ReactJs.
+                  Foi construído um jogo da velha com placar para treinar ReactJS e fazer
+                  manipulação de estados dentro do ReactJs.
                 </H5>
                 <Button onClick={handleJdv} id="jdv">
                   Visitar projeto

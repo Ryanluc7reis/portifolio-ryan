@@ -83,11 +83,6 @@ const NavOptions = () => {
             </Link>
           </StyledOption>
           <StyledOption>
-            <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
-              Habilidades
-            </Link>
-          </StyledOption>
-          <StyledOption>
             <Link to="StyledContainerTitle" spy={true} smooth={true} offset={-100} duration={500}>
               Projetos
             </Link>
