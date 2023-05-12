@@ -425,7 +425,7 @@ function HomePage({
           <StyledContainerTitle>
             <Title id="StyledContainerTitle">PROJETOS</Title>
             <Sinalizador />
-            <Subtitle>Aqui está alguns de meus projetos pessoais!</Subtitle>
+            <Subtitle>Aqui está alguns de meus projetos que estão no ar!</Subtitle>
           </StyledContainerTitle>
           <ScrollGif />
           <ContainerProjects>
