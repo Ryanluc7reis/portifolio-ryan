@@ -118,6 +118,15 @@ const StyledContacts = styled.div`
     color: ${(props) => props.theme.blackBackground};
   }
 `
+const StyledEmail = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+  color: #3e3e99;
+  cursor: pointer;
+  :hover {
+    color: ${(props) => props.theme.blackBackground};
+  }
+`
 const StyledTitleContacts = styled.div`
   font-size: 20px;
   display: flex;
@@ -281,6 +290,12 @@ function HomePage({
       '_blank'
     )
   }
+  const handleEmail = () => {
+    window.open(
+      'mailto:ryan.dev18@outlook.com?subject=Ol%C3%A1%20Ryan%20%2Ctenho%20uma%20oportunidade%20de%20vaga%20para%20voc%C3%AA!',
+      '_blank'
+    )
+  }
 
   return (
     <>
@@ -320,7 +335,7 @@ function HomePage({
                 <StyledContacts onClick={handleCurriculo}>
                   <u>CURRÍCULO</u>
                 </StyledContacts>
-                E-mail: ryandev18@outlook.com
+                <StyledEmail onClick={handleEmail}>E-mail: ryandev18@outlook.com</StyledEmail>
                 <ContainerImage>
                   <StyledContactsimage>
                     <WhatzImage onClick={handleWpp} />
