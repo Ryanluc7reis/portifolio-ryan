@@ -335,7 +335,7 @@ function HomePage({
                 <StyledContacts onClick={handleCurriculo}>
                   <u>CURRÍCULO</u>
                 </StyledContacts>
-                <StyledEmail onClick={handleEmail}>E-mail: ryandev18@outlook.com</StyledEmail>
+                <StyledEmail onClick={handleEmail}>E-mail: ryan.dev18@outlook.com</StyledEmail>
                 <ContainerImage>
                   <StyledContactsimage>
                     <WhatzImage onClick={handleWpp} />
