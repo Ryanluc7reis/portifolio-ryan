@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const H5 = styled.h4`
   font-size: 16px;
   font-weight: 600;
-  color: #08081f;
+  color: #030303;
   text-align: center;
   align-items: center;
   height: auto;
