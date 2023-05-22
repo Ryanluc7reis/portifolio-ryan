@@ -19,6 +19,10 @@ const StyledChildren = styled.div`
     gap: 30px;
     margin: 50px 0;
   }
+  @media (min-width: 425px) {
+    align-items: center;
+    margin: 0 25px;
+  }
 `
 
 function ContainerProjects({ children }) {
