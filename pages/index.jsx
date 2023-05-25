@@ -32,6 +32,8 @@ import LinkeImage from '../src/components/contacts-image/linkedin'
 import ScrollGif from '../src/components/contacts-image/ScrollGif'
 import ImageLapTop from '../src/components/image-projects/ImageLapTop'
 import ImageSocialDev from '../src/components/image-projects/ImageSocialDev'
+import ImageJogoDaVelha from '../src/components/image-projects/ImageJogoDaVelha'
+import ImageClimaDev from '../src/components/image-projects/ImageClimaDev'
 
 const StyledImage = styled.div`
   background: url('${(props) => props.image}');
@@ -103,7 +105,7 @@ const StyledImageClimaDev = styled.div`
   align-items: center;
   line-height: 38px;
   border-radius: 8px;
-  background-color: red;
+  background-color: #d1d1d1;
   @media (max-width: 370px) {
     width: 50%;
     height: 220px;
@@ -259,15 +261,7 @@ const ButtonContato = styled.button`
     background-color: ${(props) => props.theme.blackBackground};
   }
 `
-function HomePage({
-  image,
-  imageDois,
-  imageTres,
-  imageAvatar,
-  imageClimaDev,
-  imageSocialDev,
-  imageJogoDaV
-}) {
+function HomePage({ image, imageDois, imageTres, imageAvatar }) {
   const handleWpp = () => {
     window.open(
       'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!',
@@ -470,7 +464,7 @@ function HomePage({
 
               <StyledCont>
                 <ImageLapTop>
-                  <ImageSocialDev />
+                  <ImageJogoDaVelha />
                 </ImageLapTop>
                 <StyledImageClimaDev>
                   <H4Cards>Jogo da velha</H4Cards>
@@ -486,7 +480,7 @@ function HomePage({
 
               <StyledCont>
                 <ImageLapTop>
-                  <ImageSocialDev />
+                  <ImageClimaDev />
                 </ImageLapTop>
                 <StyledImageClimaDev>
                   <H4Cards>Clima dev</H4Cards>

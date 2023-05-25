@@ -15,7 +15,7 @@ const StyledImage = styled.div`
   border-radius: 4px;
   padding: 172px 259px;
 `
-function ImageSocialDev({ children, image }) {
+function ImageClimaDev({ children, image }) {
   return (
     <StyledFlex>
       {children}
@@ -24,7 +24,7 @@ function ImageSocialDev({ children, image }) {
   )
 }
 
-ImageSocialDev.defaultProps = {
-  image: '/socialdev5.jpg'
+ImageClimaDev.defaultProps = {
+  image: '/climadev2.jpg'
 }
-export default ImageSocialDev
+export default ImageClimaDev
