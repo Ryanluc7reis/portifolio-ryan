@@ -17,19 +17,21 @@ import ContainerDois from '../src/components/layout/ContainerDois'
 import ContainerSkils from '../src/components/layout/ContainerSkils'
 import ContainerSobreMim from '../src/components/layout/ContainerSobreMim'
 import ContainerHabilidades from '../src/components/layout/ContainerHabilidades'
-import ContainerProjects from '../src/components/layout/ContainerProjects'
+import ContainerCardDescricao from '../src/components/layout/ContainerCardDescricao'
 import NavOptions from '../src/components/navigations/NavOptions'
-import ContNavOptions from '../src/components/layout/ContNavOptions'
+import ContNavOptions from '../src/components/navigations/ContNavOptions'
+import ContainerProjetos from '../src/components/layout/ContainerProjetos'
 import Sinalizador from '../src/components/layout/Sinalizador'
 
 import Contacts from '../src/components/layout/Contacts'
-import ProjectsCards from '../src/components/cards/ProjectsCards'
 import CardsSkills from '../src/components/cards/CardsSkills'
 
 import WhatzImage from '../src/components/contacts-image/whtaz'
 import GitImage from '../src/components/contacts-image/git'
 import LinkeImage from '../src/components/contacts-image/linkedin'
 import ScrollGif from '../src/components/contacts-image/ScrollGif'
+import ImageLapTop from '../src/components/image-projects/ImageLapTop'
+import ImageSocialDev from '../src/components/image-projects/ImageSocialDev'
 
 const StyledImage = styled.div`
   background: url('${(props) => props.image}');
@@ -92,8 +94,7 @@ const StyledImageAvatar = styled.div`
 `
 const StyledImageClimaDev = styled.div`
   background-image: url('${(props) => props.image}');
-  background-size: cover;
-  width: 70%;
+  width: 300px;
   height: 200px;
   padding: 80px;
   display: flex;
@@ -102,6 +103,7 @@ const StyledImageClimaDev = styled.div`
   align-items: center;
   line-height: 38px;
   border-radius: 8px;
+  background-color: red;
   @media (max-width: 370px) {
     width: 50%;
     height: 220px;
@@ -147,6 +149,10 @@ const ContainerImage = styled.div`
     align-items: center;
     margin-bottom: 60px;
   }
+`
+const StyledCont = styled.div`
+  display: flex;
+  gap: 80px;
 `
 const StyledContactsimage = styled.div`
   display: inline-flex;
@@ -443,43 +449,56 @@ function HomePage({
             <Subtitle>Aqui está alguns de meus projetos que estão no ar!</Subtitle>
           </StyledContainerTitle>
           <ScrollGif />
-          <ContainerProjects>
-            <ProjectsCards>
-              <StyledImageClimaDev image={imageSocialDev}>
-                <H4Cards>Social Dev</H4Cards>
-                <H5>
-                  Foi construída uma rede social com intuito de amigos conversarem entre si por meio
-                  de posts usando ReactJs,NextJs,NodeJs,MongoDb e styled-components.
-                </H5>
-                <Button onClick={handleSdv} id="scd">
-                  {' '}
-                  Visitar projeto{' '}
-                </Button>
-              </StyledImageClimaDev>
-            </ProjectsCards>
-            <ProjectsCards>
-              <StyledImageClimaDev image={imageJogoDaV}>
-                <H4Cards>Jogo da velha</H4Cards>
-                <H5>
-                  Foi construído um jogo da velha com placar para treinar ReactJS e fazer
-                  manipulação de estados dentro do ReactJs.
-                </H5>
-                <Button onClick={handleJdv} id="jdv">
-                  Visitar projeto
-                </Button>
-              </StyledImageClimaDev>
-            </ProjectsCards>
-            <ProjectsCards>
-              <StyledImageClimaDev image={imageClimaDev}>
-                <H4Cards>Clima dev</H4Cards>
-                <H5>
-                  Foi construído um site que te oferece a previsão do tempo atual e nas proximas 6
-                  horas do mundo inteiro,utilizando ReactJs,styled-components e Router.
-                </H5>
-                <Button onClick={handleCdv}>Visitar projeto</Button>
-              </StyledImageClimaDev>
-            </ProjectsCards>
-          </ContainerProjects>
+          <ContainerProjetos>
+            <ContainerCardDescricao>
+              <StyledCont>
+                <ImageLapTop>
+                  <ImageSocialDev />
+                </ImageLapTop>
+                <StyledImageClimaDev>
+                  <H4Cards>Social Dev</H4Cards>
+                  <H5>
+                    Foi construída uma rede social com intuito de amigos conversarem entre si por
+                    meio de posts usando ReactJs, NextJs, NodeJs, MongoDb e styled-components.
+                  </H5>
+                  <Button onClick={handleSdv} id="scd">
+                    {' '}
+                    Visitar projeto{' '}
+                  </Button>
+                </StyledImageClimaDev>
+              </StyledCont>
+
+              <StyledCont>
+                <ImageLapTop>
+                  <ImageSocialDev />
+                </ImageLapTop>
+                <StyledImageClimaDev>
+                  <H4Cards>Jogo da velha</H4Cards>
+                  <H5>
+                    Foi construído um jogo da velha com placar para treinar ReactJS e fazer
+                    manipulação de estados dentro do ReactJs.
+                  </H5>
+                  <Button onClick={handleJdv} id="jdv">
+                    Visitar projeto
+                  </Button>
+                </StyledImageClimaDev>
+              </StyledCont>
+
+              <StyledCont>
+                <ImageLapTop>
+                  <ImageSocialDev />
+                </ImageLapTop>
+                <StyledImageClimaDev>
+                  <H4Cards>Clima dev</H4Cards>
+                  <H5>
+                    Foi construído um site que te oferece a previsão do tempo atual e nas proximas 6
+                    horas do mundo inteiro,utilizando ReactJs,styled-components e Router.
+                  </H5>
+                  <Button onClick={handleCdv}>Visitar projeto</Button>
+                </StyledImageClimaDev>
+              </StyledCont>
+            </ContainerCardDescricao>
+          </ContainerProjetos>
           <StyledContactFooter>
             <Subtitle>
               Caso tenha gostado do que viu , não hesite em entrar em contato comigo.
@@ -501,7 +520,6 @@ HomePage.defaultProps = {
   imageTres: '/fundo3.jpg',
   imageAvatar: '/avatar3.jpg',
   imageClimaDev: '/background.png',
-  imageSocialDev: '/redes-sociais1.jpg',
   imageJogoDaV: '/jogodavelha1.jpg'
 }
 

@@ -2,26 +2,19 @@ import styled from 'styled-components'
 
 const StyledContainer = styled.div`
   display: flex;
+  justify-content: end;
 `
 const StyledChildren = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  gap: 40px;
   margin-top: 70px;
-  margin-right: 50px;
-  @media (max-width: 915px) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: auto;
-    gap: 30px;
-    margin: 50px 0;
-  }
 `
 
-function ContainerProjects({ children }) {
+function ContainerCardDescricao({ children }) {
   return (
     <StyledContainer>
       <StyledChildren>{children}</StyledChildren>
@@ -29,4 +22,4 @@ function ContainerProjects({ children }) {
   )
 }
 
-export default ContainerProjects
+export default ContainerCardDescricao
