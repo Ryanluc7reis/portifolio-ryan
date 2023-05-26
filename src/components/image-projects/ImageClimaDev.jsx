@@ -11,8 +11,8 @@ const StyledImage = styled.div`
   background-image: url('${(props) => props.image}');
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 4px;
-  padding: 172px 259px;
+  border-radius: 3px;
+  padding: 187px 260px 165px 260px;
   @media (max-width: 768px) {
     display: flex;
     justify-content: center;
