@@ -7,6 +7,10 @@ const StyledFlex = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+    width: 40%;
+    height: 40%;
+  }
 `
 const StyledChildren = styled.div`
   width: 630px;

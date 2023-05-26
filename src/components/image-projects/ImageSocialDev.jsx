@@ -14,6 +14,14 @@ const StyledImage = styled.div`
   background-size: cover;
   border-radius: 4px;
   padding: 172px 259px;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 133px;
+    margin-bottom: 215px;
+    margin-right: 13px;
+  }
 `
 function ImageSocialDev({ children, image }) {
   return (

@@ -7,6 +7,7 @@ const StyledContainer = styled.div`
 const StyledChildren = styled.div`
   width: 100%;
   height: 100%;
+  margin-bottom: 25px;
   @media (max-width: 700px) {
     display: flex;
     align-items: center;

@@ -22,7 +22,7 @@ const StyledChildren = styled.div`
     height: auto;
     text-align: center;
     flex-direction: column;
-    padding-bottom: 115px;
+    margin-bottom: 135px;
   }
 `
 

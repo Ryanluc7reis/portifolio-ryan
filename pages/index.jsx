@@ -40,15 +40,7 @@ const StyledImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 100%;
-  }
-  @media (max-width: 450px) {
-    width: 110%;
-    height: 100%;
-  }
+  height: 100%;
 `
 const StyledImageDois = styled.div`
   background: url('${(props) => props.image}');
@@ -56,14 +48,6 @@ const StyledImageDois = styled.div`
   background-size: cover;
   width: 100%;
   height: 100%;
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 100%;
-  }
-  @media (max-width: 450px) {
-    width: 110%;
-    height: 100%;
-  }
 `
 const StyledImageTres = styled.div`
   background: url('${(props) => props.image}');
@@ -71,14 +55,6 @@ const StyledImageTres = styled.div`
   background-size: cover;
   width: 100%;
   height: 100%;
-  @media (max-width: 600px) {
-    width: 100%;
-    height: 100vh;
-  }
-  @media (max-width: 450px) {
-    width: 110%;
-    height: 100%;
-  }
 `
 const StyledImageAvatar = styled.div`
   background-image: url('${(props) => props.image}');
@@ -87,7 +63,7 @@ const StyledImageAvatar = styled.div`
   height: 35px;
   padding: 5px;
   margin-right: 4px;
-  @media screen and (max-width: 500px) {
+  @media (max-width: 500px) {
     min-width: 50px;
     height: 35px;
     margin-left: 15px;
@@ -106,9 +82,9 @@ const StyledImageClimaDev = styled.div`
   line-height: 38px;
   border-radius: 8px;
   background-color: #d1d1d1;
-  @media (max-width: 370px) {
-    width: 50%;
-    height: 220px;
+  @media (max-width: 380px) {
+    width: 22%;
+    height: 225px;
     text-align: center;
   }
 `
@@ -155,6 +131,12 @@ const ContainerImage = styled.div`
 const StyledCont = styled.div`
   display: flex;
   gap: 80px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 `
 const StyledContactsimage = styled.div`
   display: inline-flex;
@@ -509,12 +491,10 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
   )
 }
 HomePage.defaultProps = {
-  image: '/newnew.jpg',
+  image: '/fundo1.jpg',
   imageDois: '/fundo2.jpg',
   imageTres: '/fundo3.jpg',
-  imageAvatar: '/avatar3.jpg',
-  imageClimaDev: '/background.png',
-  imageJogoDaV: '/jogodavelha1.jpg'
+  imageAvatar: '/avatar3.jpg'
 }
 
 export default HomePage

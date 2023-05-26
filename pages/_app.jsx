@@ -6,10 +6,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
-  body {
+  html,body {
     font-family : 'Roboto',sans-serif;
     overflow-x: hidden;
-  }  
+    width: 100%;
+   
+}  
+  
 `
 function App({ Component, pageProps }) {
   return (
