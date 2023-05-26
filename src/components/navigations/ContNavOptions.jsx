@@ -18,7 +18,7 @@ const StyledOptions = styled.div`
 
   :hover {
     transition: 0.6s;
-    color: ${(props) => props.theme.blackBackground};
+    color: #2816cf;
   }
 `
 const StyledChildren = styled.div`
