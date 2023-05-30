@@ -22,7 +22,6 @@ import NavOptions from '../src/components/navigations/NavOptions'
 import ContNavOptions from '../src/components/navigations/ContNavOptions'
 import ContainerProjetos from '../src/components/layout/ContainerProjetos'
 import Sinalizador from '../src/components/layout/Sinalizador'
-
 import Contacts from '../src/components/layout/Contacts'
 import CardsSkills from '../src/components/cards/CardsSkills'
 
@@ -40,7 +39,7 @@ const StyledImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `
 const StyledImageDois = styled.div`
   background: url('${(props) => props.image}');
@@ -243,6 +242,7 @@ const ButtonContato = styled.button`
     background-color: ${(props) => props.theme.blackBackground};
   }
 `
+
 function HomePage({ image, imageDois, imageTres, imageAvatar }) {
   const handleWpp = () => {
     window.open(
@@ -490,6 +490,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
     </>
   )
 }
+
 HomePage.defaultProps = {
   image: '/fundo1.jpg',
   imageDois: '/fundo2.jpg',
