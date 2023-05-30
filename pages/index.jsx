@@ -69,7 +69,7 @@ const StyledImageAvatar = styled.div`
     align-items: center;
   }
 `
-const StyledImageClimaDev = styled.div`
+const StyledCardsProjetos = styled.div`
   background-image: url('${(props) => props.image}');
   width: 300px;
   height: 200px;
@@ -431,7 +431,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 <ImageLapTop>
                   <ImageSocialDev />
                 </ImageLapTop>
-                <StyledImageClimaDev>
+                <StyledCardsProjetos>
                   <H4Cards>Social Dev</H4Cards>
                   <H5>
                     Foi construída uma rede social com intuito de amigos conversarem entre si por
@@ -441,14 +441,14 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                     {' '}
                     Visitar projeto{' '}
                   </Button>
-                </StyledImageClimaDev>
+                </StyledCardsProjetos>
               </StyledCont>
 
               <StyledCont>
                 <ImageLapTop>
                   <ImageJogoDaVelha />
                 </ImageLapTop>
-                <StyledImageClimaDev>
+                <StyledCardsProjetos>
                   <H4Cards>Jogo da velha</H4Cards>
                   <H5>
                     Foi construído um jogo da velha com placar para treinar ReactJS e fazer
@@ -457,21 +457,21 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                   <Button onClick={handleJdv} id="jdv">
                     Visitar projeto
                   </Button>
-                </StyledImageClimaDev>
+                </StyledCardsProjetos>
               </StyledCont>
 
               <StyledCont>
                 <ImageLapTop>
                   <ImageClimaDev />
                 </ImageLapTop>
-                <StyledImageClimaDev>
+                <StyledCardsProjetos>
                   <H4Cards>Clima dev</H4Cards>
                   <H5>
                     Foi construído um site que te oferece a previsão do tempo atual e nas proximas 6
                     horas do mundo inteiro,utilizando ReactJs,styled-components e Router.
                   </H5>
                   <Button onClick={handleCdv}>Visitar projeto</Button>
-                </StyledImageClimaDev>
+                </StyledCardsProjetos>
               </StyledCont>
             </ContainerCardDescricao>
           </ContainerProjetos>
