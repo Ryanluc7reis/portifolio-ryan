@@ -9,14 +9,17 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   html,body {
-    font-family : 'Roboto',sans-serif;
     overflow-x: hidden;
+    font-family : 'Roboto',sans-serif;
+    margin: 0;
     width: 100%;
+    
+
 }  
   
 `
 function App({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
@@ -36,5 +39,4 @@ function App({ Component, pageProps }) {
     </>
   )
 }
-
 export default App

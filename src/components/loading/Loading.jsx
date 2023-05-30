@@ -6,7 +6,6 @@ const StyledFlex = styled.div`
   justify-content: center;
   align-items: center;
   background: #fbfbfb;
-  position: fixed;
 `
 const StyledImage = styled.div`
   background-image: url('${(props) => props.image}');

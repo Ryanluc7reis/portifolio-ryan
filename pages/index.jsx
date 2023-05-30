@@ -39,7 +39,7 @@ const StyledImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `
 const StyledImageDois = styled.div`
   background: url('${(props) => props.image}');
