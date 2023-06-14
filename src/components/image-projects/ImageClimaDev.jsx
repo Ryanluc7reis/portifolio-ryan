@@ -1,18 +1,19 @@
 import styled from 'styled-components'
+import ImageCel from './ImageCel'
 const StyledFlex = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 350px;
-  margin-left: 14px;
+  width: 660px;
+  height: 315px;
+  background-color: transparent;
 `
 const StyledImage = styled.div`
   background-image: url('${(props) => props.image}');
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 3px;
-  padding: 187px 260px 165px 260px;
+  border-radius: 4px;
+  padding: 170px 320px 160px 190px;
+  margin-left: 48px;
   @media (max-width: 768px) {
     display: flex;
     justify-content: center;
@@ -27,6 +28,7 @@ function ImageClimaDev({ children, image }) {
     <StyledFlex>
       {children}
       <StyledImage image={image} />
+      <ImageCel />
     </StyledFlex>
   )
 }

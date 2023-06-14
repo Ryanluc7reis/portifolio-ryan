@@ -3,18 +3,19 @@ const StyledFlex = styled.div`
   background-image: url('${(props) => props.image}');
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 39px;
+  padding: 38px;
   align-items: center;
   display: flex;
   justify-content: center;
+  margin-right: 30px;
   @media (max-width: 768px) {
     width: 40%;
     height: 40%;
   }
 `
 const StyledChildren = styled.div`
-  width: 630px;
-  height: 500px;
+  width: 610px;
+  height: 450px;
 `
 function ImageLapTop({ children, image }) {
   return (
@@ -25,7 +26,6 @@ function ImageLapTop({ children, image }) {
 }
 
 ImageLapTop.defaultProps = {
-  image: '/laptop-png.png',
-  imageSocialDev: '/redes-sociais1.jpg'
+  image: '/laptop-png.png'
 }
 export default ImageLapTop

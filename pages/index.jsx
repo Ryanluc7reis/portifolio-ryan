@@ -434,7 +434,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 <StyledCardsProjetos>
                   <H4Cards>Social Dev</H4Cards>
                   <H5>
-                    Foi construída uma rede social com intuito de amigos conversarem entre si por
+                    Foi construída uma rede social com o intuito de amigos conversarem entre si por
                     meio de posts usando ReactJs, NextJs, NodeJs, MongoDb e styled-components.
                   </H5>
                   <Button onClick={handleSdv} id="scd">
@@ -451,7 +451,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 <StyledCardsProjetos>
                   <H4Cards>Jogo da velha</H4Cards>
                   <H5>
-                    Foi construído um jogo da velha com placar para treinar ReactJS e fazer
+                    Foi construído um jogo da velha com placar para treinar ReactJs e fazer
                     manipulação de estados dentro do ReactJs.
                   </H5>
                   <Button onClick={handleJdv} id="jdv">
@@ -468,7 +468,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                   <H4Cards>Clima dev</H4Cards>
                   <H5>
                     Foi construído um site que te oferece a previsão do tempo atual e nas proximas 6
-                    horas do mundo inteiro,utilizando ReactJs,styled-components e Router.
+                    horas do mundo inteiro, utilizando ReactJs, styled-components e Router.
                   </H5>
                   <Button onClick={handleCdv}>Visitar projeto</Button>
                 </StyledCardsProjetos>
