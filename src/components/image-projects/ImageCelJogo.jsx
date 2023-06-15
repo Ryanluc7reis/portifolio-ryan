@@ -15,6 +15,11 @@ const StyledFlex = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
+    padding: 40px 30px;
+    z-index: 100;
+    margin-right: 270px;
+    width: 300px;
+    height: 205px;
   }
 `
 const StyledChildren = styled.div`
@@ -37,6 +42,10 @@ const ImageJogo = styled.div`
   margin-top: 3px;
 
   @media (max-width: 768px) {
+    padding: 69px 32px;
+    margin-bottom: 139px;
+    margin-right: 12px;
+    border-radius: 7px;
   }
 `
 

@@ -6,6 +6,14 @@ const StyledFlex = styled.div`
   width: 660px;
   height: 315px;
   background-color: transparent;
+  @media (max-width: 768px) {
+    width: 340px;
+    height: 185px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+  }
 `
 const StyledImage = styled.div`
   background-image: url('${(props) => props.image}');
@@ -15,12 +23,8 @@ const StyledImage = styled.div`
   padding: 170px 320px 160px 190px;
   margin-left: 48px;
   @media (max-width: 768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 90px 133px;
-    margin-bottom: 215px;
-    margin-right: 13px;
+    padding: 85px 133px;
+    margin-bottom: 50px;
   }
 `
 function ImageSocialDev({ children, image }) {
