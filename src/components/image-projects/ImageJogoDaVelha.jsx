@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import ImageCel from './ImageCel'
+import ImageJogoCel from './ImageCelJogo'
 const StyledFlex = styled.div`
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ function ImageJogoDaVelha({ children, image }) {
     <StyledFlex>
       {children}
       <StyledImage image={image} />
-      <ImageCel />
+      <ImageJogoCel />
     </StyledFlex>
   )
 }

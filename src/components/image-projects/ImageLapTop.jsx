@@ -3,7 +3,7 @@ const StyledFlex = styled.div`
   background-image: url('${(props) => props.image}');
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 38px;
+  padding: 36px;
   align-items: center;
   display: flex;
   justify-content: center;
