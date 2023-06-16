@@ -16,7 +16,6 @@ const StyledFlex = styled.div`
 
   @media (max-width: 768px) {
     padding: 40px 30px;
-    z-index: 100;
     margin-right: 270px;
     width: 300px;
     height: 205px;
