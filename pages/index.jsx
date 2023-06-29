@@ -348,7 +348,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
               <StyledSkils>
                 <StyledTitleAbout>Me conheça </StyledTitleAbout>
                 <StyledSobremim>
-                  Olá,sou o Ryan.Sou um desenvolvedor júnior fullstack que sempre presa pela
+                  Olá,sou o Ryan.Sou um desenvolvedor fullstack que sempre presa pela
                   qualidade e a eficácia de um website.Há 10 meses começei meus estudos na área de
                   desenvolvimento de software e me apaixonei por tal ,sigo até hoje os estudos para
                   continuar aperfeiçoando minhas habilidades e um dia me tornar um sênior.
