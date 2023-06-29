@@ -386,7 +386,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 <ContainerSkils>
                   <CardsSkills>JavaScript</CardsSkills>
                   <CardsSkills>NodeJs</CardsSkills>
-                  <CardsSkills>MongoBD</CardsSkills>
+                  <CardsSkills>Python</CardsSkills>
                 </ContainerSkils>
                 <ContainerSkils>
                   <CardsSkills>Mongoose</CardsSkills>
@@ -400,7 +400,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 </ContainerSkils>
                 <ContainerSkils>
                   <CardsSkills>ExpressJs</CardsSkills>
-                  <CardsSkills>Styled Components</CardsSkills>
+                  <CardsSkills>Styled-Components</CardsSkills>
                   <CardsSkills>ReactJs</CardsSkills>
                 </ContainerSkils>
                 <ContainerSkils>
@@ -410,7 +410,8 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 </ContainerSkils>
                 <ContainerSkils>
                   <CardsSkills>GitHub</CardsSkills>
-                  <CardsSkills>Responsive</CardsSkills>
+                  <CardsSkills>Design-Responsive</CardsSkills>
+                  <CardsSkills>MongoBD</CardsSkills>
                 </ContainerSkils>
               </StyledSkils>
             </ContainerHabilidades>
