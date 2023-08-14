@@ -389,14 +389,9 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                   <CardsSkills>Python</CardsSkills>
                 </ContainerSkils>
                 <ContainerSkils>
-                  <CardsSkills>Mongoose</CardsSkills>
-                  <CardsSkills>Axios</CardsSkills>
                   <CardsSkills>SASS</CardsSkills>
-                </ContainerSkils>
-                <ContainerSkils>
-                  <CardsSkills>ESlint</CardsSkills>
-                  <CardsSkills>Prettier</CardsSkills>
-                  <CardsSkills>Router</CardsSkills>
+                  <CardsSkills>GitHub</CardsSkills>
+                  <CardsSkills>MongoBD</CardsSkills>
                 </ContainerSkils>
                 <ContainerSkils>
                   <CardsSkills>ExpressJs</CardsSkills>
@@ -407,11 +402,6 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                   <CardsSkills>JoiResolver</CardsSkills>
                   <CardsSkills>SWR</CardsSkills>
                   <CardsSkills>Git</CardsSkills>
-                </ContainerSkils>
-                <ContainerSkils>
-                  <CardsSkills>GitHub</CardsSkills>
-                  <CardsSkills>Design-Responsive</CardsSkills>
-                  <CardsSkills>MongoBD</CardsSkills>
                 </ContainerSkils>
               </StyledSkils>
             </ContainerHabilidades>
