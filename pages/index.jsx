@@ -277,7 +277,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
 
   const handleCurriculo = () => {
     window.open(
-      'https://docs.google.com/document/d/1kKWYoFRvobev2Fd-ivBtQLDHE8LJXY42kmL_5GRLG8Y/edit?usp=sharing',
+      'https://docs.google.com/document/d/18wvLakDC2q-CqrhOwcoxdIhDFEtgx8XfdNNm-uHhhh4/edit?usp=sharing',
       '_blank'
     )
   }
