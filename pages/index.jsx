@@ -73,7 +73,7 @@ const StyledImageAvatar = styled.div`
 const StyledCardsProjetos = styled.div`
   background-image: url('${(props) => props.image}');
   width: 370px;
-  height: 250px;
+  height: 270px;
   padding: 20px;
   gap: 15px;
   margin-bottom: 80px;
@@ -88,7 +88,8 @@ const StyledCardsProjetos = styled.div`
 
   @media (max-width: 380px) {
     width: 35%;
-    height: 375px;
+    height: 406px;
+    padding: 26px 20px;
   }
 `
 
@@ -480,8 +481,8 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                   <H4Cards>UpCleaner</H4Cards>
                   <H5>
                     Estou construindo um sistema para automatizar a agenda de uma rede de faxineiros
-                    da cliente, no qual possibilita paguemento no próprio sistema, confirmação de
-                    serviço por whatsapp, dentre outras funcionabilidades... (EM - ANDAMENTO)
+                    para uma cliente, no qual possibilita paguemento no próprio sistema, confirmação
+                    de serviço por whatsapp, dentre outras funcionabilidades... (EM - ANDAMENTO)
                   </H5>
                 </StyledCardsProjetos>
               </StyledCont>
