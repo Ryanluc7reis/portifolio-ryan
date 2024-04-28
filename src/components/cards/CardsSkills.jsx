@@ -5,11 +5,14 @@ const StyledContainer = styled.div`
   margin-top: 10px;
 `
 const StyledChildren = styled.div`
-  width: 115px;
+  width: 119px;
   height: 47px;
+  padding: 3px;
+
   background-color: #827f7e;
   border-radius: 10px;
   display: flex;
+  font-size: 18px;
   justify-content: center;
   align-items: center;
   color: #27201e;

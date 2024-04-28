@@ -4,7 +4,6 @@ const StyledContainer = styled.div`
   display: flex;
 `
 const StyledChildren = styled.div`
-  font-size: 20px;
   margin-top: 10px;
   margin-right: 50px;
   display: flex;
@@ -16,7 +15,8 @@ const StyledChildren = styled.div`
     height: 100%;
   }
   @media (max-width: 390px) {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 200px;
   }
 `
 

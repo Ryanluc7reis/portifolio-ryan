@@ -9,9 +9,10 @@ const StyledChildren = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: start;
-  @media (max-width: 700px) {
+  @media (max-width: 1163px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 `
 

@@ -10,6 +10,10 @@ const StyledChildren = styled.div`
   margin-left: 10px;
   display: flex;
   justify-content: center;
+  @media (max-width: 341px) {
+    padding-top: 80px;
+    align-items: center;
+  }
 `
 function ContainerHabilidades({ children }) {
   return (

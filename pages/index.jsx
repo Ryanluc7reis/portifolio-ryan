@@ -33,6 +33,7 @@ import ImageLapTop from '../src/components/image-projects/ImageLapTop'
 import ImageSocialDev from '../src/components/image-projects/ImageSocialDev'
 import ImageJogoDaVelha from '../src/components/image-projects/ImageJogoDaVelha'
 import ImageClimaDev from '../src/components/image-projects/ImageClimaDev'
+import ImageCleaner from '../src/components/image-projects/ImageCleaner'
 
 const StyledImage = styled.div`
   background: url('${(props) => props.image}');
@@ -71,20 +72,23 @@ const StyledImageAvatar = styled.div`
 `
 const StyledCardsProjetos = styled.div`
   background-image: url('${(props) => props.image}');
-  width: 300px;
-  height: 200px;
-  padding: 80px;
+  width: 370px;
+  height: 250px;
+  padding: 20px;
+  gap: 15px;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 38px;
+  text-align: center;
+  line-height: 28px;
   border-radius: 8px;
   background-color: #d1d1d1;
+
   @media (max-width: 380px) {
-    width: 22%;
-    height: 225px;
-    text-align: center;
+    width: 35%;
+    height: 375px;
   }
 `
 
@@ -129,12 +133,14 @@ const ContainerImage = styled.div`
 `
 const StyledCont = styled.div`
   display: flex;
+  align-items: center;
   gap: 80px;
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: none;
   }
 `
 const StyledContactsimage = styled.div`
@@ -165,7 +171,6 @@ const StyledNameOptions = styled.div`
   border-radius: 15px;
   cursor: pointer;
 `
-// background-color: #be0b0b;
 
 const StyledSobremim = styled.div`
   font-size: 20px;
@@ -241,6 +246,9 @@ const ButtonContato = styled.button`
     transition: 0.6s;
     background-color: ${(props) => props.theme.blackBackground};
   }
+`
+const ImageLapTopAlt = styled(ImageLapTop)`
+  padding: 49px;
 `
 
 function HomePage({ image, imageDois, imageTres, imageAvatar }) {
@@ -348,18 +356,21 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
               <StyledSkils>
                 <StyledTitleAbout>Me conheça </StyledTitleAbout>
                 <StyledSobremim>
-                  Olá,sou o Ryan.Sou um desenvolvedor fullstack que sempre presa pela qualidade e a
-                  eficácia de um website.Há 10 meses começei meus estudos na área de desenvolvimento
-                  de software e me apaixonei por tal ,sigo até hoje os estudos para continuar
-                  aperfeiçoando minhas habilidades e um dia me tornar um sênior.
+                  Olá, sou o Ryan. Sou um desenvolvedor fullstack que sempre presa pela qualidade e
+                  a eficácia de um website. Há 2 anos começei meus estudos na área de
+                  desenvolvimento de software e me apaixonei por tal ,sigo até hoje com os estudos e
+                  tenho feito alguns freelancer para continuar aperfeiçoando minhas habilidades e
+                  adquirir uma certa experiência.
                   <StyledSobremim>
-                    No segundo mês de estudo iniciei um curso ,e nele participei de alguns projetos
-                    junto com colegas do curso para conseguir experiência e melhorar de fato minhas
-                    habilidades,e com isso passei a desenvolver projetos ,cujo você encontrará 3
-                    deles logo abaixo.E não vejo a hora de ingressar nesse mundo o quanto antes e
-                    iniciar minha carreira profissional na programação! Estou aberto a oportunidades
-                    de trabalho onde eu possa contribuir, aprender e crescer. Se você tiver uma boa
-                    oportunidade que corresponda às minhas habilidades e experiência{' '}
+                    No segundo mês de estudo iniciei um curso ,no qual eu aprendi do básico ao
+                    avançado de JavaScript + React para o front-end , Express + NodeJs para o
+                    back-end e MongoDB + PostegresSQL na parte de banco de dados. Com essas
+                    habilidades adquiridas , passei a desenvolver projetos ,cujo você encontrará 3
+                    deles logo abaixo, que mostra um pouco de meu conhecimento . Não vejo a hora de
+                    ingressar no mundo corporativo e seguir com minha carreira profissional na
+                    programação! Estou aberto a oportunidades de trabalho onde eu possa contribuir,
+                    aprender e crescer. Se você tiver uma boa oportunidade que corresponda às minhas
+                    habilidades e experiência{' '}
                     <StyledContateme>
                       <Link
                         to="StyledTitleContacts"
@@ -378,29 +389,25 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
             <ContainerHabilidades>
               <StyledSkils>
                 <StyledTitleAbout>Habilidades</StyledTitleAbout>
-                <ContainerSkils>
-                  <CardsSkills>HTML</CardsSkills>
-                  <CardsSkills>CSS</CardsSkills>
-                  <CardsSkills>NextJs</CardsSkills>
-                </ContainerSkils>
+
                 <ContainerSkils>
                   <CardsSkills>JavaScript</CardsSkills>
-                  <CardsSkills>NodeJs</CardsSkills>
-                  <CardsSkills>Python</CardsSkills>
+                  <CardsSkills>ReactJs</CardsSkills>
+
+                  <CardsSkills>NextJs</CardsSkills>
                 </ContainerSkils>
                 <ContainerSkils>
                   <CardsSkills>SASS</CardsSkills>
                   <CardsSkills>GitHub</CardsSkills>
-                  <CardsSkills>MongoBD</CardsSkills>
+                  <CardsSkills>Styled-Components</CardsSkills>
                 </ContainerSkils>
                 <ContainerSkils>
                   <CardsSkills>ExpressJs</CardsSkills>
-                  <CardsSkills>Styled-Components</CardsSkills>
-                  <CardsSkills>ReactJs</CardsSkills>
+                  <CardsSkills>MongoBD</CardsSkills>
+                  <CardsSkills>NodeJs</CardsSkills>
                 </ContainerSkils>
                 <ContainerSkils>
-                  <CardsSkills>JoiResolver</CardsSkills>
-                  <CardsSkills>SWR</CardsSkills>
+                  <CardsSkills>PostgresSQL</CardsSkills>
                   <CardsSkills>Git</CardsSkills>
                 </ContainerSkils>
               </StyledSkils>
@@ -426,7 +433,7 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                   <H4Cards>Social Dev</H4Cards>
                   <H5>
                     Foi construída uma rede social com o intuito de amigos conversarem entre si por
-                    meio de posts usando ReactJs, NextJs, NodeJs, MongoDb e styled-components.
+                    meio de posts usando ReactJs, NextJs, NodeJs, MongoDb e Styled-components.
                   </H5>
                   <Button onClick={handleSdv} id="scd">
                     {' '}
@@ -442,8 +449,8 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 <StyledCardsProjetos>
                   <H4Cards>Jogo da velha</H4Cards>
                   <H5>
-                    Foi construído um jogo da velha com placar para treinar ReactJs e fazer
-                    manipulação de estados dentro do ReactJs.
+                    Foi construído um jogo da velha com placar utilizando ReactJs e com o intuito de
+                    treinar manipulação de estados.
                   </H5>
                   <Button onClick={handleJdv} id="jdv">
                     Visitar projeto
@@ -459,9 +466,23 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                   <H4Cards>Clima dev</H4Cards>
                   <H5>
                     Foi construído um site que te oferece a previsão do tempo atual e nas proximas 6
-                    horas do mundo inteiro, utilizando ReactJs, styled-components e Router.
+                    horas do mundo inteiro, utilizando OpenWeatherMap API , ReactJs e
+                    Styled-components .
                   </H5>
                   <Button onClick={handleCdv}>Visitar projeto</Button>
+                </StyledCardsProjetos>
+              </StyledCont>
+              <StyledCont>
+                <ImageLapTopAlt>
+                  <ImageCleaner />
+                </ImageLapTopAlt>
+                <StyledCardsProjetos>
+                  <H4Cards>UpCleaner</H4Cards>
+                  <H5>
+                    Estou construindo um sistema para automatizar a agenda de uma rede de faxineiros
+                    da cliente, no qual possibilita paguemento no próprio sistema, confirmação de
+                    serviço por whatsapp, dentre outras funcionabilidades... (EM - ANDAMENTO)
+                  </H5>
                 </StyledCardsProjetos>
               </StyledCont>
             </ContainerCardDescricao>
