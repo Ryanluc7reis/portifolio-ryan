@@ -450,8 +450,8 @@ function HomePage({ image, imageDois, imageTres, imageAvatar }) {
                 <StyledCardsProjetos>
                   <H4Cards>Jogo da velha</H4Cards>
                   <H5>
-                    Foi construído um jogo da velha com placar utilizando ReactJs e com o intuito de
-                    treinar manipulação de estados.
+                    Foi construído um jogo da velha com placar utilizando ReactJs . Criado com o
+                    intuito de treinar manipulação de estados.
                   </H5>
                   <Button onClick={handleJdv} id="jdv">
                     Visitar projeto
