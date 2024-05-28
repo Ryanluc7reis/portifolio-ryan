@@ -1,7 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from '../src/theme'
 import { useEffect, useState } from 'react'
-import Loading from '../src/components/loading/Loading'
+import Loading from '../src/components/loadingscreen/Loading'
 
 const GlobalStyle = createGlobalStyle`
   * {

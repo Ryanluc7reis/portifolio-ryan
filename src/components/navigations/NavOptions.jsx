@@ -1,96 +1,87 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 
-const ContainerDots = styled.div`
-  height: max-content;
-  display: flex;
-  justify-content: end;
-  align-items: end;
+const Container = styled.div`
+  width: 100%;
+  height: auto;
 `
 const Dots = styled.img`
+  padding: 1px;
   cursor: pointer;
-  background-color: transparent;
 `
-const StyledMenu = styled.div`
-  position: relative;
-  width: 130px;
-  height: 160px;
-  box-shadow: 6px 5px 15px 5px rgba(0, 0, 0, 0.15);
-  background-color: ${(props) => props.theme.white};
-  display: ${(props) => (props.show ? 'block' : 'none')};
-  margin-top: 130px;
-`
-const StyledOption = styled.div`
-  font-size: 18px;
-  padding: 15px;
+
+const Option = styled.div`
+  font-size: 32px;
+  color: white;
+  font-weight: 500px;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
+  text-decoration: underline;
   cursor: pointer;
   :hover {
     background-color: ${(props) => props.theme.gray};
   }
 `
-const StyledContainerMenu = styled.div`
-  display: none;
-  margin-left: 50px;
-  margin-top: 20px;
-  justify-content: center;
+const ContainerMenu = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #30302ded;
+  display: flex;
   align-items: center;
-
-  @media (max-width: 540px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    position: relative;
-    margin: 0 20px;
-  }
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
 `
-//'onBlur' = qunado clicar em algum deck de opçoes e sair clicando fora
-const NavOptions = () => {
+
+export default function NavOptions({ ...props }) {
   const [show, setShow] = useState(false)
-  const menuRef = useRef(null)
 
-  useEffect(() => {
-    const handleClickOutSide = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setShow(false)
-      }
-    }
-    document.addEventListener('click', handleClickOutSide, true)
-
-    return () => {
-      document.removeEventListener('click', handleClickOutSide, true)
-    }
-  }, [menuRef])
   return (
-    <>
-      <StyledContainerMenu>
-        <ContainerDots>
-          <Dots src="/Hamburger_icon.svg.png" height="45px" onClick={() => setShow(!show)} />
-        </ContainerDots>
-        <StyledMenu show={show} ref={menuRef} onBlur={() => setShow(false)}>
-          <StyledOption>
-            <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+    <Container {...props}>
+      <Dots src="/menu.png" height="45px" onClick={() => setShow(!show)} />
+      {show && (
+        <ContainerMenu onClick={() => setShow(false)}>
+          <Option>
+            <Link
+              onClick={() => setShow(false)}
+              to="one"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               Início
             </Link>
-          </StyledOption>
-          <StyledOption>
-            <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
+          </Option>
+          <Option>
+            <Link
+              onClick={() => setShow(false)}
+              to="two"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               Sobre mim
             </Link>
-          </StyledOption>
-          <StyledOption>
-            <Link to="StyledContainerTitle" spy={true} smooth={true} offset={-100} duration={500}>
+          </Option>
+          <Option>
+            <Link
+              onClick={() => setShow(false)}
+              to="three"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               Projetos
             </Link>
-          </StyledOption>
-        </StyledMenu>
-      </StyledContainerMenu>
-    </>
+          </Option>
+        </ContainerMenu>
+      )}
+    </Container>
   )
 }
-
-export default NavOptions

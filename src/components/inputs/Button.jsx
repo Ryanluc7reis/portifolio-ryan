@@ -5,19 +5,17 @@ const StyledButton = styled.button`
   border-radius: 7px;
   border: 0;
   font-weight: 600;
-  color: #04003a;
+  color: #ffffff;
   font-size: 18px;
-  margin-top: 25px;
-  background-color: #747272;
-  box-shadow: 0px 4px 4px rgba(46, 46, 44, 0.25);
-
+  background-color: #0a0c00b8;
+  box-shadow: 0 5px 5px -2px rgba(90, 90, 3, 0.6);
   cursor: pointer;
+  transition: transform 0.3s ease;
 
   :hover {
-    transition: 0.6s;
-    background-color: ${(props) => props.theme.blackBackground};
+    transform: translateY(-3px);
   }
-  @media (max-width: 375px) {
+  @media (max-width: 492px) {
     padding: 13px;
   }
 `
