@@ -23,6 +23,10 @@ const Text = styled.h1`
   color: white;
   font-weight: 500;
 `
+const TextAlt = styled.h2`
+  color: #ffff06;
+  font-weight: bold;
+`
 const GradientText = styled.h1`
   font-size: 48px;
   font-weight: bold;
@@ -84,6 +88,12 @@ export default function SectionOne({ ...props }) {
       '_blank'
     )
   }
+  const handleCurriculo = () => {
+    window.open(
+      'https://docs.google.com/document/d/18wvLakDC2q-CqrhOwcoxdIhDFEtgx8XfdNNm-uHhhh4/edit?usp=sharing',
+      '_blank'
+    )
+  }
 
   return (
     <Container {...props}>
@@ -95,7 +105,7 @@ export default function SectionOne({ ...props }) {
         <Text>Contate-me </Text>
         <StyledFlexIcons>
           <BoxIcons onClick={handleGit}>
-            <ImgIcons src="/github.png" />
+            <ImgIcons src="/github-yellow.png" />
           </BoxIcons>
           <BoxIcons onClick={handleLinke}>
             <ImgIcons src="/linkedin.png" />
@@ -105,6 +115,9 @@ export default function SectionOne({ ...props }) {
           </BoxIcons>
           <BoxIcons onClick={handleEmail}>
             <ImgIcons src="/email.png" />
+          </BoxIcons>
+          <BoxIcons onClick={handleCurriculo}>
+            <TextAlt>cv</TextAlt>
           </BoxIcons>
         </StyledFlexIcons>
       </StyledFlexTitles>

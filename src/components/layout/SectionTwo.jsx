@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 const Container = styled.div`
   width: 100%;
@@ -38,7 +39,6 @@ const TitleAlt = styled(Title)`
   font-weight: bold;
 `
 const Text = styled.h3`
-  align-items: end;
   color: white;
   font-weight: 400;
   line-height: 30px;
@@ -47,7 +47,6 @@ const TextAlt = styled(Text)`
   width: max-content;
   text-decoration: underline;
   color: #fcfc55;
-
   cursor: pointer;
   :hover {
     color: #363601;
@@ -65,6 +64,7 @@ const Barra = styled.div`
   width: 70px;
   height: 3px;
   background-color: #f1ff00;
+  border-radius: 10px;
 `
 const Card = styled.div`
   width: 125px;
@@ -98,7 +98,7 @@ const ContainerSkills = styled.div`
   gap: 10px;
   background-image: linear-gradient(15deg, #111111 0%, #111111 80%, #111111 80%, #525700 100%);
   height: auto;
-  padding: 15px;
+  padding: 15px 15px 4px 15px;
   border-radius: 15px;
   @media (max-width: 956px) {
     width: 85%;
@@ -113,6 +113,14 @@ const GridSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
   }
+`
+const StyledFlexSkillIcons = styled.div`
+  display: flex;
+  margin-top: 40px;
+  gap: 8px;
+`
+const ImgIcons = styled.img`
+  padding: 1px;
 `
 export default function SectionTwo({ ...props }) {
   return (
@@ -147,7 +155,10 @@ export default function SectionTwo({ ...props }) {
             Não vejo a hora de ingressar no mundo corporativo e seguir com minha carreira
             profissional na programação! Estou aberto a oportunidades de trabalho onde eu possa
             contribuir, aprender e crescer. Se você tiver uma boa oportunidade que corresponda às
-            minhas habilidades e experiência <TextAlt> Contate-me.</TextAlt>
+            minhas habilidades e experiência{' '}
+            <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
+              <TextAlt> Contate-me.</TextAlt>
+            </Link>
           </Text>
         </ContainerAboutMe>
         <ContainerSkills>
@@ -168,6 +179,14 @@ export default function SectionTwo({ ...props }) {
             <Card>Vercel</Card>
             <Card>Postman</Card>
           </GridSkills>
+          <StyledFlexSkillIcons>
+            <ImgIcons src="/js.png" />
+            <ImgIcons src="/react.png" />
+            <ImgIcons src="/nodejs.png" />
+            <ImgIcons src="/mongodb.png" />
+            <ImgIcons src="/git.png" />
+            <ImgIcons src="/postgresql.png" />
+          </StyledFlexSkillIcons>
         </ContainerSkills>
       </StyledFlexAboutAndSkills>
     </Container>
