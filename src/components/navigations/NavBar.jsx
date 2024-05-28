@@ -31,7 +31,7 @@ const Options = styled.h3`
   color: white;
   font-weight: 500;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 7px;
 
   :hover {
     transition: 0.2s;
@@ -54,17 +54,17 @@ export default function NavBar() {
 
       <StyledFlexOptions>
         <Options>
-          <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
             Início
           </Link>
         </Options>
         <Options>
-          <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link to="two" spy={true} smooth={true} offset={-100} duration={500}>
             Sobre mim
           </Link>
         </Options>
         <Options>
-          <Link to="StyledContainerTitle" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link to="three" spy={true} smooth={true} offset={-100} duration={500}>
             Projetos
           </Link>
         </Options>

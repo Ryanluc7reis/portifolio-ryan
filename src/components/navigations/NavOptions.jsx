@@ -61,17 +61,17 @@ export default function NavOptions({ ...props }) {
       {show && (
         <ContainerMenu ref={containerMenuRef}>
           <Option>
-            <Link to="hero" spy={true} smooth={true} offset={-100} duration={500}>
+            <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
               Início
             </Link>
           </Option>
           <Option>
-            <Link to="ContainerDois" spy={true} smooth={true} offset={-100} duration={500}>
+            <Link to="two" spy={true} smooth={true} offset={-100} duration={500}>
               Sobre mim
             </Link>
           </Option>
           <Option>
-            <Link to="StyledContainerTitle" spy={true} smooth={true} offset={-100} duration={500}>
+            <Link to="three" spy={true} smooth={true} offset={-100} duration={500}>
               Projetos
             </Link>
           </Option>

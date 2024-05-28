@@ -1,12 +1,12 @@
 import SectionOne from '../src/components/layout/SectionOne'
+import SectionTwo from '../src/components/layout/SectionTwo'
 
 function HomePage() {
   return (
     <>
-      <SectionOne id="hero" />
-      <SectionOne />
-      <SectionOne />
-      <SectionOne />
+      <SectionOne id="one" />
+      <SectionTwo id="two" />
+      <SectionOne id="three" />
     </>
   )
 }
