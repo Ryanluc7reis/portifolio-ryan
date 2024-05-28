@@ -10,12 +10,15 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  justify-content: center;
+
   @media (max-width: 578px) {
     padding: 0 25px;
   }
 
-  @media (max-width: 462px) {
+  @media (max-width: 469px) {
+    padding: 0 15px;
+  }
+  @media (max-width: 371px) {
     padding: 0 10px;
   }
 `

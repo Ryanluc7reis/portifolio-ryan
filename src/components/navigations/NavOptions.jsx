@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 
@@ -39,39 +39,44 @@ const ContainerMenu = styled.div`
 export default function NavOptions({ ...props }) {
   const [show, setShow] = useState(false)
 
-  const containerMenuRef = useRef(null)
-
-  useEffect(() => {
-    const handleClickInside = (event) => {
-      if (containerMenuRef.current && containerMenuRef.current.contains(event.target)) {
-        setShow(false)
-      }
-    }
-
-    document.addEventListener('click', handleClickInside)
-
-    return () => {
-      document.removeEventListener('click', handleClickInside)
-    }
-  }, [])
-
   return (
     <Container {...props}>
       <Dots src="/menu.png" height="45px" onClick={() => setShow(!show)} />
       {show && (
-        <ContainerMenu ref={containerMenuRef}>
+        <ContainerMenu onClick={() => setShow(false)}>
           <Option>
-            <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
+            <Link
+              onClick={() => setShow(false)}
+              to="one"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               Início
             </Link>
           </Option>
           <Option>
-            <Link to="two" spy={true} smooth={true} offset={-100} duration={500}>
+            <Link
+              onClick={() => setShow(false)}
+              to="two"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               Sobre mim
             </Link>
           </Option>
           <Option>
-            <Link to="three" spy={true} smooth={true} offset={-100} duration={500}>
+            <Link
+              onClick={() => setShow(false)}
+              to="three"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
               Projetos
             </Link>
           </Option>
