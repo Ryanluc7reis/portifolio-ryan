@@ -207,10 +207,10 @@ export default function SectionThree({ ...props }) {
           </StyledFlexTitleAbout>
           <Text>
             Foi construído um site que automatiza a agenda de uma rede de faxineiros avaliados, no
-            qual possibilita o cliente agendar sua limpeza com o faxineiro de sua preferência,
-            utilizando ReactJs + Styled-components para a construção do front-end, NextJs para
-            arquitetura, NodeJs + ExpressJS no back-end, MongoDB para database e Axios/SWR para
-            integrar API e Joi para validação de dados.
+            qual possibilita o cliente agendar sua limpeza com o faxineiro de sua preferência e até
+            mesmo avalia-lo pós serviço, utilizando ReactJs + Styled-components para a construção do
+            front-end, NextJs para arquitetura, NodeJs + ExpressJS no back-end, MongoDB para
+            database e Axios/SWR para integrar API e Joi para validação de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px' }}>
             <Button onClick={handleUpCleaner}>Visitar projeto</Button>
@@ -222,7 +222,7 @@ export default function SectionThree({ ...props }) {
         <ImgProjects src="projeto-cassidev.jpg" />
         <BoxAbout>
           <StyledFlexTitleAbout>
-            <TitleProject>Classifi dev</TitleProject>
+            <TitleProject>Classifi Dev</TitleProject>
             <div>
               <ImgIcons src="/js.png" />
               <ImgIcons src="/react.png" />
@@ -231,10 +231,10 @@ export default function SectionThree({ ...props }) {
             </div>
           </StyledFlexTitleAbout>
           <Text>
-            Foi construído um site que te possilita anunciar qualquer produto para venda de seu
-            interesse, utilizando ReactJs + Styled-components para a construção do front-end, NextJs
-            para arquitetura, NodeJs + ExpressJS no back-end, MongoDB para database e Axios/SWR para
-            integrar API e Joi para validação de dados.
+            Foi construído um site que te possilita anunciar qualquer tipo de produto para venda de
+            seu interesse, utilizando ReactJs + Styled-components para a construção do front-end,
+            NextJs para arquitetura, NodeJs + ExpressJS no back-end, MongoDB para database e
+            Axios/SWR para integrar API e Joi para validação de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '20px' }}>
             <Button onClick={handleClassifi}>Visitar projeto</Button>
