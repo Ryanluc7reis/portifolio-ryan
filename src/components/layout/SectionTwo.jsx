@@ -171,7 +171,7 @@ export default function SectionTwo({ ...props }) {
             <Card>GitHub</Card>
             <Card>Styled-Components</Card>
             <Card>ExpressJs</Card>
-            <Card>MongoBD</Card>
+            <Card>MongoDB</Card>
             <Card>Git</Card>
             <Card>NodeJs</Card>
             <Card>PostgresSQL</Card>
