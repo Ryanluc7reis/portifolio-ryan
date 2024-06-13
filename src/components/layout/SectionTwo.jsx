@@ -163,6 +163,8 @@ export default function SectionTwo({ ...props }) {
         <ContainerSkills>
           <TitleAlt>Skills</TitleAlt>
           <GridSkills>
+            <Card>HTML5</Card>
+            <Card>CSS3</Card>
             <Card>JavaScript</Card>
             <Card>ReactJs</Card>
             <Card>NextJs</Card>
@@ -177,6 +179,8 @@ export default function SectionTwo({ ...props }) {
             <Card>MERN</Card>
             <Card>Vercel</Card>
             <Card>Postman</Card>
+
+            <Card>Figma</Card>
           </GridSkills>
           <StyledFlexSkillIcons>
             <ImgIcons src="/js.png" />
