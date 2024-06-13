@@ -55,17 +55,17 @@ export default function NavBar() {
       <StyledFlexOptions>
         <Options>
           <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
-            Início
+            Start
           </Link>
         </Options>
         <Options>
           <Link to="two" spy={true} smooth={true} offset={-100} duration={500}>
-            Sobre mim
+            About me
           </Link>
         </Options>
         <Options>
           <Link to="three" spy={true} smooth={true} offset={-100} duration={500}>
-            Projetos
+            Projects
           </Link>
         </Options>
         <NavOptionsAlt />

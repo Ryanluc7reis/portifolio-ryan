@@ -99,10 +99,10 @@ export default function SectionOne({ ...props }) {
     <Container {...props}>
       <NavBar />
       <StyledFlexTitles>
-        <Text>Olá, eu sou Ryan Lucas</Text>
-        <GradientText>Desenvolvedor de software </GradientText>
+        <Text>Hello, i am Ryan Lucas</Text>
+        <GradientText> Software Developer</GradientText>
         <GradientText> Full-stack</GradientText>
-        <Text>Contate-me </Text>
+        <Text>Contact me</Text>
         <StyledFlexIcons>
           <BoxIcons onClick={handleGit}>
             <ImgIcons src="/github-yellow.png" />

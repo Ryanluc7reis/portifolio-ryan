@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 
@@ -126,43 +127,41 @@ export default function SectionTwo({ ...props }) {
   return (
     <Container {...props}>
       <StyledFlexTitles>
-        <Title> Sobre mim</Title>
+        <Title>About me</Title>
         <Barra />
         <SubText>
-          Aqui você encontrará mais informações sobre mim e minhas habilidades atuais principalmente
-          em termos de programação!
+          Here you will find more information about me and my current skills mainly in terms of
+          programming!
         </SubText>
       </StyledFlexTitles>
       <StyledFlexAboutAndSkills>
         <ContainerAboutMe>
-          <TitleAlt>Me conheça</TitleAlt>
+          <TitleAlt>Know me</TitleAlt>
           <Text>
-            Olá, sou o Ryan. Sou um desenvolvedor que sempre preza pela qualidade e a eficácia de um
-            website. Há 2 anos comecei meus estudos na área de desenvolvimento de software e me
-            apaixonei por tal, sigo até hoje com os estudos e tenho feito alguns freelancer para
-            continuar aperfeiçoando minhas habilidades e adquirir uma certa experiência.
+            Hi, I'm Ryan. I am a developer who always values the quality and effectiveness of a Web
+            site. 2 years ago I started my studies in the area of softwaredevelopment and I fell in
+            love with it, I continue my studies to this day and have done some freelance work for
+            continue to improve my skills and gain some experience.
           </Text>{' '}
           <Text>
             {' '}
-            No segundo mês de estudo iniciei um curso, no qual eu aprendi do básico ao avançado de
-            JavaScript + React para o front-end, Express + NodeJs para o back-end e MongoDB +
-            PostegresSQL para databases. Com essas habilidades adquiridas ao longo do tempo, passei
-            a desenvolver projetos, cujo você encontrará alguns deles logo abaixo, que mostra um
-            pouco de meu conhecimento.{' '}
+            In the second month of study I started a course, in which I learned from basic to
+            advanced JavaScript + React for the front end, Express + NodeJs for the back end and
+            MongoDB + PostegresSQL for databases. With these skills acquired over time, I developing
+            projects, some of which you will find below, which shows a little of my knowledge.{' '}
           </Text>
           <Text>
             {' '}
-            Não vejo a hora de ingressar no mundo corporativo e seguir com minha carreira
-            profissional na programação! Estou aberto a oportunidades de trabalho onde eu possa
-            contribuir, aprender e crescer. Se você tiver uma boa oportunidade que corresponda às
-            minhas habilidades e experiência{' '}
+            I can't wait to join the corporate world and pursue my career professional in
+            programming! I am open to job opportunities wherever I can contribute, learn and grow.
+            If you have a good opportunity that matches your my skills and experience{' '}
             <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
-              <TextAlt> Contate-me.</TextAlt>
+              <TextAlt> Contact-me.</TextAlt>
             </Link>
           </Text>
         </ContainerAboutMe>
         <ContainerSkills>
-          <TitleAlt>Habilidades</TitleAlt>
+          <TitleAlt>Skills</TitleAlt>
           <GridSkills>
             <Card>JavaScript</Card>
             <Card>ReactJs</Card>
