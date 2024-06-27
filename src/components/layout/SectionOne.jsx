@@ -83,14 +83,11 @@ export default function SectionOne({ ...props }) {
     window.open('https://www.linkedin.com/in/ryanluc7reis/', '_blank')
   }
   const handleEmail = () => {
-    window.open(
-      'mailto:ryan.dev18@outlook.com?subject=Ol%C3%A1%20Ryan%20%2Ctenho%20uma%20oportunidade%20de%20vaga%20para%20voc%C3%AA!',
-      '_blank'
-    )
+    window.open('mailto:ryanluc.dev@gmail.com', '_blank')
   }
   const handleCurriculo = () => {
     window.open(
-      'https://docs.google.com/document/d/18wvLakDC2q-CqrhOwcoxdIhDFEtgx8XfdNNm-uHhhh4/edit?usp=sharing',
+      'https://docs.google.com/document/d/1CzeRLPgliU16iTsU4cqlb1c_15ZGMUc9bFrC0UmXAFA/edit?usp=sharing',
       '_blank'
     )
   }
@@ -99,10 +96,10 @@ export default function SectionOne({ ...props }) {
     <Container {...props}>
       <NavBar />
       <StyledFlexTitles>
-        <Text>Hello, i am Ryan Lucas</Text>
+        <Text>Olá, Eu sou Ryan Lucas</Text>
         <GradientText> Software Developer</GradientText>
         <GradientText> Full-stack</GradientText>
-        <Text>Contact me</Text>
+        <Text>Contate me</Text>
         <StyledFlexIcons>
           <BoxIcons onClick={handleGit}>
             <ImgIcons src="/github-yellow.png" />

@@ -53,7 +53,7 @@ export default function NavOptions({ ...props }) {
               offset={-100}
               duration={500}
             >
-              Start
+              Início
             </Link>
           </Option>
           <Option>
@@ -65,7 +65,7 @@ export default function NavOptions({ ...props }) {
               offset={-100}
               duration={500}
             >
-              About me
+              Sobre mim
             </Link>
           </Option>
           <Option>
@@ -77,7 +77,7 @@ export default function NavOptions({ ...props }) {
               offset={-100}
               duration={500}
             >
-              Projects
+              Projetos
             </Link>
           </Option>
         </ContainerMenu>

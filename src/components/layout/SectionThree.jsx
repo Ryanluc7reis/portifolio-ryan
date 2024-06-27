@@ -188,9 +188,9 @@ export default function SectionThree({ ...props }) {
   return (
     <Container {...props}>
       <StyledFlexTitles>
-        <Title> Projects</Title>
+        <Title> Projetos</Title>
         <Barra />
-        <SubText>Here are some of my projects already in production!</SubText>
+        <SubText>Aqui estão alguns de meus projetos já em produção</SubText>
       </StyledFlexTitles>
 
       <ContainerProject>
@@ -206,15 +206,15 @@ export default function SectionThree({ ...props }) {
             </div>
           </StyledFlexTitleAbout>
           <Text>
-            A website was built that automates the schedule of a network of evaluated cleaners, in
-            which allows the customer to schedule their cleaning with the cleaner of their choice
-            and even even evaluate it after service, using ReactJs + Styled-components to build the
-            front-end, NextJs for architecture, NodeJs + ExpressJS in the back-end, MongoDB for
-            database and Axios/SWR to integrate API and Joi for data validation.
+            Foi construído um site que automatiza a agenda de uma rede de faxineiros avaliados, em
+            que permite ao cliente agendar a sua limpeza com o faxineiro da sua preferência e até
+            mesmo avaliá-lo após o serviço, usando ReactJs + Styled-components para construir o
+            front-end, NextJs para arquitetura, NodeJs + ExpressJS no back-end, MongoDB para banco
+            de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px' }}>
-            <Button onClick={handleUpCleaner}>Visit project</Button>
-            <ButtonAlt onClick={handleUpCleanerRepository}>{'<Repository />'}</ButtonAlt>
+            <Button onClick={handleUpCleaner}>Visitar projeto</Button>
+            <ButtonAlt onClick={handleUpCleanerRepository}>{'<Repositório />'}</ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -231,14 +231,13 @@ export default function SectionThree({ ...props }) {
             </div>
           </StyledFlexTitleAbout>
           <Text>
-            A website has been built that allows you to advertise any type of product for sale your
-            interest, using ReactJs + Styled-components to build the front-end, NextJs for
-            architecture, NodeJs + ExpressJS in the backend, MongoDB for database and Axios/SWR to
-            integrate API and Joi for data validation.
+            Foi construído um site que te permite anunciar qualquer tipo de produto à venda de seu
+            interesse, usando ReactJs + Styled-components para construir o front-end, NextJs para
+            arquitetura, NodeJs + ExpressJS no backend, MongoDB para banco de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '20px' }}>
-            <Button onClick={handleClassifi}>Visit project</Button>
-            <ButtonAlt onClick={handleClassifiRepository}>{'<Repository />'}</ButtonAlt>
+            <Button onClick={handleClassifi}>Visitar projeto</Button>
+            <ButtonAlt onClick={handleClassifiRepository}>{'<Repositório />'}</ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -255,14 +254,13 @@ export default function SectionThree({ ...props }) {
             </div>
           </StyledFlexTitleAbout>
           <Text>
-            A social network was built that allows friends to talk to each other through posts,
-            using ReactJs + Styled-components to build the front-end, NextJs for architecture,
-            NodeJs + ExpressJS on the backend, MongoDB for database and Axios/SWR for integrate API
-            and Joi for data validation.
+            Foi construída uma rede social que permite que amigos conversem entre si por meio de
+            postagens, usando ReactJs + Styled-components para construir o front-end, NextJs para
+            arquitetura, NodeJs + ExpressJS no backend, MongoDB para banco de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '20px' }}>
-            <Button onClick={handleSocialDev}>Visit project</Button>
-            <ButtonAlt onClick={handleSocialDevRepository}>{'<Repository />'}</ButtonAlt>
+            <Button onClick={handleSocialDev}>Visitar projeto</Button>
+            <ButtonAlt onClick={handleSocialDevRepository}>{'<Repositório />'}</ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -278,15 +276,15 @@ export default function SectionThree({ ...props }) {
             </div>
           </StyledFlexTitleAbout>
           <Text>
-            A website was built that offers you the current weather forecast and the next 6 hours
-            from around the world in real time, using ReactJs + Styled-components to build from the
-            front-end, NextJs for architecture, in the back-end fetch/router was used to integrate
-            Open Weather Map API and thus train skills using React Hooks such as useContext,
-            useState and useEffect.
+            Foi construído um site que oferece a previsão do tempo atual das próximas 6 horas, 3
+            horas e 1 hora de todo o mundo em tempo real, usando ReactJs + Styled-components para
+            construir a parte do front-end, NextJs para arquitetura, fetch/router foi usado para
+            integrar a API OpenWeatherMap, assim, treinar habilidades usando React Hooks como
+            useContext, useState e useEffect.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '5px' }}>
-            <Button onClick={handleClimaDev}>Visit project</Button>
-            <ButtonAlt onClick={handleClimaDevRepository}>{'<Repository />'}</ButtonAlt>
+            <Button onClick={handleClimaDev}>Visitar projeto</Button>
+            <ButtonAlt onClick={handleClimaDevRepository}>{'<Repositório />'}</ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -294,7 +292,7 @@ export default function SectionThree({ ...props }) {
         <ImgProjects src="jogodavelha3.jpg" />
         <BoxAbout>
           <StyledFlexTitleAbout>
-            <TitleProject>Tic-tac-toe</TitleProject>
+            <TitleProject>Jogo da velha</TitleProject>
             <div>
               <ImgIcons src="/react.png" />
               <ImgIcons src="/js.png" />
@@ -302,17 +300,17 @@ export default function SectionThree({ ...props }) {
             </div>
           </StyledFlexTitleAbout>
           <Text>
-            A virtual tic-tac-toe game with a scoreboard was built, using ReactJs and CSS to style.
-            Created with the aim of training data manipulation.
+            Foi construído um jogo da velha virtual com placar, usando ReactJs e CSS para estilizar.
+            Criado com o objetivo de treinar a manipulação de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '65px' }}>
-            <Button onClick={handleJogoDaV}>Visit project</Button>
-            <ButtonAlt onClick={handleJogoDaVRepository}>{'<Repository />'}</ButtonAlt>
+            <Button onClick={handleJogoDaV}>Visitar projeto</Button>
+            <ButtonAlt onClick={handleJogoDaVRepository}>{'<Repositório />'}</ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
 
-      <TextContact> If you liked what you saw, contact me at:</TextContact>
+      <TextContact> Se você gostou do que viu, contate me por:</TextContact>
       <div style={{ display: 'flex', gap: '6px', padding: '15px 0px' }}>
         <BoxIcons onClick={handleGit}>
           <ImgIcons src="/github-yellow.png" />

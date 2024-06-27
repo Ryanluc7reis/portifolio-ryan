@@ -79,6 +79,9 @@ const Card = styled.div`
   border-radius: 6px;
   box-shadow: 0 8px 8px -4px rgba(90, 90, 3, 0.6);
 `
+const CardAlt = styled(Card)`
+  flex-direction: column;
+`
 const ContainerAboutMe = styled.div`
   width: 50%;
   display: flex;
@@ -127,59 +130,63 @@ export default function SectionTwo({ ...props }) {
   return (
     <Container {...props}>
       <StyledFlexTitles>
-        <Title>About me</Title>
+        <Title>Sobre mim</Title>
         <Barra />
         <SubText>
-          Here you will find more information about me and my current skills mainly in terms of
-          programming!
+          Aqui você encontrará mais informações sobre mim e minhas habilidades atuais principalmente
+          em termos de programação!
         </SubText>
       </StyledFlexTitles>
       <StyledFlexAboutAndSkills>
         <ContainerAboutMe>
-          <TitleAlt>Know me</TitleAlt>
+          <TitleAlt>Me conheça</TitleAlt>
           <Text>
-            Hi, I'm Ryan. I am a developer who always values the quality and effectiveness of a Web
-            site. 2 years ago I started my studies in the area of softwaredevelopment and I fell in
-            love with it, I continue my studies to this day and have done some freelance work for
-            continue to improve my skills and gain some experience.
+            Olá, meu nome é Ryan. Sou um desenvolvedor que busca valorizar a qualidade e eficácia de
+            uma web site. Há 2 anos iniciei meus estudos na área de desenvolvimento de software e me
+            aprofundei de uma vez na área, continuo meus estudos até hoje e fiz alguns trabalhos
+            freelance para continuar a melhorar minhas habilidades e ganhar uma certa experiência.
           </Text>{' '}
           <Text>
             {' '}
-            In the second month of study I started a course, in which I learned from basic to
-            advanced JavaScript + React for the front end, Express + NodeJs for the back end and
-            MongoDB + PostegresSQL for databases. With these skills acquired over time, I developing
-            projects, some of which you will find below, which shows a little of my knowledge.{' '}
+            No segundo mês de estudo iniciei um curso, no qual aprendi do básico ao avançado em
+            JavaScript + React para front-end, Express + NodeJs para back-end e MongoDB +
+            PostegresSQL para bancos de dados. Com essas habilidades adquiridas ao longo do tempo,
+            desenvolvi projetos, alguns dos quais você encontrará abaixo, que mostra um pouco do meu
+            conhecimento.{' '}
           </Text>
           <Text>
             {' '}
-            I can't wait to join the corporate world and pursue my career professional in
-            programming! I am open to job opportunities wherever I can contribute, learn and grow.
-            If you have a good opportunity that matches your my skills and experience{' '}
+            Mal posso esperar para ingressar no mundo corporativo e seguir minha carreira
+            profissional na programação! Estou aberto a oportunidades de trabalho onde eu possa
+            contribuir, aprender e crescer. Se você tiver uma boa oportunidade que corresponda às
+            minhas habilidades e experiência{' '}
             <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
-              <TextAlt> Contact-me.</TextAlt>
+              <TextAlt> Contate-me.</TextAlt>
             </Link>
           </Text>
         </ContainerAboutMe>
         <ContainerSkills>
-          <TitleAlt>Skills</TitleAlt>
+          <TitleAlt>Habilidades</TitleAlt>
           <GridSkills>
             <Card>HTML5</Card>
             <Card>CSS3</Card>
             <Card>JavaScript</Card>
-            <Card>ReactJs</Card>
-            <Card>NextJs</Card>
+            <Card>ReactJS</Card>
+            <Card>NextJS</Card>
             <Card>SASS</Card>
             <Card>GitHub</Card>
-            <Card>Styled-Components</Card>
-            <Card>ExpressJs</Card>
+            <CardAlt>
+              <h4>Styled</h4> Components
+            </CardAlt>
+            <Card>ExpressJS</Card>
             <Card>MongoDB</Card>
             <Card>Git</Card>
-            <Card>NodeJs</Card>
+            <Card>NodeJS</Card>
             <Card>PostgresSQL</Card>
             <Card>MERN</Card>
+            <Card>JWT</Card>
             <Card>Vercel</Card>
             <Card>Postman</Card>
-
             <Card>Figma</Card>
           </GridSkills>
           <StyledFlexSkillIcons>
