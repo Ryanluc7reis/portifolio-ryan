@@ -43,7 +43,11 @@ const Text = styled.h3`
   color: white;
   font-weight: 400;
   line-height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
 `
+
 const TextAlt = styled(Text)`
   width: max-content;
   text-decoration: underline;
@@ -134,32 +138,31 @@ export default function SectionTwo({ ...props }) {
         <Barra />
         <SubText>
           Aqui você encontrará mais informações sobre mim e minhas habilidades atuais principalmente
-          em termos de programação!
+          em termos de programação !
         </SubText>
       </StyledFlexTitles>
       <StyledFlexAboutAndSkills>
         <ContainerAboutMe>
           <TitleAlt>Me conheça</TitleAlt>
           <Text>
-            Olá, meu nome é Ryan. Sou um desenvolvedor que busca valorizar a qualidade e eficácia de
-            uma web site. Há 2 anos iniciei meus estudos na área de desenvolvimento de software e me
-            aprofundei de uma vez na área, continuo meus estudos até hoje e fiz alguns trabalhos
-            freelance para continuar a melhorar minhas habilidades e ganhar uma certa experiência.
-          </Text>{' '}
-          <Text>
-            {' '}
-            No segundo mês de estudo iniciei um curso, no qual aprendi do básico ao avançado em
-            JavaScript + React para front-end, Express + NodeJs para back-end e MongoDB +
-            PostegresSQL para bancos de dados. Com essas habilidades adquiridas ao longo do tempo,
-            desenvolvi projetos, alguns dos quais você encontrará abaixo, que mostra um pouco do meu
-            conhecimento.{' '}
+            Olá, meu nome é Ryan. Sou desenvolvedor a 2 anos, trabalho principalmente com as
+            tecnologias Javascript, React, Nodejs, Express, MongoDB e PostgresSQL.
           </Text>
           <Text>
             {' '}
-            Mal posso esperar para ingressar no mundo corporativo e seguir minha carreira
-            profissional na programação! Estou aberto a oportunidades de trabalho onde eu possa
-            contribuir, aprender e crescer. Se você tiver uma boa oportunidade que corresponda às
-            minhas habilidades e experiência{' '}
+            No ano de 2022 começei um curso técnico em engenharia de software, no qual aprendi do
+            básico ao avançado das minhas tecnologias principais, incluindo JavaScript + React para
+            front-end, Express + NodeJs para back-end e MongoDB + PostegresSQL para bancos de dados.
+            Daí em diante começei a me aprimorar mais estudando por fora, desenvolvendo projetos
+            pessoais e até mesmo participando de eventos de tecnologia em que eu pude aprender um
+            pouco sobre computação em nuvem. Hoje em dia atuo como autônomo, mas visando ingressar
+            no mundo corporativo.
+          </Text>
+          <Text>
+            {' '}
+            Mal posso esperar para seguir minha carreira profissional na programação! Estou aberto a
+            oportunidades de trabalho onde eu possa contribuir, aprender e crescer. Se você tiver
+            uma boa oportunidade que corresponda às minhas habilidades e experiência{' '}
             <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
               <TextAlt> Contate-me.</TextAlt>
             </Link>

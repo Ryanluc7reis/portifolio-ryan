@@ -97,6 +97,9 @@ const BoxAbout = styled.div`
   border-radius: 0px 10px 10px 0px;
   background: #111111;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media (max-width: 1112px) {
     width: 521px;
     border-radius: 10px 0px 10px 10px;
@@ -190,7 +193,7 @@ export default function SectionThree({ ...props }) {
       <StyledFlexTitles>
         <Title> Projetos</Title>
         <Barra />
-        <SubText>Aqui estão alguns de meus projetos já em produção</SubText>
+        <SubText> Veja um pouco do meu conhecimento em meus projetos logo abaixo !</SubText>
       </StyledFlexTitles>
 
       <ContainerProject>
