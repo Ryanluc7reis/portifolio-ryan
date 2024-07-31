@@ -146,7 +146,7 @@ export default function SectionTwo({ ...props }) {
           <TitleAlt>Me conheça</TitleAlt>
           <Text>
             Olá, meu nome é Ryan. Sou desenvolvedor a 2 anos, trabalho principalmente com as
-            tecnologias Javascript, React, Nodejs, Express, MongoDB e PostgresSQL.
+            tecnologias Javascript, React, Nodejs, Express, MongoDB, Docker e PostgresSQL.
           </Text>
           <Text>
             {' '}
@@ -191,6 +191,7 @@ export default function SectionTwo({ ...props }) {
             <Card>Vercel</Card>
             <Card>Postman</Card>
             <Card>Figma</Card>
+            <Card>Docker</Card>
           </GridSkills>
           <StyledFlexSkillIcons>
             <ImgIcons src="/js.png" />
@@ -199,6 +200,7 @@ export default function SectionTwo({ ...props }) {
             <ImgIcons src="/mongodb.png" />
             <ImgIcons src="/git.png" />
             <ImgIcons src="/postgresql.png" />
+            <ImgIcons src="/docker.png" />
           </StyledFlexSkillIcons>
         </ContainerSkills>
       </StyledFlexAboutAndSkills>
