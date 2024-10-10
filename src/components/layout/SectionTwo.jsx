@@ -146,18 +146,18 @@ export default function SectionTwo({ ...props }) {
           <TitleAlt>Me conheça</TitleAlt>
           <Text>
             Olá, meu nome é Ryan. Sou desenvolvedor a 2 anos, trabalho principalmente com as
-            tecnologias Javascript, React, Node.js, TypeScript, AWS, Jest, MongoDB, Docker e
+            tecnologias Javascript, React, Node.js, TypeScript, AWS, Jest Testing, MongoDB, Docker e
             PostgreSQL.
           </Text>
           <Text>
             {' '}
             No ano de 2022 ingressei no mundo da programação por meio de um curso técnico em
             engenharia de software, no qual aprendi do básico ao avançado das minhas tecnologias
-            principais, incluindo JavaScript + React para front-end, Express + NodeJs para back-end
-            e MongoDB + PostegresSQL para bancos de dados... Daí em diante começei a me aprimorar
-            mais estudando por fora, desenvolvendo projetos pessoais e até mesmo participando de
-            eventos de tecnologia em que eu pude aprender um pouco sobre computação em nuvem. Hoje
-            em dia atuo como autônomo, mas visando ingressar no mundo corporativo.
+            principais, incluindo JavaScript / TypeScript + React para front-end, Node.Js para
+            back-end e MongoDB + PostegreSQL para bancos de dados... Daí em diante começei a me
+            aprimorar mais estudando por fora, desenvolvendo projetos pessoais e até mesmo
+            participando de eventos de tecnologia em que eu pude aprender um pouco sobre computação
+            em nuvem. Hoje em dia atuo como autônomo, mas visando ingressar no mundo corporativo.
           </Text>
           <Text>
             {' '}
