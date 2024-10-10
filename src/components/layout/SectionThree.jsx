@@ -35,6 +35,7 @@ const Text = styled.h4`
   color: white;
   font-weight: 400;
   margin: 50px 0px;
+  line-height: 23px;
   @media (max-width: 492px) {
     margin: 30px 0px;
   }
@@ -139,53 +140,8 @@ const BoxIcons = styled.div`
 `
 
 export default function SectionThree({ ...props }) {
-  const handleWpp = () => {
-    window.open(
-      'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!',
-      '_blank'
-    )
-  }
-  const handleGit = () => {
-    window.open('https://github.com/Ryanluc7reis', '_blank')
-  }
-  const handleLinke = () => {
-    window.open('https://www.linkedin.com/in/ryanluc7reis/', '_blank')
-  }
-  const handleEmail = () => {
-    window.open(
-      'mailto:ryan.dev18@outlook.com?subject=Ol%C3%A1%20Ryan%20%2Ctenho%20uma%20oportunidade%20de%20vaga%20para%20voc%C3%AA!',
-      '_blank'
-    )
-  }
-  const handleUpCleaner = () => {
-    window.open('https://cleaner-project24.vercel.app/', '_blank')
-  }
-  const handleUpCleanerRepository = () => {
-    window.open('https://github.com/Ryanluc7reis/cleaner-project24', '_blank')
-  }
-  const handleClassifi = () => {
-    window.open('https://desafio-classidev-ten.vercel.app/', '_blank')
-  }
-  const handleClassifiRepository = () => {
-    window.open('https://github.com/Ryanluc7reis/desafio-classidev', '_blank')
-  }
-  const handleSocialDev = () => {
-    window.open('https://social-dev-wine.vercel.app/login', '_blank')
-  }
-  const handleSocialDevRepository = () => {
-    window.open('https://github.com/Ryanluc7reis/Projeto.social-dev', '_blank')
-  }
-  const handleClimaDev = () => {
-    window.open('https://clima-dev-devchallenge1-nine.vercel.app/', '_blank')
-  }
-  const handleClimaDevRepository = () => {
-    window.open('https://github.com/Ryanluc7reis/Projeto.Clima-Dev', '_blank')
-  }
-  const handleJogoDaV = () => {
-    window.open('https://react-jogo-da-velha-orpin.vercel.app/', '_blank')
-  }
-  const handleJogoDaVRepository = () => {
-    window.open('https://github.com/Ryanluc7reis/Projeto.react-jogo-da-velha', '_blank')
+  const handleRedirect = (url) => {
+    window.open(url, '_blank')
   }
 
   return (
@@ -206,18 +162,117 @@ export default function SectionThree({ ...props }) {
               <ImgIcons src="/react.png" />
               <ImgIcons src="/nodejs.png" />
               <ImgIcons src="/mongodb.png" />
+              <ImgIcons src="/git.png" />
             </div>
           </StyledFlexTitleAbout>
           <Text>
             Foi construído um site que automatiza a agenda de uma rede de faxineiros avaliados, em
             que permite ao cliente agendar a sua limpeza com o faxineiro da sua preferência e até
-            mesmo avaliá-lo após o serviço, usando ReactJs + Styled-components para construir o
-            front-end, NextJs para arquitetura, NodeJs + ExpressJS no back-end, MongoDB para banco
-            de dados.
+            mesmo avaliá-lo após o serviço, usando React.Js + Styled-components para construir o
+            front-end, Next.Js para arquitetura, Node.Js + Express.Js no back-end, MongoDB para
+            banco de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px' }}>
-            <Button onClick={handleUpCleaner}>Visitar projeto</Button>
-            <ButtonAlt onClick={handleUpCleanerRepository}>{'<Repositório />'}</ButtonAlt>
+            <Button onClick={() => handleRedirect('https://cleaner-project24.vercel.app/')}>
+              Visitar projeto
+            </Button>
+            <ButtonAlt
+              onClick={() => handleRedirect('https://github.com/Ryanluc7reis/cleaner-project24')}
+            >
+              {'<Repositório />'}
+            </ButtonAlt>
+          </div>
+        </BoxAbout>
+      </ContainerProject>
+      <ContainerProject>
+        <ImgProjects src="visitcard.png" />
+        <BoxAbout>
+          <StyledFlexTitleAbout>
+            <TitleProject>Hello visit</TitleProject>
+            <div>
+              <ImgIcons src="/typescript.png" />
+              <ImgIcons src="/js.png" />
+              <ImgIcons src="/react.png" />
+              <ImgIcons src="/nodejs.png" />
+              <ImgIcons src="/mongodb.png" />
+              <ImgIcons src="/git.png" />
+              <ImgIcons src="/docker.png" />
+            </div>
+          </StyledFlexTitleAbout>
+          <Text>
+            Foi contruído um cartão de visita que te permite criar um sobre sua empresa e anexar
+            URLs importantes sobre a empresa ou sobre o usuário, usando Docker para o
+            desenvolvimento, React.Js + Styled-components para construir o front-end, Next.Js para
+            arquitetura, Node.Ts + Express no back-end, MongoDB para banco de dados.
+          </Text>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <Button onClick={() => handleRedirect('https://visit-card-three.vercel.app/ryan1')}>
+              Visitar projeto
+            </Button>
+            <ButtonAlt onClick={() => handleRedirect('https://github.com/Ryanluc7reis/visit-card')}>
+              {'<Repositório />'}
+            </ButtonAlt>
+          </div>
+        </BoxAbout>
+      </ContainerProject>
+      <ContainerProject>
+        <ImgProjects src="searching.png" />
+        <BoxAbout>
+          <StyledFlexTitleAbout>
+            <TitleProject>Searching users</TitleProject>
+            <div>
+              <ImgIcons src="/typescript.png" />
+              <ImgIcons src="/react.png" />
+              <ImgIcons src="/git.png" />
+              <ImgIcons src="/docker.png" />
+            </div>
+          </StyledFlexTitleAbout>
+          <Text>
+            Foi contruído uma leitura de mock dados com um campo de pesquisa filtrada de acordo com
+            nome ou email, e também te oferece uma média de idade dos dados encontrado, usando
+            Docker para o desenvolvimento, React.Ts + Styled-components para construir o front-end e
+            Next para arquitetura.
+          </Text>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <ButtonAlt
+              onClick={() => handleRedirect('https://github.com/Ryanluc7reis/searching-app')}
+            >
+              {'<Repositório />'}
+            </ButtonAlt>
+          </div>
+        </BoxAbout>
+      </ContainerProject>
+      <ContainerProject>
+        <ImgProjects src="notes.png" />
+        <BoxAbout>
+          <StyledFlexTitleAbout>
+            <TitleProject>GambNotes</TitleProject>
+            <div>
+              <ImgIcons src="/js.png" />
+              <ImgIcons src="/react.png" />
+              <ImgIcons src="/nodejs.png" />
+              <ImgIcons src="/mongodb.png" />
+              <ImgIcons src="/git.png" />
+              <ImgIcons src="/docker.png" />
+            </div>
+          </StyledFlexTitleAbout>
+          <Text>
+            Foi contruído um bloco de notas que te permite definir o titulo e tarefa, trocar de cor
+            as notas, favoritar nota e anexar aquivos, usando Docker para o desenvolvimento,
+            React.Js + Styled-components para construir o front-end, Webpack para arquitetura,
+            Node.Js + Express.Js no back-end, MongoDB para banco de dados.
+          </Text>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <Button onClick={() => handleRedirect('https://gambnotes-ryanlucas.vercel.app/')}>
+              Visitar projeto
+            </Button>
+            <ButtonAlt
+              onClick={() =>
+                handleRedirect('https://github.com/Ryanluc7reis/corelab-web-challenge')
+              }
+            >
+              {'<Repositório />'}
+            </ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -231,16 +286,23 @@ export default function SectionThree({ ...props }) {
               <ImgIcons src="/react.png" />
               <ImgIcons src="/nodejs.png" />
               <ImgIcons src="/mongodb.png" />
+              <ImgIcons src="/git.png" />
             </div>
           </StyledFlexTitleAbout>
           <Text>
             Foi construído um site que te permite anunciar qualquer tipo de produto à venda de seu
-            interesse, usando ReactJs + Styled-components para construir o front-end, NextJs para
-            arquitetura, NodeJs + ExpressJS no backend, MongoDB para banco de dados.
+            interesse, usando React.Js + Styled-components para construir o front-end, Next.Js para
+            arquitetura, NodeJs + Express.Js no backend, MongoDB para banco de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '20px' }}>
-            <Button onClick={handleClassifi}>Visitar projeto</Button>
-            <ButtonAlt onClick={handleClassifiRepository}>{'<Repositório />'}</ButtonAlt>
+            <Button onClick={() => handleRedirect('https://desafio-classidev-ten.vercel.app/')}>
+              Visitar projeto
+            </Button>
+            <ButtonAlt
+              onClick={() => handleRedirect('https://github.com/Ryanluc7reis/desafio-classidev')}
+            >
+              {'<Repositório />'}
+            </ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -254,16 +316,23 @@ export default function SectionThree({ ...props }) {
               <ImgIcons src="/react.png" />
               <ImgIcons src="/nodejs.png" />
               <ImgIcons src="/mongodb.png" />
+              <ImgIcons src="/git.png" />
             </div>
           </StyledFlexTitleAbout>
           <Text>
             Foi construída uma rede social que permite que amigos conversem entre si por meio de
-            postagens, usando ReactJs + Styled-components para construir o front-end, NextJs para
-            arquitetura, NodeJs + ExpressJS no backend, MongoDB para banco de dados.
+            postagens, usando React.Js + Styled-components para construir o front-end, Next.Js para
+            arquitetura, Node.Js + Express.Js no backend, MongoDB para banco de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '20px' }}>
-            <Button onClick={handleSocialDev}>Visitar projeto</Button>
-            <ButtonAlt onClick={handleSocialDevRepository}>{'<Repositório />'}</ButtonAlt>
+            <Button onClick={() => handleRedirect('https://social-dev-wine.vercel.app/login')}>
+              Visitar projeto
+            </Button>
+            <ButtonAlt
+              onClick={() => handleRedirect('https://github.com/Ryanluc7reis/Projeto.social-dev')}
+            >
+              {'<Repositório />'}
+            </ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -276,18 +345,27 @@ export default function SectionThree({ ...props }) {
             <div>
               <ImgIcons src="/react.png" />
               <ImgIcons src="/js.png" />
+              <ImgIcons src="/git.png" />
             </div>
           </StyledFlexTitleAbout>
           <Text>
             Foi construído um site que oferece a previsão do tempo atual das próximas 6 horas, 3
             horas e 1 hora de todo o mundo em tempo real, usando ReactJs + Styled-components para
-            construir a parte do front-end, NextJs para arquitetura, fetch/router foi usado para
+            construir a parte do front-end, Next.Js para arquitetura, fetch/router foi usado para
             integrar a API OpenWeatherMap, assim, treinar habilidades usando React Hooks como
             useContext, useState e useEffect.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '5px' }}>
-            <Button onClick={handleClimaDev}>Visitar projeto</Button>
-            <ButtonAlt onClick={handleClimaDevRepository}>{'<Repositório />'}</ButtonAlt>
+            <Button
+              onClick={() => handleRedirect('https://clima-dev-devchallenge1-nine.vercel.app/')}
+            >
+              Visitar projeto
+            </Button>
+            <ButtonAlt
+              onClick={() => handleRedirect('https://github.com/Ryanluc7reis/Projeto.Clima-Dev')}
+            >
+              {'<Repositório />'}
+            </ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
@@ -300,6 +378,7 @@ export default function SectionThree({ ...props }) {
               <ImgIcons src="/react.png" />
               <ImgIcons src="/js.png" />
               <ImgIcons src="/css.png" />
+              <ImgIcons src="/git.png" />
             </div>
           </StyledFlexTitleAbout>
           <Text>
@@ -307,24 +386,44 @@ export default function SectionThree({ ...props }) {
             Criado com o objetivo de treinar a manipulação de dados.
           </Text>
           <div style={{ display: 'flex', gap: '6px', paddingTop: '65px' }}>
-            <Button onClick={handleJogoDaV}>Visitar projeto</Button>
-            <ButtonAlt onClick={handleJogoDaVRepository}>{'<Repositório />'}</ButtonAlt>
+            <Button onClick={() => handleRedirect('https://react-jogo-da-velha-orpin.vercel.app/')}>
+              Visitar projeto
+            </Button>
+            <ButtonAlt
+              onClick={() =>
+                handleRedirect('https://github.com/Ryanluc7reis/Projeto.react-jogo-da-velha')
+              }
+            >
+              {'<Repositório />'}
+            </ButtonAlt>
           </div>
         </BoxAbout>
       </ContainerProject>
 
       <TextContact> Se você gostou do que viu, contate me por:</TextContact>
       <div style={{ display: 'flex', gap: '6px', padding: '15px 0px' }}>
-        <BoxIcons onClick={handleGit}>
+        <BoxIcons onClick={() => handleRedirect('https://github.com/Ryanluc7reis')}>
           <ImgIcons src="/github-yellow.png" />
         </BoxIcons>
-        <BoxIcons onClick={handleLinke}>
+        <BoxIcons onClick={() => handleRedirect('https://www.linkedin.com/in/ryanluc7reis/')}>
           <ImgIcons src="/linkedin.png" />
         </BoxIcons>
-        <BoxIcons onClick={handleWpp}>
+        <BoxIcons
+          onClick={() =>
+            handleRedirect(
+              'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!'
+            )
+          }
+        >
           <ImgIcons src="/wpp.png" />
         </BoxIcons>
-        <BoxIcons onClick={handleEmail}>
+        <BoxIcons
+          onClick={() =>
+            handleRedirect(
+              'mailto:ryan.dev18@outlook.com?subject=Ol%C3%A1%20Ryan%20%2Ctenho%20uma%20oportunidade%20de%20vaga%20para%20voc%C3%AA!'
+            )
+          }
+        >
           <ImgIcons src="/email.png" />
         </BoxIcons>
       </div>

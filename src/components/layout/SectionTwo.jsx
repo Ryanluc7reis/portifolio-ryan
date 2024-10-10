@@ -146,17 +146,18 @@ export default function SectionTwo({ ...props }) {
           <TitleAlt>Me conheça</TitleAlt>
           <Text>
             Olá, meu nome é Ryan. Sou desenvolvedor a 2 anos, trabalho principalmente com as
-            tecnologias Javascript, React, Nodejs, Express, MongoDB, Docker e PostgresSQL.
+            tecnologias Javascript, React, Node.js, TypeScript, AWS, Jest, MongoDB, Docker e
+            PostgreSQL.
           </Text>
           <Text>
             {' '}
-            No ano de 2022 começei um curso técnico em engenharia de software, no qual aprendi do
-            básico ao avançado das minhas tecnologias principais, incluindo JavaScript + React para
-            front-end, Express + NodeJs para back-end e MongoDB + PostegresSQL para bancos de dados.
-            Daí em diante começei a me aprimorar mais estudando por fora, desenvolvendo projetos
-            pessoais e até mesmo participando de eventos de tecnologia em que eu pude aprender um
-            pouco sobre computação em nuvem. Hoje em dia atuo como autônomo, mas visando ingressar
-            no mundo corporativo.
+            No ano de 2022 ingressei no mundo da programação por meio de um curso técnico em
+            engenharia de software, no qual aprendi do básico ao avançado das minhas tecnologias
+            principais, incluindo JavaScript + React para front-end, Express + NodeJs para back-end
+            e MongoDB + PostegresSQL para bancos de dados... Daí em diante começei a me aprimorar
+            mais estudando por fora, desenvolvendo projetos pessoais e até mesmo participando de
+            eventos de tecnologia em que eu pude aprender um pouco sobre computação em nuvem. Hoje
+            em dia atuo como autônomo, mas visando ingressar no mundo corporativo.
           </Text>
           <Text>
             {' '}
@@ -171,26 +172,27 @@ export default function SectionTwo({ ...props }) {
         <ContainerSkills>
           <TitleAlt>Habilidades</TitleAlt>
           <GridSkills>
-            <Card>HTML5</Card>
-            <Card>CSS3</Card>
             <Card>JavaScript</Card>
+            <Card>TypeScript</Card>
             <Card>ReactJS</Card>
+            <Card>NodeJS</Card>
+            <Card>HTML</Card>
+            <Card>CSS</Card>
             <Card>NextJS</Card>
-            <Card>SASS</Card>
+            <Card>JWT</Card>
+            <Card>Jest</Card>
+            <Card>AWS</Card>
+            <Card>SQL</Card>
+            <Card>NoSQL</Card>
             <Card>GitHub</Card>
+            <Card>Git</Card>
             <CardAlt>
               <h4>Styled</h4> Components
             </CardAlt>
             <Card>ExpressJS</Card>
             <Card>MongoDB</Card>
-            <Card>Git</Card>
-            <Card>NodeJS</Card>
-            <Card>PostgresSQL</Card>
+            <Card>PostgreSQL</Card>
             <Card>MERN</Card>
-            <Card>JWT</Card>
-            <Card>Vercel</Card>
-            <Card>Postman</Card>
-            <Card>Figma</Card>
             <Card>Docker</Card>
           </GridSkills>
           <StyledFlexSkillIcons>
@@ -201,6 +203,8 @@ export default function SectionTwo({ ...props }) {
             <ImgIcons src="/git.png" />
             <ImgIcons src="/postgresql.png" />
             <ImgIcons src="/docker.png" />
+            <ImgIcons src="/typescript.png" />
+            <ImgIcons src="/aws.png" />
           </StyledFlexSkillIcons>
         </ContainerSkills>
       </StyledFlexAboutAndSkills>
