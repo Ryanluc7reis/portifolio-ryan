@@ -70,26 +70,8 @@ const ImgDeveloper = styled.img`
   }
 `
 export default function SectionOne({ ...props }) {
-  const handleWpp = () => {
-    window.open(
-      'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!',
-      '_blank'
-    )
-  }
-  const handleGit = () => {
-    window.open('https://github.com/Ryanluc7reis', '_blank')
-  }
-  const handleLinke = () => {
-    window.open('https://www.linkedin.com/in/ryanluc7reis/', '_blank')
-  }
-  const handleEmail = () => {
-    window.open('mailto:ryanluc.dev@gmail.com', '_blank')
-  }
-  const handleCurriculo = () => {
-    window.open(
-      'https://docs.google.com/document/d/1CzeRLPgliU16iTsU4cqlb1c_15ZGMUc9bFrC0UmXAFA/edit?usp=sharing',
-      '_blank'
-    )
+  const handleRedirect = (url) => {
+    window.open(url, '_blank')
   }
 
   return (
@@ -101,19 +83,31 @@ export default function SectionOne({ ...props }) {
         <GradientText> Full-stack</GradientText>
         <Text>Contate me</Text>
         <StyledFlexIcons>
-          <BoxIcons onClick={handleGit}>
+          <BoxIcons onClick={() => handleRedirect('https://github.com/Ryanluc7reis')}>
             <ImgIcons src="/github-yellow.png" />
           </BoxIcons>
-          <BoxIcons onClick={handleLinke}>
+          <BoxIcons onClick={() => handleRedirect('https://www.linkedin.com/in/ryanluc7reis/')}>
             <ImgIcons src="/linkedin.png" />
           </BoxIcons>
-          <BoxIcons onClick={handleWpp}>
+          <BoxIcons
+            onClick={() =>
+              handleRedirect(
+                'https://wa.me/5534998069617?text=Oi%20Ryan,tenho%20uma%20oportunidade%20para%20voc%C3%AA!'
+              )
+            }
+          >
             <ImgIcons src="/wpp.png" />
           </BoxIcons>
-          <BoxIcons onClick={handleEmail}>
+          <BoxIcons onClick={() => handleRedirect('mailto:ryanluc.dev@gmail.com')}>
             <ImgIcons src="/email.png" />
           </BoxIcons>
-          <BoxIcons onClick={handleCurriculo}>
+          <BoxIcons
+            onClick={() =>
+              handleRedirect(
+                'https://docs.google.com/document/d/1CzeRLPgliU16iTsU4cqlb1c_15ZGMUc9bFrC0UmXAFA/edit?usp=sharing'
+              )
+            }
+          >
             <TextAlt>cv</TextAlt>
           </BoxIcons>
         </StyledFlexIcons>

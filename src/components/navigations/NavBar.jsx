@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
+import { useState } from 'react'
 import NavOptions from './NavOptions'
 
 const Container = styled.div`
@@ -11,6 +12,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  z-index: 1000;
 `
 const Name = styled.h3`
   font-size: 22px;
@@ -32,11 +34,13 @@ const Options = styled.h3`
   font-weight: 500;
   padding: 10px;
   border-radius: 7px;
+  background-color: ${({ isActive }) => (isActive ? '#606b01' : 'transparent')};
+  transition: background-color 0.2s;
 
   :hover {
-    transition: 0.2s;
     background-color: #606b01;
   }
+
   @media (max-width: 540px) {
     display: none;
   }
@@ -47,24 +51,48 @@ const NavOptionsAlt = styled(NavOptions)`
     display: flex;
   }
 `
+
 export default function NavBar() {
+  const [activeSection, setActiveSection] = useState('one')
+
   return (
     <Container>
       <Name>RyanLucas.</Name>
 
       <StyledFlexOptions>
-        <Options>
-          <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
+        <Options isActive={activeSection === 'one'}>
+          <Link
+            to="one"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onSetActive={() => setActiveSection('one')}
+          >
             Início
           </Link>
         </Options>
-        <Options>
-          <Link to="two" spy={true} smooth={true} offset={-100} duration={500}>
+        <Options isActive={activeSection === 'two'}>
+          <Link
+            to="two"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onSetActive={() => setActiveSection('two')}
+          >
             Sobre mim
           </Link>
         </Options>
-        <Options>
-          <Link to="three" spy={true} smooth={true} offset={-100} duration={500}>
+        <Options isActive={activeSection === 'three'}>
+          <Link
+            to="three"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onSetActive={() => setActiveSection('three')}
+          >
             Projetos
           </Link>
         </Options>
