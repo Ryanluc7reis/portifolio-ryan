@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { useState } from 'react'
 import NavBar from '../navigations/NavBar'
 
 const Container = styled.div`
@@ -69,9 +69,55 @@ const ImgDeveloper = styled.img`
     display: none;
   }
 `
+const Modal = styled.div`
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+const ModalContent = styled.div`
+  background: white;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`
+const Button = styled.button`
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #111111;
+  color: #ffff06;
+  transition: background 0.3s ease;
+
+  :hover {
+    background: #252525;
+  }
+`
+
 export default function SectionOne({ ...props }) {
+  const [showModal, setShowModal] = useState(false)
+
   const handleRedirect = (url) => {
     window.open(url, '_blank')
+  }
+
+  const handleCvClick = () => {
+    setShowModal(true)
+  }
+
+  const closeModal = () => {
+    setShowModal(!showModal)
   }
 
   return (
@@ -101,18 +147,37 @@ export default function SectionOne({ ...props }) {
           <BoxIcons onClick={() => handleRedirect('mailto:ryanluc.dev@gmail.com')}>
             <ImgIcons src="/email.png" />
           </BoxIcons>
-          <BoxIcons
-            onClick={() =>
-              handleRedirect(
-                'https://docs.google.com/document/d/1CzeRLPgliU16iTsU4cqlb1c_15ZGMUc9bFrC0UmXAFA/edit?usp=sharing'
-              )
-            }
-          >
+          <BoxIcons onClick={handleCvClick}>
             <TextAlt>cv</TextAlt>
           </BoxIcons>
         </StyledFlexIcons>
       </StyledFlexTitles>
       <ImgDeveloper src="/dev.png" />
+      {showModal && (
+        <Modal onClick={closeModal}>
+          <ModalContent>
+            <p>Choose your CV language:</p>
+            <Button
+              onClick={() =>
+                handleRedirect(
+                  'https://docs.google.com/document/d/1t60KOtmGjyvTiSJECmaMvyXuMmfhdFPom9qx_VuyXTk/edit?tab=t.0'
+                )
+              }
+            >
+              English
+            </Button>
+            <Button
+              onClick={() =>
+                handleRedirect(
+                  'https://docs.google.com/document/d/1CzeRLPgliU16iTsU4cqlb1c_15ZGMUc9bFrC0UmXAFA/edit?tab=t.0'
+                )
+              }
+            >
+              Português
+            </Button>
+          </ModalContent>
+        </Modal>
+      )}
     </Container>
   )
 }

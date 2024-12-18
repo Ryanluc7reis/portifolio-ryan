@@ -91,7 +91,7 @@ const ContainerAboutMe = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: auto;
+  height: 470px;
   padding: 15px;
   border-radius: 15px;
   background-image: linear-gradient(15deg, #111111 0%, #111111 80%, #111111 80%, #494d01 100%);
@@ -145,25 +145,21 @@ export default function SectionTwo({ ...props }) {
         <ContainerAboutMe>
           <TitleAlt>Me conheça</TitleAlt>
           <Text>
-            Olá, meu nome é Ryan. Sou desenvolvedor a 2 anos, trabalho principalmente com as
-            tecnologias Javascript, React, Node.js, TypeScript, AWS, Jest Testing, MongoDB, Docker e
-            PostgreSQL.
+            Desenvolvedor Full Stack especializado em React e Node.js Trabalhando profissionalmente
+            desde 2022, sou especialista em desenvolvimento de aplicativos web com JavaScript. Tenho
+            uma sólida experiência na criação de soluções eficientes, usando tecnologias como
+            Next.js e TypeScript para desenvolver sites e aplicativos robustos e escaláveis.
           </Text>
           <Text>
             {' '}
-            No ano de 2022 ingressei no mundo da programação por meio de um curso técnico em
-            engenharia de software, no qual aprendi do básico ao avançado das minhas tecnologias
-            principais, incluindo JavaScript / TypeScript + React para front-end, Node.Js para
-            back-end e MongoDB + PostegreSQL para bancos de dados... Daí em diante começei a me
-            aprimorar mais estudando por fora, desenvolvendo projetos pessoais e até mesmo
-            participando de eventos de tecnologia em que eu pude aprender um pouco sobre computação
-            em nuvem. Hoje em dia atuo como autônomo, mas visando ingressar no mundo corporativo.
+            Como um paralelo a isso, para melhor fluxo de desenvolvimento eu tenho conhecimento em
+            Git, Jest testings, Docker, Express, CI/CD e JWT para segurança de dados.
           </Text>
           <Text>
             {' '}
-            Mal posso esperar para seguir minha carreira profissional na programação! Estou aberto a
-            oportunidades de trabalho onde eu possa contribuir, aprender e crescer. Se você tiver
-            uma boa oportunidade que corresponda às minhas habilidades e experiência{' '}
+            Sou curioso no mundo da tecnologia, procurando influenciar a vida das pessoas o máximo
+            possível com soluções através da programação, sendo assim motivado a enfrentar projetos
+            desafiadores com o objetivo de felicidade do cliente.{' '}
             <Link to="one" spy={true} smooth={true} offset={-100} duration={500}>
               <TextAlt> Contate-me.</TextAlt>
             </Link>
@@ -175,13 +171,14 @@ export default function SectionTwo({ ...props }) {
             <Card>JavaScript</Card>
             <Card>TypeScript</Card>
             <Card>ReactJS</Card>
+            <Card>React-native</Card>
             <Card>NodeJS</Card>
             <Card>HTML</Card>
             <Card>CSS</Card>
             <Card>NextJS</Card>
             <Card>JWT</Card>
             <Card>Jest</Card>
-            <Card>AWS</Card>
+            {/* <Card>AWS</Card> */}
             <Card>SQL</Card>
             <Card>NoSQL</Card>
             <Card>GitHub</Card>
@@ -191,8 +188,10 @@ export default function SectionTwo({ ...props }) {
             </CardAlt>
             <Card>ExpressJS</Card>
             <Card>MongoDB</Card>
-            <Card>PostgreSQL</Card>
+            <Card>Postgres</Card>
             <Card>MERN</Card>
+            <Card>MENN</Card>
+            <Card>REST-APIs</Card>
             <Card>Docker</Card>
           </GridSkills>
           <StyledFlexSkillIcons>
@@ -204,7 +203,7 @@ export default function SectionTwo({ ...props }) {
             <ImgIcons src="/postgresql.png" />
             <ImgIcons src="/docker.png" />
             <ImgIcons src="/typescript.png" />
-            <ImgIcons src="/aws.png" />
+            {/* <ImgIcons src="/aws.png" /> */}
           </StyledFlexSkillIcons>
         </ContainerSkills>
       </StyledFlexAboutAndSkills>
