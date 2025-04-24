@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
+import { skills } from '../../data/skills'
 
 const Container = styled.div`
   width: 100%;
@@ -94,7 +95,7 @@ const ContainerAboutMe = styled.div`
   height: 470px;
   padding: 15px;
   border-radius: 15px;
-  background-image: linear-gradient(15deg, #111111 0%, #111111 80%, #111111 80%, #494d01 100%);
+  background-image: linear-gradient(15deg, #25252539 0%, #111111 80%, #111111 80%, #494d01 100%);
   @media (max-width: 956px) {
     width: 85%;
   }
@@ -104,7 +105,7 @@ const ContainerSkills = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-image: linear-gradient(15deg, #111111 0%, #111111 80%, #111111 80%, #525700 100%);
+  background-image: linear-gradient(15deg, #25252513 0%, #111111 80%, #111111 80%, #525700 100%);
   height: auto;
   padding: 15px 15px 4px 15px;
   border-radius: 15px;
@@ -166,44 +167,24 @@ export default function SectionTwo({ ...props }) {
           </Text>
         </ContainerAboutMe>
         <ContainerSkills>
-          <TitleAlt>Habilidades</TitleAlt>
+          <TitleAlt>{skills && skills.title}</TitleAlt>
           <GridSkills>
-            <Card>JavaScript</Card>
-            <Card>TypeScript</Card>
-            <Card>ReactJS</Card>
-            <Card>React-native</Card>
-            <Card>NodeJS</Card>
-            <Card>HTML</Card>
-            <Card>CSS</Card>
-            <Card>NextJS</Card>
-            <Card>JWT</Card>
-            <Card>Jest</Card>
-            {/* <Card>AWS</Card> */}
-            <Card>SQL</Card>
-            <Card>NoSQL</Card>
-            <Card>GitHub</Card>
-            <Card>Git</Card>
-            <CardAlt>
-              <h4>Styled</h4> Components
-            </CardAlt>
-            <Card>ExpressJS</Card>
-            <Card>MongoDB</Card>
-            <Card>Postgres</Card>
-            <Card>MERN</Card>
-            <Card>MENN</Card>
-            <Card>REST-APIs</Card>
-            <Card>Docker</Card>
+            {skills &&
+              skills.skillCards.map((skill, index) =>
+                skill.isDoubleRow ? (
+                  <CardAlt key={index}>
+                    <h4>{skill.name.split(' ')[0]}</h4> {skill.name.split(' ')[1]}
+                  </CardAlt>
+                ) : (
+                  <Card key={index}>{skill.name}</Card>
+                )
+              )}
           </GridSkills>
           <StyledFlexSkillIcons>
-            <ImgIcons src="/js.png" />
-            <ImgIcons src="/react.png" />
-            <ImgIcons src="/nodejs.png" />
-            <ImgIcons src="/mongodb.png" />
-            <ImgIcons src="/git.png" />
-            <ImgIcons src="/postgresql.png" />
-            <ImgIcons src="/docker.png" />
-            <ImgIcons src="/typescript.png" />
-            {/* <ImgIcons src="/aws.png" /> */}
+            {skills &&
+              skills.skillIcons.map((icon, index) => (
+                <ImgIcons key={index} src={icon.src} alt={icon.alt} />
+              ))}
           </StyledFlexSkillIcons>
         </ContainerSkills>
       </StyledFlexAboutAndSkills>
