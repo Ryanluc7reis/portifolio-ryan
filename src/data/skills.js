@@ -18,7 +18,7 @@ export const skills = {
     { name: 'REST-APIs' },
     { name: 'Docker' },
     { name: 'AWS' },
-    { name: 'Kubernets' },
+    { name: 'Kubernetes' },
     { name: 'Google Cloud' },
     { name: 'Azure Cloud' }
   ],
