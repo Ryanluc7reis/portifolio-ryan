@@ -152,7 +152,7 @@ export default function SectionTwo({ ...props }) {
           <Text>
             {' '}
             Como um paralelo a isso, para melhor fluxo de desenvolvimento eu tenho conhecimento em
-            Git, Jest testings, Docker, Express, CI/CD e JWT para segurança de dados.
+            Git, Jest testings, Docker, AWS, CI/CD e JWT para segurança de dados.
           </Text>
           <Text>
             {' '}
