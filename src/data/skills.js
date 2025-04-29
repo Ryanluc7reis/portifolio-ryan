@@ -20,7 +20,7 @@ export const skills = {
     { name: 'AWS' },
     { name: 'Kubernets' },
     { name: 'Google Cloud' },
-    { name: 'Azure' }
+    { name: 'Azure Cloud' }
   ],
   skillIcons: [
     { src: '/js.png', alt: 'JavaScript' },
@@ -30,6 +30,9 @@ export const skills = {
     { src: '/git.png', alt: 'Git' },
     { src: '/postgresql.png', alt: 'PostgreSQL' },
     { src: '/docker.png', alt: 'Docker' },
-    { src: '/typescript.png', alt: 'TypeScript' }
+    { src: '/typescript.png', alt: 'TypeScript' },
+    { src: '/aws.png', alt: 'AWS' },
+    { src: '/google-cloud.png', alt: 'Google-Cloud' },
+    { src: '/azure.png', alt: 'Azure-Cloud' }
   ]
 }

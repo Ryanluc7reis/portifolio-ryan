@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Button from '../inputs/Button'
 import { projects } from '../../data/projects'
 import { contacts } from '../../data/contacts'
+import { useState } from 'react'
 
 const Container = styled.div`
   width: 100%;
@@ -92,10 +93,10 @@ const ImgProjects = styled.img`
 const ImgIcons = styled.img`
   padding: 1px;
 `
-
 const BoxAbout = styled.div`
   width: 500px;
-  height: 310px;
+  height: auto;
+  min-height: 310px;
   border-radius: 0px 10px 10px 0px;
   background: #111111;
   padding: 15px;
@@ -113,7 +114,7 @@ const BoxAbout = styled.div`
     border-radius: 10px;
   }
   @media (max-width: 356px) {
-    height: 340px;
+    min-height: 340px;
   }
 `
 const StyledFlexTitleAbout = styled.div`
@@ -140,9 +141,67 @@ const BoxIcons = styled.div`
   }
 `
 
+const ImplementationButton = styled.h4`
+  color: #cfc313;
+  text-decoration: underline;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: #636e72;
+  }
+`
+
+const ImplementationLinksContainer = styled.div`
+  max-height: ${(props) => (props.isOpen ? '500px' : '0')};
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  margin-top: ${(props) => (props.isOpen ? '10px' : '0')};
+`
+
+const LinksList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`
+
+const LinkItem = styled.li`
+  margin: 10px 0;
+`
+
+const StyledLink = styled.a`
+  color: #f1ff00;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: rgba(241, 255, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(241, 255, 0, 0.2);
+    transform: translateX(5px);
+  }
+
+  &:before {
+    content: '→';
+    margin-right: 8px;
+  }
+`
+
 export default function SectionThree({ ...props }) {
+  const [openImplementations, setOpenImplementations] = useState({})
+
   const handleRedirect = (url) => {
     window.open(url, '_blank')
+  }
+
+  const toggleImplementations = (projectId) => {
+    setOpenImplementations((prev) => ({
+      ...prev,
+      [projectId]: !prev[projectId]
+    }))
   }
 
   return (
@@ -150,7 +209,9 @@ export default function SectionThree({ ...props }) {
       <StyledFlexTitles>
         <Title>Projetos</Title>
         <Barra />
-        <SubText>Veja um pouco do meu conhecimento em meus projetos logo abaixo!</SubText>
+        <SubText>
+          Veja um pouco do meu conhecimento com projetos e experiências descritas logo abaixo!
+        </SubText>
       </StyledFlexTitles>
 
       {projects &&
@@ -161,19 +222,57 @@ export default function SectionThree({ ...props }) {
               <StyledFlexTitleAbout>
                 <TitleProject>{project.title}</TitleProject>
                 <div>
-                  {project.technologies.map((tech, index) => (
-                    <ImgIcons key={index} src={tech} alt={`Technology ${index + 1}`} />
-                  ))}
+                  {project.technologies?.map((tech, index) =>
+                    tech === '/azure.png' ? (
+                      <ImgIcons
+                        key={index}
+                        src={tech}
+                        alt={`Technology ${index + 1}`}
+                        style={{ width: '20px', height: '20px' }}
+                      />
+                    ) : (
+                      <ImgIcons key={index} src={tech} alt={`Technology ${index + 1}`} />
+                    )
+                  )}
                 </div>
               </StyledFlexTitleAbout>
               <Text>{project.description}</Text>
-              <div style={{ display: 'flex', gap: '6px' }}>
-                {project.liveUrl && (
-                  <Button onClick={() => handleRedirect(project.liveUrl)}>Visitar projeto</Button>
+              <div>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  {project.liveUrl && (
+                    <Button onClick={() => handleRedirect(project.liveUrl)}>Visitar projeto</Button>
+                  )}
+
+                  <ButtonAlt onClick={() => handleRedirect(project.repoUrl)}>
+                    {'<Repositório />'}
+                  </ButtonAlt>
+                </div>
+
+                {project.implementations && project.implementations.length > 0 && (
+                  <>
+                    <ImplementationButton onClick={() => toggleImplementations(project.id)}>
+                      {openImplementations[project.id]
+                        ? 'Ocultar implementações'
+                        : 'Mostrar implementações ->'}
+                    </ImplementationButton>
+
+                    <ImplementationLinksContainer isOpen={openImplementations[project.id]}>
+                      <LinksList>
+                        {project.implementations.map((implementation, index) => (
+                          <LinkItem key={index}>
+                            <StyledLink
+                              href={implementation.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {implementation.title}
+                            </StyledLink>
+                          </LinkItem>
+                        ))}
+                      </LinksList>
+                    </ImplementationLinksContainer>
+                  </>
                 )}
-                <ButtonAlt onClick={() => handleRedirect(project.repoUrl)}>
-                  {'<Repositório />'}
-                </ButtonAlt>
               </div>
             </BoxAbout>
           </ContainerProject>

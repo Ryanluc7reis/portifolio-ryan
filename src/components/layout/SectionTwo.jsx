@@ -84,9 +84,7 @@ const Card = styled.div`
   border-radius: 6px;
   box-shadow: 0 8px 8px -4px rgba(90, 90, 3, 0.6);
 `
-const CardAlt = styled(Card)`
-  flex-direction: column;
-`
+
 const ContainerAboutMe = styled.div`
   width: 50%;
   display: flex;
@@ -170,21 +168,22 @@ export default function SectionTwo({ ...props }) {
           <TitleAlt>{skills && skills.title}</TitleAlt>
           <GridSkills>
             {skills &&
-              skills.skillCards.map((skill, index) =>
-                skill.isDoubleRow ? (
-                  <CardAlt key={index}>
-                    <h4>{skill.name.split(' ')[0]}</h4> {skill.name.split(' ')[1]}
-                  </CardAlt>
-                ) : (
-                  <Card key={index}>{skill.name}</Card>
-                )
-              )}
+              skills.skillCards.map((skill, index) => <Card key={index}>{skill.name}</Card>)}
           </GridSkills>
           <StyledFlexSkillIcons>
             {skills &&
-              skills.skillIcons.map((icon, index) => (
-                <ImgIcons key={index} src={icon.src} alt={icon.alt} />
-              ))}
+              skills.skillIcons.map((icon, index) =>
+                icon.src === '/azure.png' ? (
+                  <ImgIcons
+                    key={index}
+                    src={icon.src}
+                    alt={icon.alt}
+                    style={{ width: '20px', height: '20px' }}
+                  />
+                ) : (
+                  <ImgIcons key={index} src={icon.src} alt={icon.alt} />
+                )
+              )}
           </StyledFlexSkillIcons>
         </ContainerSkills>
       </StyledFlexAboutAndSkills>

@@ -1,6 +1,48 @@
 export const projects = [
   {
     id: 1,
+    title: 'CloudMart',
+    image: 'cloudmart.jpg',
+    description:
+      'Foi construído um e-commerce para venda de produtos variados, contendo um painel de administrador, sistema de pedidos e suporte ao cliente. Foi implementado uma infraestrutura utilizando Terraform, AWS, Docker, Kubernetes, Google Cloud, Azure Cloud e OpenIA.',
+    repoUrl: 'https://github.com/Ryanluc7reis/cloudmart',
+    technologies: [
+      '/react.png',
+      '/js.png',
+      '/css.png',
+      '/nodejs.png',
+      '/git.png',
+      '/aws.png',
+      '/google-cloud.png',
+      '/azure.png',
+      '/docker.png'
+    ],
+    implementations: [
+      {
+        title:
+          'Provisionando tabelas SQL-DyanamoDB pelo Terraform e Dockerização do projeto via AWS-EC2',
+        url: 'https://www.linkedin.com/posts/ryanluc7reis_devops-cloud-multicloud-activity-7306034137499369472-EBvY?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyhWvwBvXfBxVbivL_f5Aw4GI-SrEIDEWM'
+      },
+      {
+        title: 'Orquestração de containers Docker utilizando Kubernetes via AWS-EC2',
+        url: 'https://www.linkedin.com/posts/ryanluc7reis_devops-cloud-multicloud-activity-7307812311656751104-pghy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyhWvwBvXfBxVbivL_f5Aw4GI-SrEIDEWM'
+      },
+      {
+        title: 'AWS Pipeline - CI/CD',
+        url: 'https://www.linkedin.com/posts/ryanluc7reis_devops-cloud-multicloud-activity-7308110102916489218-7Cr9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyhWvwBvXfBxVbivL_f5Aw4GI-SrEIDEWM'
+      },
+      {
+        title: 'Agentes de IA utilizando AWS-Bedrock e OpenIA para suporte ao cliente',
+        url: 'https://www.linkedin.com/posts/ryanluc7reis_devops-cloud-multicloud-activity-7308472414064074752-iPb7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyhWvwBvXfBxVbivL_f5Aw4GI-SrEIDEWM'
+      },
+      {
+        title: 'BigQuery utilizando Google Cloud e analise de atendimento utilizando Azure Cloud',
+        url: 'https://github.com/seu-usuario/cloudmart/feature-4'
+      }
+    ]
+  },
+  {
+    id: 2,
     title: 'UpCleaner',
     image: 'projeto-cleaner2.jpg',
     description:
@@ -10,7 +52,7 @@ export const projects = [
     technologies: ['/js.png', '/react.png', '/nodejs.png', '/mongodb.png', '/git.png']
   },
   {
-    id: 2,
+    id: 3,
     title: 'Hello visit',
     image: 'visitcard.png',
     description:
@@ -28,7 +70,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: 'Searching users',
     image: 'searching.png',
     description:
@@ -38,7 +80,7 @@ export const projects = [
     technologies: ['/typescript.png', '/react.png', '/git.png', '/docker.png']
   },
   {
-    id: 4,
+    id: 5,
     title: 'GambNotes',
     image: 'notes.png',
     description:
@@ -55,7 +97,7 @@ export const projects = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Classifi Dev',
     image: 'projeto-cassidev.jpg',
     description:
@@ -65,7 +107,7 @@ export const projects = [
     technologies: ['/js.png', '/react.png', '/nodejs.png', '/mongodb.png', '/git.png']
   },
   {
-    id: 6,
+    id: 7,
     title: 'Social Dev',
     image: 'socialdev5.jpg',
     description:
@@ -75,7 +117,7 @@ export const projects = [
     technologies: ['/js.png', '/react.png', '/nodejs.png', '/mongodb.png', '/git.png']
   },
   {
-    id: 7,
+    id: 8,
     title: 'Clima Dev',
     image: 'climadev2.jpg',
     description:
@@ -83,15 +125,15 @@ export const projects = [
     liveUrl: 'https://clima-dev-devchallenge1-nine.vercel.app/',
     repoUrl: 'https://github.com/Ryanluc7reis/Projeto.Clima-Dev',
     technologies: ['/react.png', '/js.png', '/git.png']
-  },
-  {
-    id: 8,
-    title: 'Jogo da velha',
-    image: 'jogodavelha3.jpg',
-    description:
-      'Foi construído um jogo da velha virtual com placar, usando ReactJs e CSS para estilizar. Criado com o objetivo de treinar a manipulação de dados.',
-    liveUrl: 'https://react-jogo-da-velha-orpin.vercel.app/',
-    repoUrl: 'https://github.com/Ryanluc7reis/Projeto.react-jogo-da-velha',
-    technologies: ['/react.png', '/js.png', '/css.png', '/git.png']
   }
+  // {
+  //   id: 8,
+  //   title: 'Jogo da velha',
+  //   image: 'jogodavelha3.jpg',
+  //   description:
+  //     'Foi construído um jogo da velha virtual com placar, usando ReactJs e CSS para estilizar. Criado com o objetivo de treinar a manipulação de dados.',
+  //   liveUrl: 'https://react-jogo-da-velha-orpin.vercel.app/',
+  //   repoUrl: 'https://github.com/Ryanluc7reis/Projeto.react-jogo-da-velha',
+  //   technologies: ['/react.png', '/js.png', '/css.png', '/git.png']
+  // }
 ]
